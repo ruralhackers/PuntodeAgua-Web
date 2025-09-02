@@ -1,0 +1,71 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Droplets, Play } from 'lucide-react';
+import { useMouseGradient } from '../../hooks/useMouseGradient';
+
+const HeroSection: React.FC = () => {
+  const gradientRef = useMouseGradient();
+
+  return (
+    <section ref={gradientRef} className="min-h-screen flex items-center justify-center relative overflow-hidden px-6 lg:px-8">
+      {/* Interactive gradient background with specific class */}
+      <div className="gradient-bg absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-emerald-50 transition-all duration-1000 ease-out" />
+      
+      <div className="max-w-7xl mx-auto relative z-10 w-full">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="text-left"
+          >
+            <motion.h1 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 1, ease: "easeOut" }}
+              className="text-6xl lg:text-8xl font-serif font-bold text-gray-900 mb-8 leading-tight"
+            >
+              Punto de Agua
+            </motion.h1>
+
+            <motion.p 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7, duration: 1, ease: "easeOut" }}
+              className="text-lg text-gray-600 leading-relaxed font-light mb-12 max-w-xl"
+            >
+              Una iniciativa abierta que nace para hacer la gestión del agua más sencilla y accesible, cuidando siempre de que el agua siga siendo un bien público.
+            </motion.p>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.9, duration: 1, ease: "easeOut" }}
+              className="flex justify-center lg:justify-start"
+            >
+              <button className="bg-gradient-to-r from-primary to-primary-light text-white px-12 py-4 rounded-2xl font-bold text-xl hover:from-primary-light hover:to-primary transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl flex items-center space-x-3">
+                <Play className="h-5 w-5" />
+                <span>Ver demo</span>
+              </button>
+            </motion.div>
+          </motion.div>
+
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.6, duration: 1, ease: "easeOut" }}
+            className="hidden lg:block"
+          >
+            <div className="relative">
+              <div className="w-96 h-96 bg-white/60 backdrop-blur-md rounded-[3rem] shadow-2xl flex items-center justify-center border border-white/80 hover:bg-white/70 transition-all duration-500">
+                <Droplets className="h-40 w-40 text-primary" />
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
