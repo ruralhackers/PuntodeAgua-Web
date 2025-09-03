@@ -64,7 +64,7 @@ const HeroSection: React.FC = () => {
                   initial={{ opacity: 0, y: 30, rotate: -5 }}
                   animate={{ opacity: 1, y: 0, rotate: 0 }}
                   transition={{ delay: 1, duration: 1, ease: "easeOut" }}
-                  className="absolute -left-12 top-20 z-10"
+                  className="absolute -left-12 top-16 z-10"
                 >
                   <motion.img 
                     src="/2 copy.png" 
