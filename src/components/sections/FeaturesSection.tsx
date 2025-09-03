@@ -6,22 +6,22 @@ const FeaturesSection: React.FC = () => {
   const features = [
     {
       icon: Users,
-      title: 'Registro de Usuarios y Viviendas',
-      description: 'Gestiona fichas individuales vinculadas a cada contador, con referencia catastral y toda la información relevante centralizada.',
+      title: 'Registro de Usuarios',
+      description: 'Ten toda la información de cada contador organizada en su ficha, todos los datos clave, centralizados y a mano.',
       gradient: 'from-primary to-primary-light',
       bgColor: 'from-blue-50 to-blue-100'
     },
     {
       icon: Calendar,
       title: 'Calendario de Tareas y Lecturas',
-      description: 'Organiza lecturas, analíticas y controles de manera ordenada, con alertas que aseguran que nada se pase por alto.',
+      description: 'Tu calendario de tareas centraliza lecturas y controles, con alertas que evitan que algo se quede pendiente.',
       gradient: 'from-accent to-primary',
       bgColor: 'from-emerald-50 to-emerald-100'
     },
     {
       icon: BarChart3,
       title: 'Control de Analíticas y Reportes',
-      description: 'Registra de forma digital parámetros como cloro, pH y consumos, con reportes listos para imprimir o consultar mediante código QR.',
+      description: 'Todos tus mediciones de cloro, pH y consumos en un sólo lugar. Listos para consultar o imprimir.',
       gradient: 'from-primary-light to-accent',
       bgColor: 'from-indigo-50 to-indigo-100'
     }
@@ -40,10 +40,10 @@ const FeaturesSection: React.FC = () => {
           className="text-center mb-20"
         >
           <h2 className="text-4xl lg:text-5xl font-serif font-bold text-gray-900 mb-6">
-            Control total, simplicidad absoluta
+            Control total sobre el agua de tu pueblo
           </h2>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed font-light">
-            Facilita la organización, evita que el conocimiento se pierda y garantiza que la gestión pueda mantenerse de forma continuada en el tiempo. Descubre cómo Punto de Agua transforma la gestión del agua en una tarea sencilla.
+            Olvídate de los papeles y los cálculos a mano. Con Punto de Agua, todo queda guardado y ordenado, ya no tendrás que depender solo de tu memoria o tus notas. Descubre cómo transformar la gestión del agua en una tarea sencilla.
           </p>
         </motion.div>
 
