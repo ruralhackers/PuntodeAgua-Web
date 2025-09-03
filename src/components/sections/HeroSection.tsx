@@ -67,7 +67,7 @@ const HeroSection: React.FC = () => {
                   className="absolute left-8 top-0 z-10"
                 >
                   <motion.img 
-                    src="/2.png" 
+                    src="/2 copy.png" 
                     alt="Punto de Agua App - Pantalla 2" 
                     className="w-44 h-auto drop-shadow-2xl hover:drop-shadow-3xl transition-all duration-500"
                     whileHover={{ scale: 1.05, rotate: -10, y: -10 }}
@@ -83,7 +83,7 @@ const HeroSection: React.FC = () => {
                   className="absolute right-8 top-12 z-20"
                 >
                   <motion.img 
-                    src="/1.png" 
+                    src="/1 copy.png" 
                     alt="Punto de Agua App - Pantalla 1" 
                     className="w-44 h-auto drop-shadow-2xl hover:drop-shadow-3xl transition-all duration-500"
                     whileHover={{ scale: 1.05, rotate: 10, y: -10 }}
