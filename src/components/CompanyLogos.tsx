@@ -21,7 +21,8 @@ const CompanyLogos: React.FC = () => {
     { 
       name: 'Eleven Yellow', 
       logo: '/eleven yellow.png',
-      url: 'https://www.elevenyellow.com/'
+      url: 'https://www.elevenyellow.com/',
+      darkBg: true
     },
     { 
       name: 'Teimas', 
@@ -57,18 +58,15 @@ const CompanyLogos: React.FC = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
-            className="bg-white/80 backdrop-blur-md rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 border border-white/60 hover:border-white/80 group flex flex-col items-center justify-center hover:-translate-y-2 max-w-xs w-full"
+            className="bg-white/80 backdrop-blur-md rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 border border-white/60 hover:border-white/80 group hover:-translate-y-2 max-w-xs w-full"
           >
-            <div className="w-24 h-24 bg-white rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg overflow-hidden">
+            <div className="flex flex-col items-center justify-center h-32">
               <img 
                 src={organizer.logo} 
                 alt={organizer.name}
-                className="w-20 h-20 object-contain"
+                className="max-w-full max-h-full object-contain group-hover:scale-110 transition-all duration-500"
               />
             </div>
-            <h4 className="text-xl font-bold text-gray-900 text-center group-hover:text-primary transition-colors duration-300">
-              {organizer.name}
-            </h4>
           </motion.a>
         </div>
       </div>
@@ -89,18 +87,15 @@ const CompanyLogos: React.FC = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.8 + index * 0.1, ease: "easeOut" }}
-              className="bg-white/80 backdrop-blur-md rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 border border-white/60 hover:border-white/80 group flex flex-col items-center justify-center hover:-translate-y-2 aspect-square"
+              className={`${
+                company.darkBg ? 'bg-gray-900/80' : 'bg-white/80'
+              } backdrop-blur-md rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 border border-white/60 hover:border-white/80 group hover:-translate-y-2 aspect-square flex items-center justify-center`}
             >
-              <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg overflow-hidden">
-                <img 
-                  src={company.logo} 
-                  alt={company.name}
-                  className="w-12 h-12 object-contain"
-                />
-              </div>
-              <h4 className="text-sm font-bold text-gray-900 text-center group-hover:text-primary transition-colors duration-300 leading-tight">
-                {company.name}
-              </h4>
+              <img 
+                src={company.logo} 
+                alt={company.name}
+                className="max-w-full max-h-full object-contain group-hover:scale-110 transition-all duration-500 p-2"
+              />
             </motion.a>
           ))}
         </div>
