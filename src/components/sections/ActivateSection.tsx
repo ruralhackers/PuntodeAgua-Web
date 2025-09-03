@@ -16,7 +16,6 @@ const ActivateSection: React.FC = () => {
           className="text-center mb-20"
         >
           <h2 className="text-4xl lg:text-5xl font-serif font-bold text-white mb-8">
-          <h2 className="text-4xl lg:text-5xl font-serif font-bold text-gray-900 mb-8">
             Activa tu pueblo
           </h2>
         </motion.div>
