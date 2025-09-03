@@ -57,8 +57,42 @@ const HeroSection: React.FC = () => {
             className="hidden lg:block"
           >
             <div className="relative">
-              <div className="w-96 h-96 bg-white/60 backdrop-blur-md rounded-[3rem] shadow-2xl flex items-center justify-center border border-white/80 hover:bg-white/70 transition-all duration-500">
-                <Droplets className="h-40 w-40 text-primary" />
+              {/* Mobile screenshots showcase */}
+              <div className="relative w-full max-w-lg mx-auto">
+                {/* Image 2 - Left and slightly higher */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30, rotate: -5 }}
+                  animate={{ opacity: 1, y: 0, rotate: -8 }}
+                  transition={{ delay: 1, duration: 1, ease: "easeOut" }}
+                  className="absolute left-0 top-0 z-10"
+                >
+                  <div className="bg-white/80 backdrop-blur-md rounded-3xl p-3 shadow-2xl border border-white/60 hover:shadow-3xl transition-all duration-500 hover:-translate-y-2 hover:rotate-[-10deg]">
+                    <img 
+                      src="/2.png" 
+                      alt="Punto de Agua App - Pantalla 2" 
+                      className="w-48 h-auto rounded-2xl shadow-lg"
+                    />
+                  </div>
+                </motion.div>
+
+                {/* Image 1 - Right */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30, rotate: 5 }}
+                  animate={{ opacity: 1, y: 0, rotate: 8 }}
+                  transition={{ delay: 1.2, duration: 1, ease: "easeOut" }}
+                  className="absolute right-0 top-16 z-20"
+                >
+                  <div className="bg-white/80 backdrop-blur-md rounded-3xl p-3 shadow-2xl border border-white/60 hover:shadow-3xl transition-all duration-500 hover:-translate-y-2 hover:rotate-[10deg]">
+                    <img 
+                      src="/1.png" 
+                      alt="Punto de Agua App - Pantalla 1" 
+                      className="w-48 h-auto rounded-2xl shadow-lg"
+                    />
+                  </div>
+                </motion.div>
+
+                {/* Decorative background glow */}
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-accent/10 to-primary-light/10 rounded-[4rem] blur-3xl -z-10 scale-110" />
               </div>
             </div>
           </motion.div>
