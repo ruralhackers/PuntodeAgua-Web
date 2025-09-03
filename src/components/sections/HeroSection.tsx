@@ -62,15 +62,15 @@ const HeroSection: React.FC = () => {
                 {/* Image 2 - Left and slightly higher */}
                 <motion.div
                   initial={{ opacity: 0, y: 30, rotate: -5 }}
-                  animate={{ opacity: 1, y: 0, rotate: -8 }}
+                  animate={{ opacity: 1, y: 0, rotate: 0 }}
                   transition={{ delay: 1, duration: 1, ease: "easeOut" }}
-                  className="absolute left-4 -top-4 z-10"
+                  className="absolute left-0 -top-8 z-10"
                 >
                   <motion.img 
                     src="/2 copy.png" 
                     alt="Punto de Agua App - Pantalla 2" 
-                    className="w-56 h-auto drop-shadow-2xl hover:drop-shadow-3xl transition-all duration-500"
-                    whileHover={{ scale: 1.05, rotate: -10, y: -10 }}
+                    className="w-72 h-auto drop-shadow-2xl hover:drop-shadow-3xl transition-all duration-500"
+                    whileHover={{ scale: 1.05, y: -10 }}
                     transition={{ type: "spring", stiffness: 300, damping: 20 }}
                   />
                 </motion.div>
@@ -78,15 +78,15 @@ const HeroSection: React.FC = () => {
                 {/* Image 1 - Right */}
                 <motion.div
                   initial={{ opacity: 0, y: 30, rotate: 5 }}
-                  animate={{ opacity: 1, y: 0, rotate: 8 }}
+                  animate={{ opacity: 1, y: 0, rotate: 0 }}
                   transition={{ delay: 1.2, duration: 1, ease: "easeOut" }}
-                  className="absolute right-4 top-4 z-20"
+                  className="absolute right-0 top-0 z-20"
                 >
                   <motion.img 
                     src="/1 copy.png" 
                     alt="Punto de Agua App - Pantalla 1" 
-                    className="w-56 h-auto drop-shadow-2xl hover:drop-shadow-3xl transition-all duration-500"
-                    whileHover={{ scale: 1.05, rotate: 10, y: -10 }}
+                    className="w-72 h-auto drop-shadow-2xl hover:drop-shadow-3xl transition-all duration-500"
+                    whileHover={{ scale: 1.05, y: -10 }}
                     transition={{ type: "spring", stiffness: 300, damping: 20 }}
                   />
                 </motion.div>
