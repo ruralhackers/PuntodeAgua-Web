@@ -160,7 +160,7 @@ const TeamSection: React.FC = () => {
                     to="/contributors" 
                     className="inline-flex items-center space-x-3 bg-white text-gray-900 px-6 py-3 rounded-2xl font-bold hover:bg-white/90 transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-white/20 group"
                   >
-                    <span>Ver contributors</span>
+                    <span>Ver equipo</span>
                     <ArrowRight className="h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" />
                   </Link>
                 </div>

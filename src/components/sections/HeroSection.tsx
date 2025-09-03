@@ -34,7 +34,7 @@ const HeroSection: React.FC = () => {
               transition={{ delay: 0.7, duration: 1, ease: "easeOut" }}
               className="text-lg text-gray-600 leading-relaxed font-light mb-12 max-w-xl"
             >
-              Una iniciativa abierta que nace para hacer la gestión del agua más sencilla y accesible, cuidando siempre de que el agua siga siendo un bien público.
+              Una herramienta gratuita que nace para hacer la gestión del agua de tu pueblo más sencilla, cuidando siempre de que el agua siga siendo un bien público.
             </motion.p>
 
             <motion.div 
@@ -45,7 +45,7 @@ const HeroSection: React.FC = () => {
             >
               <button className="bg-gradient-to-r from-primary to-primary-light text-white px-12 py-4 rounded-2xl font-bold text-xl hover:from-primary-light hover:to-primary transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl flex items-center space-x-3">
                 <Play className="h-5 w-5" />
-                <span>Ver demo</span>
+                <span>Cómo funciona</span>
               </button>
             </motion.div>
           </motion.div>

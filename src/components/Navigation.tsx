@@ -56,7 +56,7 @@ const Navigation: React.FC = () => {
                   : 'text-gray-900 hover:bg-primary/80 hover:text-white'
               }`}
             >
-              Contributors
+              Equipo
             </Link>
             <Link 
               to="/prensa" 
@@ -75,9 +75,9 @@ const Navigation: React.FC = () => {
               className={`text-sm font-medium transition-all duration-300 px-4 py-2 rounded-xl group ${
                 isActive('/activa-tu-pueblo') 
                   ? 'bg-primary text-white shadow-lg' 
-                  : 'text-gray-900 hover:bg-primary/80 hover:text-white'
-                ? 'text-gray-900 hover:bg-primary hover:text-white' 
-                : 'text-gray-900 hover:bg-primary hover:text-white'
+                  : isScrolled 
+                    ? 'text-gray-900 hover:bg-primary hover:text-white' 
+                    : 'text-gray-900 hover:bg-primary/80 hover:text-white'
             }`}>
               Activa tu pueblo
             </Link>
@@ -115,7 +115,7 @@ const Navigation: React.FC = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="block text-gray-900 text-sm font-medium hover:text-primary transition-colors"
               >
-                Contributors
+                Equipo
               </Link>
               <Link 
                 to="/prensa" 

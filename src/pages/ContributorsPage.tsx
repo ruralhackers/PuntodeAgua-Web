@@ -22,7 +22,7 @@ const ContributorsPage: React.FC = () => {
             className="text-center mb-20"
           >
             <h1 className="text-6xl lg:text-7xl font-display font-black text-gray-900 mb-8 tracking-tight">
-              Contributors
+              Equipo
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed font-light max-w-4xl mx-auto">
               Gracias a estas personas y organizaciones, Punto de Agua es hoy un recurso abierto y gratuito. 
