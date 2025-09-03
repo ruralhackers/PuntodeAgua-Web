@@ -58,12 +58,13 @@ const CompanyLogos: React.FC = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
             className="bg-white/80 backdrop-blur-md rounded-3xl p-12 shadow-lg hover:shadow-xl transition-all duration-500 border border-white/60 hover:border-white/80 group hover:-translate-y-2 w-80 h-48"
+            className="bg-white/80 backdrop-blur-md rounded-3xl p-12 shadow-lg hover:shadow-xl transition-all duration-500 border border-white/60 hover:border-white/80 group hover:-translate-y-2 w-96 h-64"
           >
             <div className="flex flex-col items-center justify-center h-full">
               <img 
                 src={organizer.logo} 
                 alt={organizer.name}
-                className="w-full h-full object-contain group-hover:scale-110 transition-all duration-500 p-4"
+                className="w-full h-full object-contain group-hover:scale-110 transition-all duration-500 p-2"
               />
             </div>
           </motion.a>
@@ -91,7 +92,11 @@ const CompanyLogos: React.FC = () => {
               <img 
                 src={company.logo} 
                 alt={company.name}
-                className={`${company.name === 'Viko' ? 'w-20 h-20' : 'w-32 h-24'} object-contain group-hover:scale-110 transition-all duration-500 ${
+                className={`${
+                  company.name === 'Viko' ? 'w-20 h-20' : 
+                  company.name === 'Next Digital' || company.name === 'SiteGround' ? 'w-40 h-28' : 
+                  'w-32 h-24'
+                } object-contain group-hover:scale-110 transition-all duration-500 ${
                   company.name === 'Eleven Yellow' ? 'filter brightness-0' : ''
                 }`}
               />
