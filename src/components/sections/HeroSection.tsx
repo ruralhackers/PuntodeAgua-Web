@@ -2,9 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Droplets, Play } from 'lucide-react';
 import { useMouseGradient } from '../../hooks/useMouseGradient';
+import VideoModal from '../VideoModal';
 
 const HeroSection: React.FC = () => {
   const gradientRef = useMouseGradient();
+  const [isVideoModalOpen, setIsVideoModalOpen] = React.useState(false);
 
   return (
     <section ref={gradientRef} className="min-h-screen flex items-center justify-center relative overflow-hidden px-6 lg:px-8">
@@ -43,7 +45,10 @@ const HeroSection: React.FC = () => {
               transition={{ delay: 0.9, duration: 1, ease: "easeOut" }}
               className="flex justify-center lg:justify-start"
             >
-              <button className="bg-gradient-to-r from-primary to-primary-light text-white px-12 py-4 rounded-2xl font-bold text-xl hover:from-primary-light hover:to-primary transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl flex items-center space-x-3">
+              <button 
+                onClick={() => setIsVideoModalOpen(true)}
+                className="bg-gradient-to-r from-primary to-primary-light text-white px-12 py-4 rounded-2xl font-bold text-xl hover:from-primary-light hover:to-primary transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl flex items-center space-x-3"
+              >
                 <Play className="h-5 w-5" />
                 <span>Cómo funciona</span>
               </button>
@@ -98,6 +103,11 @@ const HeroSection: React.FC = () => {
           </motion.div>
         </div>
       </div>
+      
+      <VideoModal 
+        isOpen={isVideoModalOpen} 
+        onClose={() => setIsVideoModalOpen(false)} 
+      />
     </section>
   );
 };
