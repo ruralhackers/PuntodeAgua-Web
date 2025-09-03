@@ -5,12 +5,15 @@ import { ArrowRight, Sparkles, Zap, Globe } from 'lucide-react';
 
 const TeamSection: React.FC = () => {
   return (
-    <section className="py-32 relative overflow-hidden bg-gradient-to-br from-gray-900 via-slate-900 to-black px-6 lg:px-8">
-      {/* Modern animated background */}
+    <section className="py-32 relative overflow-hidden px-6 lg:px-8">
+      {/* Background image */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(77,137,199,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(159,188,158,0.2)_0%,transparent_50%)] animate-pulse delay-1000" />
-        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_30%,rgba(77,137,199,0.1)_50%,transparent_70%)] animate-gradient bg-300%" />
+        <img 
+          src="/def copy.png" 
+          alt="Background" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/70" />
       </div>
       
       <div className="max-w-7xl mx-auto relative z-10">
