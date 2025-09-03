@@ -91,7 +91,7 @@ const CompanyLogos: React.FC = () => {
               <img 
                 src={company.logo} 
                 alt={company.name}
-                className={`w-20 h-20 object-contain group-hover:scale-110 transition-all duration-500 ${
+                className={`${company.name === 'Viko' ? 'w-20 h-20' : 'w-32 h-24'} object-contain group-hover:scale-110 transition-all duration-500 ${
                   company.name === 'Eleven Yellow' ? 'filter brightness-0' : ''
                 }`}
               />
