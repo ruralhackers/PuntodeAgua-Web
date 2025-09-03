@@ -30,7 +30,7 @@ const ActivatePage: React.FC = () => {
 
   return (
     <div ref={gradientRef} className="min-h-screen relative">
-      <div className="absolute inset-0 bg-gradient-to-br from-white via-blue-50/20 to-emerald-50/20 transition-all duration-1000 ease-out -z-10" />
+      <div className="gradient-bg absolute inset-0 bg-gradient-to-br from-white via-blue-50/20 to-emerald-50/20 transition-all duration-1000 ease-out -z-10" />
       
       <div className="pt-32 pb-20">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
