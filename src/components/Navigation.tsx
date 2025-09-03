@@ -33,10 +33,10 @@ const Navigation: React.FC = () => {
             <span className="font-serif font-bold text-xl">Punto de Agua</span>
           </Link>
 
-          <div className="hidden lg:flex items-center space-x-3">
+          <div className="hidden lg:flex items-center space-x-4">
             <Link 
               to="/" 
-              className={`text-sm font-medium transition-all duration-300 px-5 py-3 rounded-2xl relative group ${
+              className={`text-sm font-medium transition-all duration-300 px-6 py-4 rounded-2xl relative group ${
                 isActive('/') 
                   ? 'bg-primary text-white shadow-lg' 
                   : 'text-gray-700 hover:bg-primary hover:text-white hover:shadow-md'
@@ -46,7 +46,7 @@ const Navigation: React.FC = () => {
             </Link>
             <Link 
               to="/contributors" 
-              className={`text-sm font-medium transition-all duration-300 px-5 py-3 rounded-2xl relative group ${
+              className={`text-sm font-medium transition-all duration-300 px-6 py-4 rounded-2xl relative group ${
                 isActive('/contributors') 
                   ? 'bg-primary text-white shadow-lg' 
                   : 'text-gray-700 hover:bg-primary hover:text-white hover:shadow-md'
@@ -56,7 +56,7 @@ const Navigation: React.FC = () => {
             </Link>
             <Link 
               to="/prensa" 
-              className={`text-sm font-medium transition-all duration-300 px-5 py-3 rounded-2xl relative group ${
+              className={`text-sm font-medium transition-all duration-300 px-6 py-4 rounded-2xl relative group ${
                 isActive('/prensa') 
                   ? 'bg-primary text-white shadow-lg' 
                   : 'text-gray-700 hover:bg-primary hover:text-white hover:shadow-md'
@@ -66,15 +66,15 @@ const Navigation: React.FC = () => {
             </Link>
             <Link 
               to="/activa-tu-pueblo" 
-              className={`text-sm font-medium transition-all duration-300 px-5 py-3 rounded-2xl group ml-3 ${
+              className={`text-sm font-medium transition-all duration-300 px-6 py-4 rounded-2xl relative group ${
                 isActive('/activa-tu-pueblo') 
-                  ? 'bg-gradient-to-r from-primary to-accent text-white shadow-lg' 
-                  : 'bg-gradient-to-r from-primary to-accent text-white hover:shadow-lg hover:scale-105'
+                  ? 'bg-primary text-white shadow-lg' 
+                  : 'text-gray-700 hover:bg-primary hover:text-white hover:shadow-md'
               }`}
             >
               Activa tu pueblo
             </Link>
-            <button className="bg-white/80 text-gray-900 px-5 py-3 rounded-2xl text-sm font-semibold hover:bg-white transition-all duration-300 ml-4 border border-gray-200/50 hover:shadow-md">
+            <button className="bg-white/80 text-gray-900 px-6 py-4 rounded-2xl text-sm font-semibold hover:bg-white transition-all duration-300 ml-4 border border-gray-200/50 hover:shadow-md">
               Iniciar sesión
             </button>
           </div>
@@ -97,7 +97,7 @@ const Navigation: React.FC = () => {
               <Link 
                 to="/" 
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`block text-sm font-medium transition-all duration-300 px-5 py-3 rounded-2xl ${
+                className={`block text-sm font-medium transition-all duration-300 px-6 py-4 rounded-2xl ${
                   isActive('/') 
                     ? 'bg-primary text-white' 
                     : 'text-gray-700 hover:bg-primary hover:text-white'
@@ -108,7 +108,7 @@ const Navigation: React.FC = () => {
               <Link 
                 to="/contributors" 
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`block text-sm font-medium transition-all duration-300 px-5 py-3 rounded-2xl ${
+                className={`block text-sm font-medium transition-all duration-300 px-6 py-4 rounded-2xl ${
                   isActive('/contributors') 
                     ? 'bg-primary text-white' 
                     : 'text-gray-700 hover:bg-primary hover:text-white'
@@ -119,7 +119,7 @@ const Navigation: React.FC = () => {
               <Link 
                 to="/prensa" 
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`block text-sm font-medium transition-all duration-300 px-5 py-3 rounded-2xl ${
+                className={`block text-sm font-medium transition-all duration-300 px-6 py-4 rounded-2xl ${
                   isActive('/prensa') 
                     ? 'bg-primary text-white' 
                     : 'text-gray-700 hover:bg-primary hover:text-white'
@@ -130,15 +130,15 @@ const Navigation: React.FC = () => {
               <Link 
                 to="/activa-tu-pueblo" 
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`block text-sm font-medium transition-all duration-300 px-5 py-3 rounded-2xl ${
+                className={`block text-sm font-medium transition-all duration-300 px-6 py-4 rounded-2xl ${
                   isActive('/activa-tu-pueblo') 
-                    ? 'bg-gradient-to-r from-primary to-accent text-white' 
-                    : 'bg-gradient-to-r from-primary to-accent text-white hover:shadow-lg'
+                    ? 'bg-primary text-white' 
+                    : 'text-gray-700 hover:bg-primary hover:text-white'
                 }`}
               >
                 Activa tu pueblo
               </Link>
-              <button className="w-full bg-white/80 text-gray-900 px-5 py-3 rounded-2xl text-sm font-semibold hover:bg-white transition-all duration-300 border border-gray-200/50">
+              <button className="w-full bg-white/80 text-gray-900 px-6 py-4 rounded-2xl text-sm font-semibold hover:bg-white transition-all duration-300 border border-gray-200/50">
                 Iniciar sesión
               </button>
             </div>
