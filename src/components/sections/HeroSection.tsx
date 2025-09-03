@@ -58,18 +58,18 @@ const HeroSection: React.FC = () => {
           >
             <div className="relative">
               {/* Mobile screenshots showcase */}
-              <div className="relative w-full max-w-2xl mx-auto h-96">
+              <div className="relative w-full max-w-lg mx-auto h-[500px] flex items-center justify-center">
                 {/* Image 2 - Left and slightly higher */}
                 <motion.div
                   initial={{ opacity: 0, y: 30, rotate: -5 }}
                   animate={{ opacity: 1, y: 0, rotate: -8 }}
                   transition={{ delay: 1, duration: 1, ease: "easeOut" }}
-                  className="absolute left-8 top-0 z-10"
+                  className="absolute left-4 -top-4 z-10"
                 >
                   <motion.img 
                     src="/2 copy.png" 
                     alt="Punto de Agua App - Pantalla 2" 
-                    className="w-44 h-auto drop-shadow-2xl hover:drop-shadow-3xl transition-all duration-500"
+                    className="w-56 h-auto drop-shadow-2xl hover:drop-shadow-3xl transition-all duration-500"
                     whileHover={{ scale: 1.05, rotate: -10, y: -10 }}
                     transition={{ type: "spring", stiffness: 300, damping: 20 }}
                   />
@@ -80,19 +80,19 @@ const HeroSection: React.FC = () => {
                   initial={{ opacity: 0, y: 30, rotate: 5 }}
                   animate={{ opacity: 1, y: 0, rotate: 8 }}
                   transition={{ delay: 1.2, duration: 1, ease: "easeOut" }}
-                  className="absolute right-8 top-12 z-20"
+                  className="absolute right-4 top-4 z-20"
                 >
                   <motion.img 
                     src="/1 copy.png" 
                     alt="Punto de Agua App - Pantalla 1" 
-                    className="w-44 h-auto drop-shadow-2xl hover:drop-shadow-3xl transition-all duration-500"
+                    className="w-56 h-auto drop-shadow-2xl hover:drop-shadow-3xl transition-all duration-500"
                     whileHover={{ scale: 1.05, rotate: 10, y: -10 }}
                     transition={{ type: "spring", stiffness: 300, damping: 20 }}
                   />
                 </motion.div>
 
                 {/* Decorative background glow */}
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-accent/10 to-primary-light/10 rounded-[4rem] blur-3xl -z-10 scale-125" />
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-accent/10 to-primary-light/10 rounded-[4rem] blur-3xl -z-10" />
               </div>
             </div>
           </motion.div>
