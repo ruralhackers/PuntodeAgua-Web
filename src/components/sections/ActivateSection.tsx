@@ -95,3 +95,5 @@ const ActivateSection: React.FC = () => {
 };
 
 export default ActivateSection;
+  )
+}
