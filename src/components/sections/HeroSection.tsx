@@ -64,12 +64,12 @@ const HeroSection: React.FC = () => {
                   initial={{ opacity: 0, y: 30, rotate: -5 }}
                   animate={{ opacity: 1, y: 0, rotate: 0 }}
                   transition={{ delay: 1, duration: 1, ease: "easeOut" }}
-                  className="absolute -left-8 top-8 z-10"
+                  className="absolute -left-12 top-20 z-10"
                 >
                   <motion.img 
                     src="/2 copy.png" 
                     alt="Punto de Agua App - Pantalla 2" 
-                    className="w-80 h-auto drop-shadow-2xl hover:drop-shadow-3xl transition-all duration-500"
+                    className="w-96 h-auto drop-shadow-2xl hover:drop-shadow-3xl transition-all duration-500"
                     whileHover={{ scale: 1.05, y: -10 }}
                     transition={{ type: "spring", stiffness: 300, damping: 20 }}
                   />
@@ -80,12 +80,12 @@ const HeroSection: React.FC = () => {
                   initial={{ opacity: 0, y: 30, rotate: 5 }}
                   animate={{ opacity: 1, y: 0, rotate: 0 }}
                   transition={{ delay: 1.2, duration: 1, ease: "easeOut" }}
-                  className="absolute -right-8 top-16 z-20"
+                  className="absolute -right-12 top-24 z-20"
                 >
                   <motion.img 
                     src="/1 copy.png" 
                     alt="Punto de Agua App - Pantalla 1" 
-                    className="w-80 h-auto drop-shadow-2xl hover:drop-shadow-3xl transition-all duration-500"
+                    className="w-96 h-auto drop-shadow-2xl hover:drop-shadow-3xl transition-all duration-500"
                     whileHover={{ scale: 1.05, y: -10 }}
                     transition={{ type: "spring", stiffness: 300, damping: 20 }}
                   />
