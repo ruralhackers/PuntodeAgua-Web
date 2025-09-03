@@ -63,7 +63,7 @@ const CompanyLogos: React.FC = () => {
               <img 
                 src={organizer.logo} 
                 alt={organizer.name}
-                className="w-48 h-24 object-contain group-hover:scale-110 transition-all duration-500"
+                className="w-full h-full object-contain group-hover:scale-110 transition-all duration-500 p-4"
               />
             </div>
           </motion.a>
@@ -91,7 +91,7 @@ const CompanyLogos: React.FC = () => {
               <img 
                 src={company.logo} 
                 alt={company.name}
-                className={`w-24 h-16 object-contain group-hover:scale-110 transition-all duration-500 ${
+                className={`w-20 h-20 object-contain group-hover:scale-110 transition-all duration-500 ${
                   company.name === 'Eleven Yellow' ? 'filter brightness-0' : ''
                 }`}
               />
