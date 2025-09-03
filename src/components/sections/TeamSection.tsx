@@ -43,27 +43,27 @@ const TeamSection: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="space-y-10"
+            className="space-y-6 lg:space-y-10"
           >
             {/* Hackers Days Card */}
             <motion.div
               whileHover={{ scale: 1.02, y: -5 }}
-              className="group relative overflow-hidden h-48"
+              className="group relative overflow-hidden min-h-[200px] lg:h-48"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500" />
-              <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500 h-full flex items-center">
-                <div className="flex items-start space-x-6">
+              <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-6 lg:p-8 border border-white/20 hover:border-white/40 transition-all duration-500 h-full flex items-center">
+                <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6">
                   <motion.div 
                     whileHover={{ scale: 1.1, rotate: 5 }}
-                    className="bg-gradient-to-br from-primary to-primary-light rounded-2xl p-4 shadow-2xl flex-shrink-0"
+                    className="bg-gradient-to-br from-primary to-primary-light rounded-2xl p-3 lg:p-4 shadow-2xl flex-shrink-0 mx-auto sm:mx-0"
                   >
-                    <Zap className="h-8 w-8 text-white" />
+                    <Zap className="h-6 w-6 lg:h-8 lg:w-8 text-white" />
                   </motion.div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-accent transition-colors duration-300">
+                    <h3 className="text-xl lg:text-2xl font-bold text-white mb-3 lg:mb-4 group-hover:text-accent transition-colors duration-300 text-center sm:text-left">
                       Hackers Days
                     </h3>
-                    <p className="text-gray-300 leading-relaxed">
+                    <p className="text-gray-300 leading-relaxed text-sm lg:text-base text-center sm:text-left">
                       Punto de Agua nació durante los{' '}
                       <a 
                         href="https://www.hackerdays.org" 
@@ -92,22 +92,22 @@ const TeamSection: React.FC = () => {
             {/* Alianza por el rural Card */}
             <motion.div
               whileHover={{ scale: 1.02, y: -5 }}
-              className="group relative overflow-hidden h-48"
+              className="group relative overflow-hidden min-h-[200px] lg:h-48"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-primary/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500" />
-              <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500 h-full flex items-center">
-                <div className="flex items-start space-x-6">
+              <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-6 lg:p-8 border border-white/20 hover:border-white/40 transition-all duration-500 h-full flex items-center">
+                <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6">
                   <motion.div 
                     whileHover={{ scale: 1.1, rotate: -5 }}
-                    className="bg-gradient-to-br from-accent to-primary rounded-2xl p-4 shadow-2xl flex-shrink-0"
+                    className="bg-gradient-to-br from-accent to-primary rounded-2xl p-3 lg:p-4 shadow-2xl flex-shrink-0 mx-auto sm:mx-0"
                   >
-                    <Globe className="h-8 w-8 text-white" />
+                    <Globe className="h-6 w-6 lg:h-8 lg:w-8 text-white" />
                   </motion.div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-primary-light transition-colors duration-300">
+                    <h3 className="text-xl lg:text-2xl font-bold text-white mb-3 lg:mb-4 group-hover:text-primary-light transition-colors duration-300 text-center sm:text-left">
                       Alianza por el rural
                     </h3>
-                    <p className="text-gray-300 leading-relaxed">
+                    <p className="text-gray-300 leading-relaxed text-sm lg:text-base text-center sm:text-left">
                       Una unión entre vecinas y talento tecnológico para crear soluciones útiles que respondan a las necesidades reales del medio rural.
                     </p>
                   </div>
