@@ -21,8 +21,7 @@ const CompanyLogos: React.FC = () => {
     { 
       name: 'Eleven Yellow', 
       logo: '/eleven yellow.png',
-      url: 'https://www.elevenyellow.com/',
-      darkBg: true
+      url: 'https://www.elevenyellow.com/'
     },
     { 
       name: 'Teimas', 
@@ -58,13 +57,13 @@ const CompanyLogos: React.FC = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
-            className="bg-white/80 backdrop-blur-md rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 border border-white/60 hover:border-white/80 group hover:-translate-y-2 max-w-xs w-full"
+            className="bg-white/80 backdrop-blur-md rounded-3xl p-12 shadow-lg hover:shadow-xl transition-all duration-500 border border-white/60 hover:border-white/80 group hover:-translate-y-2 w-80 h-48"
           >
-            <div className="flex flex-col items-center justify-center h-32">
+            <div className="flex flex-col items-center justify-center h-full">
               <img 
                 src={organizer.logo} 
                 alt={organizer.name}
-                className="max-w-full max-h-full object-contain group-hover:scale-110 transition-all duration-500"
+                className="w-48 h-24 object-contain group-hover:scale-110 transition-all duration-500"
               />
             </div>
           </motion.a>
@@ -87,14 +86,14 @@ const CompanyLogos: React.FC = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.8 + index * 0.1, ease: "easeOut" }}
-              className={`${
-                company.darkBg ? 'bg-gray-900/80' : 'bg-white/80'
-              } backdrop-blur-md rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 border border-white/60 hover:border-white/80 group hover:-translate-y-2 aspect-square flex items-center justify-center`}
+              className="bg-white/80 backdrop-blur-md rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 border border-white/60 hover:border-white/80 group hover:-translate-y-2 h-32 flex items-center justify-center"
             >
               <img 
                 src={company.logo} 
                 alt={company.name}
-                className="max-w-full max-h-full object-contain group-hover:scale-110 transition-all duration-500 p-2"
+                className={`w-24 h-16 object-contain group-hover:scale-110 transition-all duration-500 ${
+                  company.name === 'Eleven Yellow' ? 'filter brightness-0' : ''
+                }`}
               />
             </motion.a>
           ))}
