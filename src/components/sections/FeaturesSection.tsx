@@ -8,22 +8,22 @@ const FeaturesSection: React.FC = () => {
       icon: Users,
       title: 'Registro de Usuarios',
       description: 'Ten toda la información de cada contador organizada en su ficha, todos los datos clave, centralizados y a mano.',
-      gradient: 'from-primary to-primary-light',
+      gradient: 'from-blue-600 to-blue-500',
       bgColor: 'from-blue-50 to-blue-100'
     },
     {
       icon: Calendar,
       title: 'Calendario de Tareas y Lecturas',
       description: 'Tu calendario de tareas centraliza lecturas y controles, con alertas que evitan que algo se quede pendiente.',
-      gradient: 'from-primary-light to-primary',
-      bgColor: 'from-blue-50 to-blue-100'
+      gradient: 'from-indigo-600 to-indigo-500',
+      bgColor: 'from-indigo-50 to-indigo-100'
     },
     {
       icon: BarChart3,
       title: 'Control de Analíticas y Reportes',
       description: 'Todos tus mediciones de cloro, pH y consumos en un sólo lugar. Listos para consultar o imprimir.',
-      gradient: 'from-primary-light to-accent',
-      bgColor: 'from-indigo-50 to-indigo-100'
+      gradient: 'from-cyan-600 to-cyan-500',
+      bgColor: 'from-cyan-50 to-cyan-100'
     }
   ];
 
