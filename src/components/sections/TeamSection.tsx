@@ -43,8 +43,16 @@ const TeamSection: React.FC = () => {
               <img 
                 src="/Beatiful bees (1) 1.png" 
                 alt="Beautiful bees illustration" 
-                className="absolute top-4 left-4 w-8 h-8 md:w-12 md:h-12 object-contain z-20"
+                className="absolute top-4 right-4 w-8 h-8 md:w-12 md:h-12 object-contain z-20"
               />
+              <div className="absolute inset-0 flex flex-col justify-center p-4 md:p-6 z-10">
+                <h3 className="text-white text-lg md:text-xl font-bold mb-2 leading-tight">
+                  Alianza por el rural
+                </h3>
+                <p className="text-white/90 text-sm md:text-base leading-relaxed">
+                  Una unión entre vecinas y talento tecnológico para crear soluciones útiles que respondan a las necesidades reales del medio rural.
+                </p>
+              </div>
             </motion.div>
 
             {/* Card 2 */}
