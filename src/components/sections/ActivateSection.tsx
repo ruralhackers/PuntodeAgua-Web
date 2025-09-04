@@ -15,8 +15,8 @@ const ActivateSection: React.FC = () => {
           {/* Left - Totalmente Gratis */}
           <div className="text-center lg:text-right flex-1">
             <h3 className="text-5xl lg:text-7xl font-serif font-bold text-gray-900 leading-tight flex flex-col items-center lg:items-end">
-              <div className="text-center lg:text-right">Totalmente</div>
-              <div className="text-center lg:text-right">Gratis</div>
+              <div className="text-center">Totalmente</div>
+              <div className="text-center">Gratis</div>
             </h3>
           </div>
 
@@ -39,8 +39,8 @@ const ActivateSection: React.FC = () => {
           {/* Right - Código Abierto */}
           <div className="text-center lg:text-left flex-1">
             <h3 className="text-5xl lg:text-7xl font-serif font-bold text-gray-900 leading-tight flex flex-col items-center lg:items-start">
-              <div className="text-center lg:text-left">Código</div>
-              <div className="text-center lg:text-left">Abierto</div>
+              <div className="text-center">Código</div>
+              <div className="text-center">Abierto</div>
             </h3>
           </div>
         </div>
