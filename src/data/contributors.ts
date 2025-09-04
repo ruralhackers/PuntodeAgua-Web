@@ -1,27 +1,86 @@
 export const contributorsData = [
   {
-    name: 'Jesús',
-    company: 'Next Digital',
-    role: 'Desarrollo Frontend'
+    name: 'Miguel',
+    company: '',
+    role: '',
+    photo: '/retratos/Miguel.jpg'
   },
   {
-    name: 'Ana',
-    company: 'Next Digital',
-    role: 'UX/UI Design'
+    name: 'Orlando',
+    company: 'Eleven Yellow',
+    role: '',
+    photo: '/retratos/Orlando (Eleven Yellow).jpg'
+  },
+  {
+    name: 'Miguel Angel',
+    company: '',
+    role: '',
+    photo: '/retratos/Miguel Angel.jpg'
+  },
+  {
+    name: 'Celso',
+    company: 'Rural Hacker',
+    role: '',
+    photo: '/retratos/Celso (Rural Hacker).jpg'
+  },
+  {
+    name: 'Adriana',
+    company: '',
+    role: '',
+    photo: '/retratos/Adriana.jpg'
+  },
+  {
+    name: 'Carol',
+    company: '',
+    role: '',
+    photo: '/retratos/Carol.jpg'
   },
   {
     name: 'Chema',
     company: 'Eleven Yellow',
-    role: 'Desarrollo Backend'
+    role: '',
+    photo: '/retratos/Chema (Eleven Yellow).jpg'
   },
   {
-    name: 'Laura',
-    company: 'Adopta un Junior',
-    role: 'Mentorship & Development'
+    name: 'Victor',
+    company: '',
+    role: '',
+    photo: '/retratos/Victor.jpg'
+  },
+  {
+    name: 'Agus',
+    company: 'Rural Hacker',
+    role: '',
+    photo: '/retratos/Agus (Rural Hacker).jpg'
+  },
+  {
+    name: 'Afri',
+    company: 'Rural Hacker',
+    role: '',
+    photo: '/retratos/Afri (Rural Hacker).jpg'
   },
   {
     name: 'Juanma',
     company: 'SiteGround',
-    role: 'Infrastructure & DevOps'
+    role: '',
+    photo: '/retratos/Juanma (SiteGround).jpg'
+  },
+  {
+    name: 'Laura',
+    company: 'Adopta Un Junior',
+    role: '',
+    photo: '/retratos/Laura (Adopta Un Junior).jpg'
+  },
+  {
+    name: 'Cesar',
+    company: '',
+    role: '',
+    photo: '/retratos/Cesar.jpg'
+  },
+  {
+    name: 'Emma',
+    company: '',
+    role: '',
+    photo: '/retratos/Emma.jpg'
   }
 ];
