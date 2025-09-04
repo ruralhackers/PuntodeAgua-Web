@@ -43,13 +43,13 @@ const TeamSection: React.FC = () => {
               <img 
                 src="/Beatiful bees (1) 1.png" 
                 alt="Beautiful bees illustration" 
-                className="absolute top-4 right-4 w-8 h-8 md:w-12 md:h-12 object-contain z-20"
+                className="absolute top-2 md:top-4 right-2 md:right-4 w-6 h-6 md:w-10 md:h-10 lg:w-12 lg:h-12 object-contain z-20"
               />
-              <div className="absolute inset-0 flex flex-col justify-center p-4 md:p-6 z-10">
-                <h3 className="text-white text-lg md:text-xl font-bold mb-2 leading-tight">
+              <div className="absolute inset-0 flex flex-col justify-center p-3 md:p-4 lg:p-6 z-10 pr-8 md:pr-12 lg:pr-16">
+                <h3 className="text-white text-sm md:text-lg lg:text-xl font-bold mb-1 md:mb-2 leading-tight">
                   Alianza por el rural
                 </h3>
-                <p className="text-white/90 text-sm md:text-base leading-relaxed">
+                <p className="text-white/90 text-xs md:text-sm lg:text-base leading-relaxed">
                   Una unión entre vecinas y talento tecnológico para crear soluciones útiles que respondan a las necesidades reales del medio rural.
                 </p>
               </div>
@@ -99,10 +99,10 @@ const TeamSection: React.FC = () => {
               <img 
                 src="/Layer_1.svg" 
                 alt="Layer 1 illustration" 
-                className="absolute -bottom-6 right-4 w-16 h-16 md:w-20 md:h-20 object-contain z-20"
+                className="absolute -bottom-4 md:-bottom-6 right-2 md:right-4 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 object-contain z-20"
               />
-              <div className="absolute inset-0 flex items-center justify-center p-4 md:p-6">
-                <p className="text-white text-sm md:text-base leading-relaxed text-center font-medium">
+              <div className="absolute inset-0 flex items-center justify-center p-3 md:p-4 lg:p-6 pb-8 md:pb-12 lg:pb-16">
+                <p className="text-white text-xs md:text-sm lg:text-base leading-relaxed text-center font-medium">
                   Punto de Agua nació durante los Hackers Days de Rural Hackers, un encuentro colaborativo para crear una solución abierta y gratuita para la gestión comunitaria del agua.
                 </p>
               </div>
@@ -118,13 +118,13 @@ const TeamSection: React.FC = () => {
               style={{ backgroundColor: '#50A99A' }}
             >
               <div className="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded z-30">4</div>
-              <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
-                <h3 className="text-white text-lg md:text-xl font-bold mb-4">
+              <div className="absolute inset-0 flex flex-col items-center justify-center p-3 md:p-4 lg:p-6 text-center">
+                <h3 className="text-white text-sm md:text-lg lg:text-xl font-bold mb-2 md:mb-4">
                   Conoce al equipo de Hackers
                 </h3>
                 <Link 
                   to="/contributors"
-                  className="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300 border border-white/30 hover:border-white/50"
+                  className="bg-white/20 hover:bg-white/30 text-white px-3 md:px-4 py-1.5 md:py-2 rounded-xl text-xs md:text-sm font-semibold transition-all duration-300 border border-white/30 hover:border-white/50"
                 >
                   Ver equipo
                 </Link>
