@@ -26,22 +26,9 @@ const ActivateSection: React.FC = () => {
             viewport={{ once: true }}
             className="text-center lg:text-right flex-1"
           >
-            <div className="flex flex-col items-center lg:items-end space-y-4">
-              <motion.div
-                whileHover={{ scale: 1.1, rotate: 5 }}
-                className="bg-gradient-to-br from-accent to-accent/80 rounded-2xl p-4 shadow-xl"
-              >
-                <Heart className="h-8 w-8 text-white" />
-              </motion.div>
-              <div>
-                <h3 className="text-3xl lg:text-4xl font-serif font-bold text-gray-900 mb-2">
-                  Totalmente Gratis
-                </h3>
-                <p className="text-gray-600 text-sm lg:text-base max-w-48">
-                  Sin costes ocultos ni suscripciones mensuales
-                </p>
-              </div>
-            </div>
+            <h3 className="text-3xl lg:text-4xl font-serif font-bold text-gray-900">
+              Totalmente Gratis
+            </h3>
           </motion.div>
 
           {/* Center - Lottie Animation */}
@@ -52,35 +39,18 @@ const ActivateSection: React.FC = () => {
             viewport={{ once: true }}
             className="flex-shrink-0"
           >
-            <motion.div
-              animate={{ 
-                scale: [1, 1.05, 1],
-                rotate: [0, 2, -2, 0]
-              }}
-              transition={{ 
-                duration: 6, 
-                repeat: Infinity, 
-                ease: "easeInOut" 
-              }}
-              className="w-40 h-40 lg:w-56 lg:h-56 rounded-full bg-gradient-to-br from-primary/10 via-white to-accent/10 flex items-center justify-center shadow-2xl border border-white/60 backdrop-blur-sm relative overflow-hidden"
-            >
-              {/* Animated background glow */}
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 rounded-full blur-xl animate-pulse" />
-              
-              {/* Lottie container */}
-              <div className="relative z-10 w-32 h-32 lg:w-44 lg:h-44 flex items-center justify-center">
-                <iframe
-                  src="https://lottie.host/embed/84d1e7b6-0d59-48c0-9e60-bb1f0c8c0f79/AE71MNMra7.lottie"
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    border: 'none',
-                    background: 'transparent'
-                  }}
-                  title="Water Management Animation"
-                />
-              </div>
-            </motion.div>
+            <div className="w-40 h-40 lg:w-56 lg:h-56 flex items-center justify-center">
+              <iframe
+                src="https://lottie.host/embed/84d1e7b6-0d59-48c0-9e60-bb1f0c8c0f79/AE71MNMra7.lottie"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  border: 'none',
+                  background: 'transparent'
+                }}
+                title="Water Management Animation"
+              />
+            </div>
           </motion.div>
 
           {/* Right - Open Source */}
@@ -91,22 +61,9 @@ const ActivateSection: React.FC = () => {
             viewport={{ once: true }}
             className="text-center lg:text-left flex-1"
           >
-            <div className="flex flex-col items-center lg:items-start space-y-4">
-              <motion.div
-                whileHover={{ scale: 1.1, rotate: -5 }}
-                className="bg-gradient-to-br from-primary to-primary-light rounded-2xl p-4 shadow-xl"
-              >
-                <Code className="h-8 w-8 text-white" />
-              </motion.div>
-              <div>
-                <h3 className="text-3xl lg:text-4xl font-serif font-bold text-gray-900 mb-2">
-                  Open Source
-                </h3>
-                <p className="text-gray-600 text-sm lg:text-base max-w-48">
-                  Código abierto y transparente para todos
-                </p>
-              </div>
-            </div>
+            <h3 className="text-3xl lg:text-4xl font-serif font-bold text-gray-900">
+              Open Source
+            </h3>
           </motion.div>
         </motion.div>
 
@@ -119,23 +76,23 @@ const ActivateSection: React.FC = () => {
           className="flex justify-center"
         >
           <motion.div
-            whileHover={{ scale: 1.05, y: -3 }}
+            whileHover={{ scale: 1.02, y: -2 }}
             whileTap={{ scale: 0.98 }}
             className="group relative"
           >
             {/* Animated background glow */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-primary via-accent to-primary-light rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-500 animate-gradient bg-300%" />
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-accent to-primary-light rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500" />
             
             <Link 
               to="/activa-tu-pueblo"
-              className="relative bg-gradient-to-r from-primary to-accent text-white py-4 px-8 rounded-2xl font-bold text-lg hover:from-primary-light hover:to-primary transition-all duration-300 shadow-xl hover:shadow-2xl flex items-center space-x-3 border border-white/20"
+              className="relative bg-gradient-to-r from-primary to-accent text-white py-3 px-6 rounded-xl font-semibold text-base hover:from-primary-light hover:to-primary transition-all duration-300 shadow-lg hover:shadow-xl flex items-center space-x-2 border border-white/20"
             >
               <span>{t('activate.ctaButton')}</span>
               <motion.div
-                animate={{ x: [0, 5, 0] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                animate={{ x: [0, 3, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
               >
-                <ArrowRight className="h-5 w-5" />
+                <ArrowRight className="h-4 w-4" />
               </motion.div>
             </Link>
           </motion.div>
