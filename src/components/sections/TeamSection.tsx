@@ -35,7 +35,7 @@ const TeamSection: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
             className="col-start-1 row-start-3 col-span-2 rounded-2xl md:rounded-3xl overflow-hidden hover:scale-105 transition-transform duration-300 relative border border-white/20"
-            style={{ background: 'linear-gradient(to right, #7bc4d1 25%, #4a9aa3 76%)' }}
+            style={{ background: 'linear-gradient(to right, #5a9aa7 25%, #3a7a83 76%)' }}
           >
             <div className="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded z-30">1</div>
             <img 
@@ -70,7 +70,7 @@ const TeamSection: React.FC = () => {
             <img 
               src="/Layer_1.svg" 
               alt="Layer 1 illustration" 
-              className="absolute -bottom-2 right-4 w-16 h-16 md:w-20 md:h-20 object-contain z-20"
+              className="absolute -bottom-6 right-4 w-16 h-16 md:w-20 md:h-20 object-contain z-20"
             />
           </motion.div>
 
