@@ -13,7 +13,7 @@ const ActivateSection: React.FC = () => {
         {/* Main content with three columns */}
         <div className="flex flex-col lg:flex-row items-center justify-center space-y-16 lg:space-y-0 lg:space-x-24 mb-16">
           {/* Left - Totalmente Gratis */}
-          <div className="text-center lg:text-right flex-1 lg:pr-8">
+          <div className="text-center lg:text-right flex-1">
             <h3 className="text-5xl lg:text-7xl font-serif font-bold text-gray-900 leading-tight">
               <div className="text-center">Totalmente</div>
               <div className="text-center">Gratis</div>
@@ -21,7 +21,7 @@ const ActivateSection: React.FC = () => {
           </div>
 
           {/* Center - Lottie Animation */}
-          <div className="flex-shrink-0 flex justify-center">
+          <div className="flex-shrink-0 flex justify-center lg:mx-8">
             <div className="w-96 h-96 lg:w-[28rem] lg:h-[28rem] flex items-center justify-center mx-auto">
               <iframe
                 src="https://lottie.host/embed/84d1e7b6-0d59-48c0-9e60-bb1f0c8c0f79/AE71MNMra7.lottie"
