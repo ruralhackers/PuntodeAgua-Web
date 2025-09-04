@@ -60,7 +60,6 @@ const CompanyLogos: React.FC = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
-            className="bg-white/80 backdrop-blur-md rounded-3xl p-12 shadow-lg hover:shadow-xl transition-all duration-500 border border-white/60 hover:border-white/80 group hover:-translate-y-2 w-80 h-48"
             className="bg-white/80 backdrop-blur-md rounded-3xl p-12 shadow-lg hover:shadow-xl transition-all duration-500 border border-white/60 hover:border-white/80 group hover:-translate-y-2 w-96 h-64"
           >
             <div className="flex flex-col items-center justify-center h-full">
