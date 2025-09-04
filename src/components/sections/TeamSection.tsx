@@ -56,6 +56,25 @@ const TeamSection: React.FC = () => {
               style={{ backgroundColor: '#647CFF' }}
             >
               <div className="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded z-30">2</div>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="text-white/20 text-2xl md:text-3xl lg:text-4xl font-bold mb-2 tracking-wider">
+                    HACKER DAYS
+                  </div>
+                  <div className="text-white/20 text-2xl md:text-3xl lg:text-4xl font-bold mb-2 tracking-wider">
+                    HACKER DAYS
+                  </div>
+                  <div className="text-white text-2xl md:text-3xl lg:text-4xl font-bold mb-2 tracking-wider">
+                    HACKER DAYS
+                  </div>
+                  <div className="text-white/20 text-2xl md:text-3xl lg:text-4xl font-bold mb-2 tracking-wider">
+                    HACKER DAYS
+                  </div>
+                  <div className="text-white/20 text-2xl md:text-3xl lg:text-4xl font-bold tracking-wider">
+                    HACKER DAYS
+                  </div>
+                </div>
+              </div>
             </motion.div>
 
             {/* Card 3 */}
