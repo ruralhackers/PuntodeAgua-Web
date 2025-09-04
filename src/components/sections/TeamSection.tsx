@@ -293,7 +293,7 @@ const TeamSection: React.FC = () => {
               <img 
                 src={selectedImage}
                 alt="Selected image"
-                className="w-full h-full object-contain rounded-2xl"
+                className="w-full h-full object-contain rounded-2xl max-h-[70vh]"
               />
             </div>
           </motion.div>
