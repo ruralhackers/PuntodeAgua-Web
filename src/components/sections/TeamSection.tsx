@@ -108,7 +108,8 @@ const TeamSection: React.FC = () => {
               <img 
                 src="/Logo Rural Hackers.png" 
                 alt="Rural Hackers logo" 
-          </motion.div>
+               className="w-24 h-24 md:w-32 md:h-32 object-contain"
+              />
 
           {/* Card 5 */}
           <motion.div 
