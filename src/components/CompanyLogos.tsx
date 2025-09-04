@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 const CompanyLogos: React.FC = () => {
   const collaborators = [
     { 
-      name: 'Viko', 
-      logo: '/logo_Viko.png',
-      url: 'https://www.viko.net/'
+      name: 'Eleven Yellow', 
+      logo: '/eleven yellow.png',
+      url: 'https://www.elevenyellow.com/'
     },
     { 
       name: 'SiteGround', 
@@ -14,19 +14,19 @@ const CompanyLogos: React.FC = () => {
       url: 'https://www.siteground.es/'
     },
     { 
+      name: 'Teimas', 
+      logo: '/logo_teimas.png',
+      url: 'https://www.teimas.com/'
+    },
+    { 
       name: 'Next Digital', 
       logo: '/PositivoNEXTdigital-ai.svg',
       url: 'https://www.nextdigital.es/'
     },
     { 
-      name: 'Eleven Yellow', 
-      logo: '/eleven yellow.png',
-      url: 'https://www.elevenyellow.com/'
-    },
-    { 
-      name: 'Teimas', 
-      logo: '/logo_teimas.png',
-      url: 'https://www.teimas.com/'
+      name: 'Viko', 
+      logo: '/logo_Viko.png',
+      url: 'https://www.viko.net/'
     }
   ];
 
