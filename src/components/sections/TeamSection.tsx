@@ -16,7 +16,7 @@ const TeamSection: React.FC = () => {
         {/* Interactive gradient background with specific class */}
         <div className="gradient-bg absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-emerald-50 transition-all duration-1000 ease-out" />
         
-        <div className="flex-1 relative z-10 p-4 md:p-6 lg:p-8">
+        <div className="flex-1 relative z-10 p-4 md:p-6 lg:p-8 block">
           {/* Title Section */}
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
@@ -31,7 +31,7 @@ const TeamSection: React.FC = () => {
           </motion.div>
 
           {/* Bento Grid */}
-          <div className="grid grid-cols-5 grid-rows-3 gap-2 md:gap-3 lg:gap-4 h-[80vh] md:h-[85vh] lg:h-[90vh] max-w-6xl mx-auto px-4 md:px-8 lg:px-12">
+          <div className="hidden md:grid grid-cols-5 grid-rows-3 gap-2 md:gap-3 lg:gap-4 h-[80vh] md:h-[85vh] lg:h-[90vh] max-w-6xl mx-auto px-4 md:px-8 lg:px-12">
             {/* Card 0 */}
             <motion.div 
               initial={{ opacity: 0, scale: 0.8 }}
@@ -119,7 +119,7 @@ const TeamSection: React.FC = () => {
                 alt="Layer 1 illustration" 
                 className="absolute -bottom-4 md:-bottom-6 right-2 md:right-4 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 object-contain z-20"
               />
-              <div className="absolute inset-0 flex items-center justify-center p-3 md:p-4 lg:p-6 pb-12 md:pb-16 lg:pb-20">
+              <div className="absolute inset-0 flex items-center justify-center p-3 md:p-4 lg:p-6 pb-16 md:pb-20 lg:pb-24">
                 <p className="text-white text-xs md:text-sm lg:text-base leading-relaxed text-center font-medium pb-4 md:pb-6 lg:pb-8">
                   Punto de Agua nació durante los Hackers Days de Rural Hackers, un encuentro colaborativo para crear una solución abierta y gratuita para la gestión comunitaria del agua.
                 </p>
@@ -183,6 +183,73 @@ const TeamSection: React.FC = () => {
                   alt="Computer illustration" 
                   className="w-80 h-80 md:w-96 md:h-96 object-contain"
                 />
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Mobile version - simplified layout */}
+          <div className="md:hidden space-y-6 px-4">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300 relative border border-white/20"
+              style={{ background: 'linear-gradient(to right, #5a9aa7 25%, #3a7a83 76%)' }}
+            >
+              <img 
+                src="/Beatiful bees (1) 1.png" 
+                alt="Beautiful bees illustration" 
+                className="absolute top-2 right-2 w-8 h-8 object-contain z-20"
+              />
+              <div className="p-6 pr-12">
+                <h3 className="text-white text-lg font-bold mb-2 leading-tight">
+                  Alianza por el rural
+                </h3>
+                <p className="text-white/90 text-sm leading-relaxed">
+                  Una unión entre vecinas y talento tecnológico para crear soluciones útiles que respondan a las necesidades reales del medio rural.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300 relative border border-white/20"
+              style={{ backgroundColor: '#EB9B11' }}
+            >
+              <img 
+                src="/Layer_1.svg" 
+                alt="Layer 1 illustration" 
+                className="absolute -bottom-2 right-2 w-12 h-12 object-contain z-20"
+              />
+              <div className="p-6 pb-16">
+                <p className="text-white text-sm leading-relaxed text-center font-medium">
+                  Punto de Agua nació durante los Hackers Days de Rural Hackers, un encuentro colaborativo para crear una solución abierta y gratuita para la gestión comunitaria del agua.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300 relative border border-white/20"
+              style={{ backgroundColor: '#50A99A' }}
+            >
+              <div className="p-6 text-center">
+                <h3 className="text-white text-lg font-bold mb-4">
+                  Conoce al equipo de Hackers
+                </h3>
+                <Link 
+                  to="/contributors"
+                  className="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300 border border-white/30 hover:border-white/50"
+                >
+                  Ver equipo
+                </Link>
               </div>
             </motion.div>
           </div>
