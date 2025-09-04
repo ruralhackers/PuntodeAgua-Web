@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import { X } from 'lucide-react';
 
 const TeamSection: React.FC = () => {
@@ -184,10 +185,22 @@ const TeamSection: React.FC = () => {
             {/* Image container */}
             <div className="p-4 md:p-8">
               <img 
-                src={selectedImage}
-                alt="Foto ampliada"
-                className="w-full h-auto rounded-2xl shadow-2xl"
-              />
+            <div className="absolute top-4 left-4 text-white z-20">
+            <div className="absolute inset-0 flex items-center justify-center p-4 md:p-6">
+              <p className="text-white text-sm md:text-base leading-relaxed text-center font-medium">
+                Punto de Agua nació durante los Hackers Days de Rural Hackers, un encuentro colaborativo para crear una solución abierta y gratuita para la gestión comunitaria del agua.
+              </p>
+            </div>
+            <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
+              <h3 className="text-white text-lg md:text-xl font-bold mb-4">
+                Conoce al equipo de Hackers
+              </h3>
+              <Link 
+                to="/contributors"
+                className="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300 border border-white/30 hover:border-white/50"
+              >
+                Ver equipo
+              </Link>
             </div>
           </motion.div>
         </motion.div>

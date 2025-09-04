@@ -38,6 +38,8 @@ const Footer: React.FC = () => {
           {/* Copyright */}
           <p className="text-sm text-gray-700 drop-shadow-sm">
             {t('footer.copyright')}
+            <br />
+            Rural Hackers
           </p>
         </div>
       </div>
