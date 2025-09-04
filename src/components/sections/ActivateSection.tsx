@@ -11,7 +11,7 @@ const ActivateSection: React.FC = () => {
     <section className="min-h-screen py-32 relative overflow-hidden bg-white px-6 lg:px-8 flex items-center">
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Main content with three columns */}
-        <div className="flex flex-col lg:flex-row items-center justify-center space-y-16 lg:space-y-0 lg:space-x-24 mb-16">
+        <div className="flex flex-col lg:flex-row items-center justify-center space-y-16 lg:space-y-0 lg:space-x-24 mb-8">
           {/* Left - Totalmente Gratis */}
           <div className="text-center lg:text-right flex-1">
             <h3 className="text-5xl lg:text-7xl font-serif font-bold text-gray-900 leading-tight">
@@ -22,7 +22,7 @@ const ActivateSection: React.FC = () => {
 
           {/* Center - Lottie Animation */}
           <div className="flex-shrink-0 flex justify-center">
-            <div className="w-80 h-80 lg:w-96 lg:h-96 flex items-center justify-center mx-auto">
+            <div className="w-96 h-96 lg:w-[28rem] lg:h-[28rem] flex items-center justify-center mx-auto">
               <iframe
                 src="https://lottie.host/embed/84d1e7b6-0d59-48c0-9e60-bb1f0c8c0f79/AE71MNMra7.lottie"
                 style={{
@@ -45,29 +45,14 @@ const ActivateSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Center column with Lottie and Button */}
-        <div className="flex flex-col items-center space-y-8">
-          {/* Lottie Animation */}
-          <div className="w-80 h-80 lg:w-96 lg:h-96 flex items-center justify-center">
-            <iframe
-              src="https://lottie.host/embed/84d1e7b6-0d59-48c0-9e60-bb1f0c8c0f79/AE71MNMra7.lottie"
-              style={{
-                width: '100%',
-                height: '100%',
-                border: 'none',
-                background: 'transparent'
-              }}
-              title="Water Management Animation"
-            />
-          </div>
-
+        {/* Centered CTA button */}
+        <div className="flex justify-center">
           {/* Elegant centered CTA button */}
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="flex justify-center"
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
