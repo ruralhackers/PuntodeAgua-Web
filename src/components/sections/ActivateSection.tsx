@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Heart, Code } from 'lucide-react';
+import { Player } from '@lottiefiles/react-lottie-player';
 
 const ActivateSection: React.FC = () => {
   const { t } = useTranslation();
@@ -11,16 +12,72 @@ const ActivateSection: React.FC = () => {
     <section className="py-32 relative overflow-hidden bg-white px-6 lg:px-8">
       
       <div className="max-w-7xl mx-auto relative z-10">
+        {/* Central content with Lottie and text */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="flex items-center justify-center mb-20"
         >
-          <h2 className="text-4xl lg:text-5xl font-serif font-bold text-white mb-8">
-            {t('activate.title')}
-          </h2>
+          <div className="flex items-center space-x-8 lg:space-x-16">
+            {/* Left text - Totalmente Gratis */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="flex items-center space-x-2 mb-2">
+                <Heart className="h-6 w-6 text-accent" />
+                <span className="text-2xl lg:text-3xl font-serif font-bold text-gray-900">
+                  Totalmente Gratis
+                </span>
+              </div>
+              <p className="text-sm text-gray-600 max-w-32">
+                Sin costes ocultos ni suscripciones
+              </p>
+            </motion.div>
+
+            {/* Center Lottie animation */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="flex-shrink-0"
+            >
+              <div className="w-32 h-32 lg:w-48 lg:h-48 rounded-full bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center shadow-xl border border-white/60">
+                <Player
+                  autoplay
+                  loop
+                  src="https://lottie.host/embed/84d1e7b6-0d59-48c0-9e60-bb1f0c8c0f79/AE71MNMra7.lottie"
+                  style={{ height: '120px', width: '120px' }}
+                  className="lg:w-36 lg:h-36"
+                />
+              </div>
+            </motion.div>
+
+            {/* Right text - Open Source */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="flex items-center space-x-2 mb-2">
+                <Code className="h-6 w-6 text-primary" />
+                <span className="text-2xl lg:text-3xl font-serif font-bold text-gray-900">
+                  Open Source
+                </span>
+              </div>
+              <p className="text-sm text-gray-600 max-w-32">
+                Código abierto y transparente
+              </p>
+            </motion.div>
+          </div>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
