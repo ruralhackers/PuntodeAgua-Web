@@ -15,8 +15,8 @@ const FeaturesSection: React.FC = () => {
       icon: Calendar,
       title: 'Calendario de Tareas y Lecturas',
       description: 'Tu calendario de tareas centraliza lecturas y controles, con alertas que evitan que algo se quede pendiente.',
-      gradient: 'from-accent to-primary',
-      bgColor: 'from-emerald-50 to-emerald-100'
+      gradient: 'from-primary-light to-primary',
+      bgColor: 'from-blue-50 to-blue-100'
     },
     {
       icon: BarChart3,
