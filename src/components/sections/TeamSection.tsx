@@ -148,10 +148,7 @@ const TeamSection: React.FC = () => {
         </div>
       </div>
     </section>
-  )
   );
 };
 
 export default TeamSection;
-  )
-}
