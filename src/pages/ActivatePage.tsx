@@ -42,7 +42,8 @@ const ActivatePage: React.FC = () => {
             transition={{ duration: 1, ease: "easeOut" }}
             className="text-center mb-16"
           >
-            <h1 className="text-6xl lg:text-7xl font-display font-black text-gray-900 mb-6 tracking-tight">
+            <h1 className="text-6xl lg:text-7xl font-serif font-bold text-gray-900 mb-6 tracking-tight">
+            <h1 className="text-6xl lg:text-7xl font-serif font-bold text-gray-900 mb-6 tracking-tight">
               {t('activate.title')}
             </h1>
             <p className="text-xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed">
