@@ -7,12 +7,20 @@ import LanguageSelector from './LanguageSelector';
 const Navigation: React.FC = () => {
   const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      
+      // Hide navigation when reaching the last section (footer area)
+      const scrollPosition = window.scrollY + window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      const threshold = documentHeight - 200; // Hide when 200px from bottom
+      
+      setIsHidden(scrollPosition > threshold);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -22,7 +30,9 @@ const Navigation: React.FC = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-[100] transition-all duration-500 px-4 lg:px-6">
+    <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 px-4 lg:px-6 ${
+      isHidden ? 'transform -translate-y-full opacity-0' : 'transform translate-y-0 opacity-100'
+    }`}>
       <div className={`max-w-6xl mx-auto mt-6 transition-all duration-500 ${
         isScrolled 
           ? 'bg-white/20 backdrop-blur-2xl shadow-2xl border border-white/30' 
