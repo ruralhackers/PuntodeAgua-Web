@@ -20,6 +20,7 @@ const TeamSection: React.FC = () => {
             viewport={{ once: true }}
             className="col-start-1 row-start-1 row-span-2 rounded-2xl md:rounded-3xl overflow-hidden hover:scale-105 transition-transform duration-300 relative border border-white/20"
           >
+            <div className="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded z-30">0</div>
             <img 
               src="/Pot.png" 
               alt="Pot illustration" 
@@ -36,6 +37,7 @@ const TeamSection: React.FC = () => {
             className="col-start-1 row-start-3 col-span-2 rounded-2xl md:rounded-3xl overflow-hidden hover:scale-105 transition-transform duration-300 relative border border-white/20"
             style={{ background: 'linear-gradient(to right, #a4eef5 25%, #6DBDC6 76%)' }}
           >
+            <div className="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded z-30">1</div>
             <img 
               src="/Beatiful bees (1) 1.png" 
               alt="Beautiful bees illustration" 
@@ -52,6 +54,7 @@ const TeamSection: React.FC = () => {
             className="col-start-2 row-start-1 col-span-2 rounded-2xl md:rounded-3xl overflow-hidden hover:scale-105 transition-transform duration-300 relative border border-white/20"
             style={{ backgroundColor: '#647CFF' }}
           >
+            <div className="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded z-30">2</div>
             <img 
               src="/HackerDays_grupo_2.JPG" 
               alt="Hacker Days group photo" 
@@ -68,6 +71,7 @@ const TeamSection: React.FC = () => {
             className="col-start-2 row-start-2 col-span-2 rounded-2xl md:rounded-3xl overflow-hidden hover:scale-105 transition-transform duration-300 relative border border-white/20"
             style={{ backgroundColor: '#EB9B11' }}
           >
+            <div className="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded z-30">3</div>
             <img 
               src="/Layer_1.svg" 
               alt="Layer 1 illustration" 
@@ -83,6 +87,7 @@ const TeamSection: React.FC = () => {
             viewport={{ once: true }}
             className="col-start-3 row-start-3 rounded-2xl md:rounded-3xl overflow-hidden hover:scale-105 transition-transform duration-300 relative border border-white/20"
           >
+            <div className="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded z-30">4</div>
             <img 
               src="/HackerDays_grupo_2.JPG" 
               alt="Hacker Days group photo" 
@@ -98,6 +103,7 @@ const TeamSection: React.FC = () => {
             viewport={{ once: true }}
             className="col-start-4 row-start-1 col-span-2 rounded-2xl md:rounded-3xl overflow-hidden hover:scale-105 transition-transform duration-300 relative border border-white/20"
           >
+            <div className="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded z-30">5</div>
           </motion.div>
 
           {/* Card 6 */}
@@ -109,6 +115,7 @@ const TeamSection: React.FC = () => {
             className="col-start-4 row-start-2 col-span-2 row-span-2 rounded-2xl md:rounded-3xl overflow-hidden hover:scale-105 transition-transform duration-300 relative border border-white/20"
             style={{ background: 'linear-gradient(to bottom, #81C1E6 0%, #486E7A 82%)' }}
           >
+            <div className="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded z-30">6</div>
             <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-4 md:p-8">
               <img 
                 src="/2 (2).png" 
