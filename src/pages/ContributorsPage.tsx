@@ -23,7 +23,7 @@ const ContributorsPage: React.FC = () => {
             transition={{ duration: 1, ease: "easeOut" }}
             className="text-center mb-20"
           >
-            <h1 className="text-6xl lg:text-7xl font-serif font-bold text-gray-900 mb-8 tracking-tight">
+            <h1 className="text-6xl lg:text-7xl font-display font-black text-gray-900 mb-8 tracking-tight">
               {t('contributors.title')}
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed font-light max-w-4xl mx-auto">

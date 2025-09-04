@@ -29,7 +29,6 @@
   },
   "team": {
     "title": "Quién está detrás del proyecto",
-    "subtitle": "Su trabajo y compromiso durante los Hackers Days hicieron posible una solución que cualquier comunidad puede adoptar y adaptar.",
     "hackersdays": {
       "title": "Hackers Days",
       "description": "Punto de Agua nació durante los Hackers Days de Rural Hackers, un encuentro colaborativo para crear una solución abierta y gratuita para la gestión comunitaria del agua."
@@ -43,7 +42,7 @@
   },
   "activate": {
     "title": "Activa tu pueblo",
-    "subtitle": "Registra tu comunidad para comenzar a gestionar tu agua",
+    "subtitle": "Registra tu comunidad para comenzar a gestionar el agua de manera eficiente y transparente",
     "step1": "Punto de Agua nació durante los Hackers Days, un encuentro colaborativo para crear una solución abierta y gratuita.",
     "step2": "Completamente desarrollada en open source, está disponible para que cualquier comunidad de aguas la utilice.",
     "step3": "Si tu pueblo quiere beneficiarse de una herramienta sencilla, puede empezar hoy mismo.",
@@ -67,7 +66,7 @@
   },
   "contributors": {
     "title": "Equipo",
-    "subtitle": "Gracias a estas personas y organizaciones, Punto de Agua es hoy un recurso abierto y gratuito.",
+    "subtitle": "Gracias a estas personas y organizaciones, Punto de Agua es hoy un recurso abierto y gratuito. Su trabajo y compromiso durante los Hackers Days hicieron posible una solución que cualquier comunidad puede adoptar y adaptar.",
     "organizer": "Organiza",
     "alliance": "Organizaciones de la alianza"
   },

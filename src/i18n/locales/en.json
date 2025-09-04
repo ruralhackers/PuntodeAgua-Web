@@ -29,7 +29,6 @@
   },
   "team": {
     "title": "Who is behind the project",
-    "subtitle": "Their work and commitment during Hackers Days made possible a solution that any community can adopt and adapt.",
     "hackersdays": {
       "title": "Hackers Days",
       "description": "Punto de Agua was born during the Hackers Days by Rural Hackers, a collaborative meeting to create an open and free solution for community water management."
@@ -67,7 +66,7 @@
   },
   "contributors": {
     "title": "Team",
-    "subtitle": "Thanks to these people and organizations, Punto de Agua is today an open and free resource.",
+    "subtitle": "Thanks to these people and organizations, Punto de Agua is today an open and free resource. Their work and commitment during Hackers Days made possible a solution that any community can adopt and adapt.",
     "organizer": "Organizer",
     "alliance": "Alliance organizations"
   },
