@@ -40,6 +40,7 @@ const TeamSection: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
               className="col-start-1 row-start-1 row-span-2 rounded-2xl md:rounded-3xl overflow-hidden hover:scale-105 transition-transform duration-300 relative border border-white/20"
+              onClick={() => setSelectedImage('/Pot.png')}
             >
               <img 
                 src="/Pot.png" 
@@ -159,7 +160,7 @@ const TeamSection: React.FC = () => {
               <img 
                 src="/foto1.png" 
                 alt="Foto 1" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover cursor-pointer"
               />
             </motion.div>
 
