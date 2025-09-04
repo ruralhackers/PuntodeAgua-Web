@@ -24,12 +24,6 @@ export const contributorsData = [
     photo: '/retratos/Celso (Rural Hacker).jpg'
   },
   {
-    name: 'Adriana',
-    company: '',
-    role: '',
-    photo: '/retratos/Adriana.jpg'
-  },
-  {
     name: 'Carol',
     company: '',
     role: '',
@@ -82,6 +76,12 @@ export const contributorsData = [
     company: '',
     role: '',
     photo: '/retratos/Emma.jpg'
+  },
+  {
+    name: 'Adriana',
+    company: '',
+    role: '',
+    photo: '/retratos/Adriana.jpg'
   },
   {
     name: 'Adriana',
