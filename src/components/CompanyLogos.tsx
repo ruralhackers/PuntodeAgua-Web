@@ -74,7 +74,7 @@ const CompanyLogos: React.FC = () => {
       {/* Collaborators Section */}
       <div>
         <h3 className="text-2xl font-serif font-bold text-gray-900 text-center mb-12">
-          Organizaciones colaboradoras
+          Organizaciones de la alianza
         </h3>
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
