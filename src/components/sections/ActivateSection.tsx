@@ -11,34 +11,16 @@ const ActivateSection: React.FC = () => {
     <section className="py-32 relative overflow-hidden bg-white px-6 lg:px-8">
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Main content with three columns */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="flex flex-col lg:flex-row items-center justify-center space-y-12 lg:space-y-0 lg:space-x-16 mb-20"
-        >
+        <div className="flex flex-col lg:flex-row items-center justify-center space-y-12 lg:space-y-0 lg:space-x-16 mb-20">
           {/* Left - Totalmente Gratis */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="text-center lg:text-right flex-1"
-          >
-            <h3 className="text-3xl lg:text-4xl font-serif font-bold text-gray-900">
+          <div className="text-center lg:text-right flex-1">
+            <h3 className="text-6xl lg:text-8xl font-serif font-bold text-gray-900 leading-tight">
               Totalmente Gratis
             </h3>
-          </motion.div>
+          </div>
 
           {/* Center - Lottie Animation */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="flex-shrink-0"
-          >
+          <div className="flex-shrink-0">
             <div className="w-40 h-40 lg:w-56 lg:h-56 flex items-center justify-center">
               <iframe
                 src="https://lottie.host/embed/84d1e7b6-0d59-48c0-9e60-bb1f0c8c0f79/AE71MNMra7.lottie"
@@ -51,21 +33,15 @@ const ActivateSection: React.FC = () => {
                 title="Water Management Animation"
               />
             </div>
-          </motion.div>
+          </div>
 
-          {/* Right - Open Source */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="text-center lg:text-left flex-1"
-          >
-            <h3 className="text-3xl lg:text-4xl font-serif font-bold text-gray-900">
-              Open Source
+          {/* Right - Código Abierto */}
+          <div className="text-center lg:text-left flex-1">
+            <h3 className="text-6xl lg:text-8xl font-serif font-bold text-gray-900 leading-tight">
+              Código Abierto
             </h3>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
 
         {/* Elegant centered CTA button */}
         <motion.div 
@@ -85,9 +61,9 @@ const ActivateSection: React.FC = () => {
             
             <Link 
               to="/activa-tu-pueblo"
-              className="relative bg-gradient-to-r from-primary to-accent text-white py-3 px-6 rounded-xl font-semibold text-base hover:from-primary-light hover:to-primary transition-all duration-300 shadow-lg hover:shadow-xl flex items-center space-x-2 border border-white/20"
+              className="relative bg-gradient-to-r from-primary to-accent text-white py-2 px-4 rounded-lg font-medium text-sm hover:from-primary-light hover:to-primary transition-all duration-300 shadow-md hover:shadow-lg flex items-center space-x-2 border border-white/20"
             >
-              <span>{t('activate.ctaButton')}</span>
+              <span>Activa tu pueblo</span>
               <motion.div
                 animate={{ x: [0, 3, 0] }}
                 transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
