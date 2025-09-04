@@ -39,8 +39,11 @@ const TeamSection: React.FC = () => {
             viewport={{ once: true }}
             className="col-start-1 row-start-1 row-span-2 md:col-start-1 md:row-start-1 md:col-span-1 md:row-span-2 bg-gradient-to-br from-primary to-primary-light rounded-3xl p-6 flex flex-col items-center justify-center text-white hover:scale-105 transition-transform duration-300"
           >
-            <Zap className="h-12 w-12 mb-4" />
-            <h3 className="text-lg font-bold text-center">Hackers Days</h3>
+            <img 
+              src="/Pot.png" 
+              alt="Pot illustration" 
+              className="w-full h-full object-contain"
+            />
           </motion.div>
 
           {/* Card 1 */}
@@ -63,9 +66,15 @@ const TeamSection: React.FC = () => {
             viewport={{ once: true }}
             className="col-start-2 row-start-1 col-span-2 md:col-start-2 md:row-start-1 md:col-span-2 md:row-span-1 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-3xl p-6 flex items-center justify-center text-white hover:scale-105 transition-transform duration-300"
           >
-            <div className="text-center">
-              <h3 className="text-2xl font-bold mb-2">HACKER DAYS</h3>
-              <p className="text-sm opacity-90">Evento colaborativo</p>
+            <img 
+              src="/HackerDays_grupo_2.JPG" 
+              alt="Hacker Days group photo" 
+              className="w-full h-full object-cover rounded-2xl"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-2xl" />
+            <div className="absolute bottom-4 left-4 right-4 text-center z-10">
+              <h3 className="text-xl font-bold mb-1">HACKER DAYS</h3>
+              <p className="text-xs opacity-90">Evento colaborativo</p>
             </div>
           </motion.div>
 
@@ -77,8 +86,15 @@ const TeamSection: React.FC = () => {
             viewport={{ once: true }}
             className="col-start-2 row-start-2 col-span-2 md:col-start-2 md:row-start-2 md:col-span-2 md:row-span-1 bg-gradient-to-r from-orange-400 to-red-500 rounded-3xl p-6 flex items-center justify-center text-white hover:scale-105 transition-transform duration-300"
           >
-            <Code className="h-8 w-8 mr-3" />
-            <span className="font-bold">Desarrollo Open Source</span>
+            <img 
+              src="/Beatiful bees (1) 1.png" 
+              alt="Abstract geometric figure" 
+              className="absolute inset-0 w-full h-full object-cover opacity-30"
+            />
+            <div className="relative z-10 flex items-center">
+              <Code className="h-8 w-8 mr-3" />
+              <span className="font-bold">Desarrollo Open Source</span>
+            </div>
           </motion.div>
 
           {/* Card 4 */}
@@ -89,7 +105,11 @@ const TeamSection: React.FC = () => {
             viewport={{ once: true }}
             className="col-start-3 row-start-3 md:col-start-3 md:row-start-3 md:col-span-1 md:row-span-1 bg-gradient-to-br from-green-400 to-emerald-500 rounded-3xl p-6 flex items-center justify-center text-white hover:scale-105 transition-transform duration-300"
           >
-            <Calendar className="h-8 w-8" />
+            <img 
+              src="/2 (2).png" 
+              alt="Computer illustration" 
+              className="w-full h-full object-contain"
+            />
           </motion.div>
 
           {/* Card 5 */}
@@ -100,8 +120,15 @@ const TeamSection: React.FC = () => {
             viewport={{ once: true }}
             className="col-start-4 row-start-1 col-span-2 md:col-start-4 md:row-start-1 md:col-span-2 md:row-span-1 bg-gradient-to-r from-teal-400 to-cyan-500 rounded-3xl p-6 flex items-center justify-center text-white hover:scale-105 transition-transform duration-300"
           >
-            <Globe className="h-8 w-8 mr-3" />
-            <span className="font-bold">Alianza Rural</span>
+            <img 
+              src="/def copy.png" 
+              alt="Alianza Rural image" 
+              className="absolute inset-0 w-full h-full object-cover opacity-40 rounded-3xl"
+            />
+            <div className="relative z-10 flex items-center">
+              <Globe className="h-8 w-8 mr-3" />
+              <span className="font-bold">Alianza Rural</span>
+            </div>
           </motion.div>
 
           {/* Card 6 */}
@@ -112,11 +139,13 @@ const TeamSection: React.FC = () => {
             viewport={{ once: true }}
             className="col-start-4 row-start-2 col-span-2 row-span-2 md:col-start-4 md:row-start-2 md:col-span-2 md:row-span-2 bg-gradient-to-br from-indigo-600 to-purple-700 rounded-3xl p-8 flex flex-col items-center justify-center text-white hover:scale-105 transition-transform duration-300"
           >
-            <div className="text-center mb-6">
-              <BarChart3 className="h-16 w-16 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold mb-2">RURAL HACKERS</h3>
-              <p className="text-sm opacity-90 mb-6">Tecnología para el rural</p>
-            </div>
+            <img 
+              src="/Logo Rural Hackers.png" 
+              alt="Rural Hackers logo" 
+              className="w-32 h-32 object-contain mb-6"
+            />
+            <h3 className="text-2xl font-bold mb-2 text-center">RURAL HACKERS</h3>
+            <p className="text-sm opacity-90 mb-6 text-center">Tecnología para el rural</p>
             <Link 
               to="/contributors" 
               className="inline-flex items-center space-x-2 bg-white text-gray-900 px-4 py-2 rounded-xl font-bold hover:bg-white/90 transition-all duration-300 hover:scale-105 shadow-lg text-sm"
