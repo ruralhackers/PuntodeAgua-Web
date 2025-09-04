@@ -23,7 +23,7 @@ const TeamSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="text-center mb-12 md:mb-16 lg:mb-20"
+            className="text-center mb-16 md:mb-20 lg:mb-24"
           >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-900 leading-tight">
               {t('team.title')}
@@ -61,7 +61,7 @@ const TeamSection: React.FC = () => {
               <img 
                 src="/Beatiful bees (1) 1.png" 
                 alt="Beautiful bees illustration" 
-                className="absolute top-2 md:top-4 right-2 md:right-4 w-6 h-6 md:w-10 md:h-10 lg:w-12 lg:h-12 object-contain z-20"
+                className="absolute top-2 md:top-4 right-2 md:right-4 w-8 h-8 md:w-12 md:h-12 lg:w-16 lg:h-16 object-contain z-20"
               />
               <div className="absolute inset-0 flex flex-col justify-center p-3 md:p-4 lg:p-6 z-10 pr-8 md:pr-12 lg:pr-16">
                 <h3 className="text-white text-sm md:text-lg lg:text-xl font-bold mb-1 md:mb-2 leading-tight">
@@ -117,9 +117,9 @@ const TeamSection: React.FC = () => {
               <img 
                 src="/Layer_1.svg" 
                 alt="Layer 1 illustration" 
-                className="absolute -bottom-4 md:-bottom-6 right-2 md:right-4 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 object-contain z-20"
+                className="absolute -bottom-2 md:-bottom-4 right-2 md:right-4 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 object-contain z-20"
               />
-              <div className="absolute inset-0 flex items-center justify-center p-3 md:p-4 lg:p-6 pb-16 md:pb-20 lg:pb-24">
+              <div className="absolute inset-0 flex items-center justify-end flex-col p-3 md:p-4 lg:p-6 pb-16 md:pb-20 lg:pb-24">
                 <p className="text-white text-xs md:text-sm lg:text-base leading-relaxed text-center font-medium pb-4 md:pb-6 lg:pb-8">
                   Punto de Agua nació durante los Hackers Days de Rural Hackers, un encuentro colaborativo para crear una solución abierta y gratuita para la gestión comunitaria del agua.
                 </p>
