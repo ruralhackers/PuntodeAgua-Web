@@ -84,10 +84,10 @@ export const contributorsData = [
     photo: '/retratos/Emma.jpg'
   },
   {
-    name: 'Nacho',
-    company: 'Rural Hacker',
+    name: 'Adriana',
+    company: '',
     role: '',
-    photo: '/retratos/Nacho (Rural Hacker).jpg'
+    photo: '/retratos/Adriana.jpg'
   },
   {
     name: 'Jesus',
