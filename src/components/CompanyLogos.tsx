@@ -57,17 +57,13 @@ const CompanyLogos: React.FC = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
-            className="group relative overflow-hidden w-96 h-64"
+            className="group relative overflow-hidden w-80 h-48"
           >
-            {/* Modern gradient background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/10 to-primary-light/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500" />
-            
-            {/* Glass morphism container */}
-            <div className="relative bg-white/15 backdrop-blur-2xl rounded-3xl p-8 border border-white/30 hover:border-white/50 transition-all duration-500 h-full flex flex-col items-center justify-center group-hover:-translate-y-2 shadow-2xl hover:shadow-white/20">
+            <div className="bg-white/80 backdrop-blur-md rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 border border-white/60 hover:border-white/80 group-hover:-translate-y-2 h-full flex items-center justify-center">
               <img 
                 src={organizer.logo} 
                 alt={organizer.name}
-                className="w-full h-full object-contain group-hover:scale-110 transition-all duration-500 p-2 drop-shadow-lg"
+                className="w-full h-full object-contain group-hover:scale-110 transition-all duration-500 drop-shadow-md"
               />
             </div>
           </motion.a>
