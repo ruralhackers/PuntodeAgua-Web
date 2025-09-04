@@ -52,7 +52,7 @@ const ActivateSection: React.FC = () => {
                 <Player
                   autoplay
                   loop
-                  src="https://lottie.host/embed/84d1e7b6-0d59-48c0-9e60-bb1f0c8c0f79/AE71MNMra7.lottie"
+                  src="https://lottie.host/84d1e7b6-0d59-48c0-9e60-bb1f0c8c0f79/AE71MNMra7.json"
                   style={{ height: '120px', width: '120px' }}
                   className="lg:w-36 lg:h-36"
                 />
