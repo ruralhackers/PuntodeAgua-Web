@@ -1,5 +1,4 @@
-import React, { useEffect, useRef } from 'react';
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useMouseGradient } from '../hooks/useMouseGradient';
 import HeroSection from '../components/sections/HeroSection';
 import FeaturesSection from '../components/sections/FeaturesSection';
