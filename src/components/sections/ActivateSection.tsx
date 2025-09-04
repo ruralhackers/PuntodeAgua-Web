@@ -51,7 +51,7 @@ const ActivateSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="flex justify-center"
+          className="flex justify-center -mt-16 lg:-mt-20"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}

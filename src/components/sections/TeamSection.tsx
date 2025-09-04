@@ -41,7 +41,6 @@ const TeamSection: React.FC = () => {
               viewport={{ once: true }}
               className="col-start-1 row-start-1 row-span-2 rounded-2xl md:rounded-3xl overflow-hidden hover:scale-105 transition-transform duration-300 relative border border-white/20"
             >
-              <div className="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded z-30">0</div>
               <img 
                 src="/Pot.png" 
                 alt="Pot illustration" 
@@ -58,7 +57,6 @@ const TeamSection: React.FC = () => {
               className="col-start-1 row-start-3 col-span-2 rounded-2xl md:rounded-3xl overflow-hidden hover:scale-105 transition-transform duration-300 relative border border-white/20"
               style={{ background: 'linear-gradient(to right, #5a9aa7 25%, #3a7a83 76%)' }}
             >
-              <div className="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded z-30">1</div>
               <img 
                 src="/Beatiful bees (1) 1.png" 
                 alt="Beautiful bees illustration" 
@@ -83,7 +81,6 @@ const TeamSection: React.FC = () => {
               className="col-start-2 row-start-1 col-span-2 rounded-2xl md:rounded-3xl overflow-hidden hover:scale-105 transition-transform duration-300 relative border border-white/20 group"
               style={{ backgroundColor: '#647CFF' }}
             >
-              <div className="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded z-30">2</div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
                   <div className="text-transparent text-2xl md:text-3xl lg:text-4xl font-bold mb-2 tracking-wider transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(235,155,17,1)] group-hover:text-yellow-400" style={{ WebkitTextStroke: '1px rgba(0, 0, 0, 0.3)' }}>
@@ -114,13 +111,12 @@ const TeamSection: React.FC = () => {
               className="col-start-2 row-start-2 col-span-2 rounded-2xl md:rounded-3xl overflow-hidden hover:scale-105 transition-transform duration-300 relative border border-white/20"
               style={{ backgroundColor: '#EB9B11' }}
             >
-              <div className="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded z-30">3</div>
               <img 
                 src="/Layer_1.svg" 
                 alt="Layer 1 illustration" 
                 className="absolute -bottom-2 md:-bottom-4 right-2 md:right-4 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 object-contain z-20"
               />
-              <div className="absolute inset-0 flex items-center justify-center p-3 md:p-4 lg:p-6 pb-16 md:pb-20 lg:pb-24">
+              <div className="absolute inset-0 flex items-end justify-center p-3 md:p-4 lg:p-6 pb-20 md:pb-24 lg:pb-28">
                 <p className="text-white text-xs md:text-sm lg:text-base leading-relaxed text-center font-medium pb-4 md:pb-6 lg:pb-8">
                   Punto de Agua nació durante los Hackers Days de Rural Hackers, un encuentro colaborativo para crear una solución abierta y gratuita para la gestión comunitaria del agua.
                 </p>
@@ -136,7 +132,6 @@ const TeamSection: React.FC = () => {
               className="col-start-3 row-start-3 rounded-2xl md:rounded-3xl overflow-hidden hover:scale-105 transition-transform duration-300 relative border border-white/20"
               style={{ backgroundColor: '#50A99A' }}
             >
-              <div className="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded z-30">4</div>
               <div className="absolute inset-0 flex flex-col items-center justify-center p-3 md:p-4 lg:p-6 text-center">
                 <div className="w-full">
                   <h3 className="text-white text-sm md:text-lg lg:text-xl font-bold mb-2 md:mb-4">
@@ -161,7 +156,6 @@ const TeamSection: React.FC = () => {
               className="col-start-4 row-start-1 col-span-2 rounded-2xl md:rounded-3xl overflow-hidden hover:scale-105 transition-transform duration-300 relative border border-white/20 cursor-pointer"
               onClick={() => setSelectedImage('/foto1.png')}
             >
-              <div className="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded z-30">5</div>
               <img 
                 src="/foto1.png" 
                 alt="Foto 1" 
@@ -179,7 +173,6 @@ const TeamSection: React.FC = () => {
               style={{ background: 'linear-gradient(to bottom, #81C1E6 0%, #486E7A 82%)' }}
               onClick={() => window.open('https://www.ruralhackers.com', '_blank')}
             >
-              <div className="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded z-30">6</div>
               <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-4 md:p-8">
                 <img 
                   src="/2 (2).png" 
