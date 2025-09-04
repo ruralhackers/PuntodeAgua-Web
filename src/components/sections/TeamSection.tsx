@@ -3,14 +3,19 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { X } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useMouseGradient } from '../../hooks/useMouseGradient';
 
 const TeamSection: React.FC = () => {
   const { t } = useTranslation();
+  const gradientRef = useMouseGradient();
   const [selectedImage, setSelectedImage] = React.useState<string | null>(null);
   
   return (
     <>
-      <section className="min-h-screen relative overflow-hidden bg-black flex flex-col">
+      <section ref={gradientRef} className="min-h-screen relative overflow-hidden flex flex-col">
+        {/* Interactive gradient background with specific class */}
+        <div className="gradient-bg absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-emerald-50 transition-all duration-1000 ease-out" />
+        
         <div className="flex-1 relative z-10 p-4 md:p-6 lg:p-8">
           {/* Bento Grid */}
           <div className="grid grid-cols-5 grid-rows-3 gap-2 md:gap-3 lg:gap-4 h-[80vh] md:h-[85vh] lg:h-[90vh] max-w-6xl mx-auto px-4 md:px-8 lg:px-12">
