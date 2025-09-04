@@ -8,20 +8,21 @@ const ActivateSection: React.FC = () => {
   const { t } = useTranslation();
   
   return (
-    <section className="py-32 relative overflow-hidden bg-white px-6 lg:px-8">
+    <section className="min-h-screen py-32 relative overflow-hidden bg-white px-6 lg:px-8 flex items-center">
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Main content with three columns */}
-        <div className="flex flex-col lg:flex-row items-center justify-center space-y-12 lg:space-y-0 lg:space-x-16 mb-20">
+        <div className="flex flex-col lg:flex-row items-center justify-center space-y-16 lg:space-y-0 lg:space-x-24 mb-24">
           {/* Left - Totalmente Gratis */}
           <div className="text-center lg:text-right flex-1">
-            <h3 className="text-3xl lg:text-4xl font-serif font-bold text-gray-900 leading-tight">
-              Totalmente Gratis
+            <h3 className="text-5xl lg:text-7xl font-serif font-bold text-gray-900 leading-tight">
+              <div>Totalmente</div>
+              <div>Gratis</div>
             </h3>
           </div>
 
           {/* Center - Lottie Animation */}
           <div className="flex-shrink-0">
-            <div className="w-40 h-40 lg:w-56 lg:h-56 flex items-center justify-center">
+            <div className="w-64 h-64 lg:w-80 lg:h-80 flex items-center justify-center">
               <iframe
                 src="https://lottie.host/embed/84d1e7b6-0d59-48c0-9e60-bb1f0c8c0f79/AE71MNMra7.lottie"
                 style={{
@@ -37,8 +38,9 @@ const ActivateSection: React.FC = () => {
 
           {/* Right - Código Abierto */}
           <div className="text-center lg:text-left flex-1">
-            <h3 className="text-3xl lg:text-4xl font-serif font-bold text-gray-900 leading-tight">
-              Código Abierto
+            <h3 className="text-5xl lg:text-7xl font-serif font-bold text-gray-900 leading-tight">
+              <div>Código</div>
+              <div>Abierto</div>
             </h3>
           </div>
         </div>
