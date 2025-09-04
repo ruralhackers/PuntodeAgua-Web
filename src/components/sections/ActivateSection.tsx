@@ -22,7 +22,7 @@ const ActivateSection: React.FC = () => {
 
           {/* Center - Lottie Animation */}
           <div className="flex-shrink-0 flex justify-center">
-            <div className="w-64 h-64 lg:w-80 lg:h-80 flex items-center justify-center mx-auto">
+            <div className="w-80 h-80 lg:w-96 lg:h-96 flex items-center justify-center mx-auto">
               <iframe
                 src="https://lottie.host/embed/84d1e7b6-0d59-48c0-9e60-bb1f0c8c0f79/AE71MNMra7.lottie"
                 style={{
