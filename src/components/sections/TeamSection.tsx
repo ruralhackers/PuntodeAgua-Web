@@ -17,6 +17,19 @@ const TeamSection: React.FC = () => {
         <div className="gradient-bg absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-emerald-50 transition-all duration-1000 ease-out" />
         
         <div className="flex-1 relative z-10 p-4 md:p-6 lg:p-8">
+          {/* Title Section */}
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="text-center mb-12 md:mb-16 lg:mb-20"
+          >
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-900 leading-tight">
+              {t('team.title')}
+            </h2>
+          </motion.div>
+
           {/* Bento Grid */}
           <div className="grid grid-cols-5 grid-rows-3 gap-2 md:gap-3 lg:gap-4 h-[80vh] md:h-[85vh] lg:h-[90vh] max-w-6xl mx-auto px-4 md:px-8 lg:px-12">
             {/* Card 0 */}

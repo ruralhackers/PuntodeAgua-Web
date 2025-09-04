@@ -78,9 +78,14 @@ const Navigation: React.FC = () => {
               {t('nav.activate')}
             </Link>
             <LanguageSelector />
-            <button className="bg-white/80 text-gray-900 px-4 py-2 rounded-xl text-sm font-semibold hover:bg-white transition-all duration-300 ml-4 border border-gray-200/50 hover:shadow-md my-1">
+            <a 
+              href="https://dashboard.puntodeagua.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-white/80 text-gray-900 px-4 py-2 rounded-xl text-sm font-semibold hover:bg-white transition-all duration-300 ml-4 border border-gray-200/50 hover:shadow-md my-1 inline-block"
+            >
               {t('nav.login')}
-            </button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -145,9 +150,14 @@ const Navigation: React.FC = () => {
               >
                 {t('nav.activate')}
               </Link>
-              <button className="w-full bg-white/80 text-gray-900 px-4 py-2 rounded-xl text-sm font-semibold hover:bg-white transition-all duration-300 border border-gray-200/50 mx-2">
+              <a 
+                href="https://dashboard.puntodeagua.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-full bg-white/80 text-gray-900 px-4 py-2 rounded-xl text-sm font-semibold hover:bg-white transition-all duration-300 border border-gray-200/50 mx-2 inline-block text-center"
+              >
                 {t('nav.login')}
-              </button>
+              </a>
             </div>
           </div>
         )}
