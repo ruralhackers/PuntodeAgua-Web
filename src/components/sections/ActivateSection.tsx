@@ -80,74 +80,27 @@ const ActivateSection: React.FC = () => {
           </div>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="space-y-8"
+        {/* Centered CTA Button */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="flex justify-center mt-16"
+        >
+          <motion.div
+            whileHover={{ scale: 1.05, y: -5 }}
+            className="group"
           >
-            <div className="bg-white/80 backdrop-blur-md rounded-3xl p-8 shadow-lg border border-white/60 hover:border-white/80 transition-all duration-500 hover:-translate-y-2">
-              <div className="flex items-start space-x-4">
-                <div className="bg-gradient-to-br from-primary to-primary-light rounded-2xl p-3 shadow-lg flex-shrink-0 w-12 h-12 flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">1</span>
-                </div>
-                <p className="text-gray-600 leading-relaxed">
-                  {t('activate.step1')}
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-white/80 backdrop-blur-md rounded-3xl p-8 shadow-lg border border-white/60 hover:border-white/80 transition-all duration-500 hover:-translate-y-2">
-              <div className="flex items-start space-x-4">
-                <div className="bg-gradient-to-br from-accent to-primary rounded-2xl p-3 shadow-lg flex-shrink-0 w-12 h-12 flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">2</span>
-                </div>
-                <p className="text-gray-600 leading-relaxed">
-                  {t('activate.step2')}
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-white/80 backdrop-blur-md rounded-3xl p-8 shadow-lg border border-white/60 hover:border-white/80 transition-all duration-500 hover:-translate-y-2">
-              <div className="flex items-start space-x-4">
-                <div className="bg-gradient-to-br from-primary to-accent rounded-2xl p-3 shadow-lg flex-shrink-0 w-12 h-12 flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">3</span>
-                </div>
-                <p className="text-gray-600 leading-relaxed">
-                  {t('activate.step3')}
-                </p>
-              </div>
-            </div>
+            <Link 
+              to="/activa-tu-pueblo"
+              className="bg-gradient-to-r from-primary to-accent text-white py-6 px-12 rounded-3xl font-bold text-xl hover:from-primary-light hover:to-primary transition-all duration-300 hover:shadow-2xl shadow-xl flex items-center space-x-4 group border border-white/20"
+            >
+              <span>{t('activate.ctaButton')}</span>
+              <ArrowRight className="h-6 w-6 group-hover:translate-x-2 transition-transform duration-300" />
+            </Link>
           </motion.div>
-
-          <motion.div 
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="flex justify-center"
-          >
-            <div className="bg-white/80 backdrop-blur-md rounded-3xl p-8 shadow-xl border border-white/60 hover:border-white/80 max-w-md w-full transition-all duration-500 hover:-translate-y-2">
-              <h3 className="text-2xl font-serif font-bold text-gray-900 mb-6 text-center">
-                {t('activate.ready')}
-              </h3>
-              
-              <Link 
-                to="/activa-tu-pueblo"
-                className="w-full bg-gradient-to-r from-primary to-accent text-white py-4 px-8 rounded-2xl font-semibold hover:from-primary-light hover:to-primary transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg flex items-center justify-center space-x-3 group"
-              >
-                <span>{t('activate.ctaButton')}</span>
-                <ArrowRight className="h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
-              </Link>
-              
-              <p className="text-xs text-gray-500 text-center mt-4">
-                {t('activate.freeText')}
-              </p>
-            </div>
-          </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
