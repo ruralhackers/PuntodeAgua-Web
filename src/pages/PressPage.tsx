@@ -43,5 +43,3 @@ const PressPage: React.FC = () => {
 };
 
 export default PressPage;
-  )
-}
