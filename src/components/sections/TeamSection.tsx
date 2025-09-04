@@ -96,8 +96,8 @@ const TeamSection: React.FC = () => {
           >
             <div className="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded z-30">5</div>
             <img 
-              src="/Diseño sin título (2).png" 
-              alt="Rural Hackers design" 
+              src="/HackerDays_grupo_2.JPG" 
+              alt="Hacker Days group photo" 
               className="w-full h-full object-cover"
             />
           </motion.div>
