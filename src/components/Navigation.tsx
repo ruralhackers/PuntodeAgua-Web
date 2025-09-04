@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Droplets, Menu, X } from 'lucide-react';
+import LanguageSelector from './LanguageSelector';
 
 const Navigation: React.FC = () => {
+  const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
@@ -42,7 +45,7 @@ const Navigation: React.FC = () => {
                   : 'text-gray-700 hover:bg-primary hover:text-white hover:shadow-md'
               }`}
             >
-              Inicio
+              {t('nav.home')}
             </Link>
             <Link 
               to="/contributors" 
@@ -52,7 +55,7 @@ const Navigation: React.FC = () => {
                   : 'text-gray-700 hover:bg-primary hover:text-white hover:shadow-md'
               }`}
             >
-              Equipo
+              {t('nav.team')}
             </Link>
             <Link 
               to="/prensa" 
@@ -62,7 +65,7 @@ const Navigation: React.FC = () => {
                   : 'text-gray-700 hover:bg-primary hover:text-white hover:shadow-md'
               }`}
             >
-              Prensa
+              {t('nav.press')}
             </Link>
             <Link 
               to="/activa-tu-pueblo" 
@@ -72,15 +75,88 @@ const Navigation: React.FC = () => {
                   : 'text-gray-700 hover:bg-primary hover:text-white hover:shadow-md'
               }`}
             >
-              Activa tu pueblo
+              {t('nav.activate')}
             </Link>
+            <LanguageSelector />
             <button className="bg-white/80 text-gray-900 px-4 py-2 rounded-xl text-sm font-semibold hover:bg-white transition-all duration-300 ml-4 border border-gray-200/50 hover:shadow-md my-1">
-              Iniciar sesión
+              {t('nav.login')}
             </button>
           </div>
 
           {/* Mobile menu button */}
           <div className="lg:hidden">
+            <div className="flex items-center space-x-2">
+              <LanguageSelector />
+              <button 
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="p-2 rounded-xl transition-all duration-300 text-gray-700 hover:bg-white/30"
+              >
+                {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile menu */}
+        {isMobileMenuOpen && (
+          <div className="lg:hidden">
+            <div className="px-8 py-4 space-y-3 border-t border-white/20">
+              <Link 
+                to="/" 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`block text-sm font-medium transition-all duration-300 px-4 py-2 rounded-xl mx-2 ${
+                  isActive('/') 
+                    ? 'bg-primary text-white' 
+                    : 'text-gray-700 hover:bg-primary hover:text-white'
+                }`}
+              >
+                {t('nav.home')}
+              </Link>
+              <Link 
+                to="/contributors" 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`block text-sm font-medium transition-all duration-300 px-4 py-2 rounded-xl mx-2 ${
+                  isActive('/contributors') 
+                    ? 'bg-primary text-white' 
+                    : 'text-gray-700 hover:bg-primary hover:text-white'
+                }`}
+              >
+                {t('nav.team')}
+              </Link>
+              <Link 
+                to="/prensa" 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`block text-sm font-medium transition-all duration-300 px-4 py-2 rounded-xl mx-2 ${
+                  isActive('/prensa') 
+                    ? 'bg-primary text-white' 
+                    : 'text-gray-700 hover:bg-primary hover:text-white'
+                }`}
+              >
+                {t('nav.press')}
+              </Link>
+              <Link 
+                to="/activa-tu-pueblo" 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`block text-sm font-medium transition-all duration-300 px-4 py-2 rounded-xl mx-2 ${
+                  isActive('/activa-tu-pueblo') 
+                    ? 'bg-primary text-white' 
+                    : 'text-gray-700 hover:bg-primary hover:text-white'
+                }`}
+              >
+                {t('nav.activate')}
+              </Link>
+              <button className="w-full bg-white/80 text-gray-900 px-4 py-2 rounded-xl text-sm font-semibold hover:bg-white transition-all duration-300 border border-gray-200/50 mx-2">
+                {t('nav.login')}
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
+    </nav>
+  );
+};
+
+export default Navigation;
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 rounded-xl transition-all duration-300 text-gray-700 hover:bg-white/30"
@@ -103,7 +179,7 @@ const Navigation: React.FC = () => {
                     : 'text-gray-700 hover:bg-primary hover:text-white'
                 }`}
               >
-                Inicio
+                {t('nav.home')}
               </Link>
               <Link 
                 to="/contributors" 
@@ -114,7 +190,7 @@ const Navigation: React.FC = () => {
                     : 'text-gray-700 hover:bg-primary hover:text-white'
                 }`}
               >
-                Equipo
+                {t('nav.team')}
               </Link>
               <Link 
                 to="/prensa" 
@@ -125,7 +201,7 @@ const Navigation: React.FC = () => {
                     : 'text-gray-700 hover:bg-primary hover:text-white'
                 }`}
               >
-                Prensa
+                {t('nav.press')}
               </Link>
               <Link 
                 to="/activa-tu-pueblo" 
@@ -136,10 +212,13 @@ const Navigation: React.FC = () => {
                     : 'text-gray-700 hover:bg-primary hover:text-white'
                 }`}
               >
-                Activa tu pueblo
+                {t('nav.activate')}
               </Link>
+              <div className="mx-2 my-2 flex justify-center">
+                <LanguageSelector />
+              </div>
               <button className="w-full bg-white/80 text-gray-900 px-4 py-2 rounded-xl text-sm font-semibold hover:bg-white transition-all duration-300 border border-gray-200/50 mx-2">
-                Iniciar sesión
+                {t('nav.login')}
               </button>
             </div>
           </div>

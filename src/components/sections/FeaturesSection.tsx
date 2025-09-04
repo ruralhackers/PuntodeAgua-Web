@@ -1,27 +1,30 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { Users, Calendar, BarChart3 } from 'lucide-react';
 
 const FeaturesSection: React.FC = () => {
+  const { t } = useTranslation();
+  
   const features = [
     {
       icon: Users,
-      title: 'Registro de Usuarios',
-      description: 'Ten toda la información de cada contador organizada en su ficha, todos los datos clave, centralizados y a mano.',
+      title: t('features.userRegistry.title'),
+      description: t('features.userRegistry.description'),
       gradient: 'from-blue-600 to-blue-500',
       bgColor: 'from-blue-50 to-blue-100'
     },
     {
       icon: Calendar,
-      title: 'Calendario de Tareas y Lecturas',
-      description: 'Tu calendario de tareas centraliza lecturas y controles, con alertas que evitan que algo se quede pendiente.',
+      title: t('features.calendar.title'),
+      description: t('features.calendar.description'),
       gradient: 'from-indigo-600 to-indigo-500',
       bgColor: 'from-indigo-50 to-indigo-100'
     },
     {
       icon: BarChart3,
-      title: 'Control de Analíticas y Reportes',
-      description: 'Todos tus mediciones de cloro, pH y consumos en un sólo lugar. Listos para consultar o imprimir.',
+      title: t('features.analytics.title'),
+      description: t('features.analytics.description'),
       gradient: 'from-cyan-600 to-cyan-500',
       bgColor: 'from-cyan-50 to-cyan-100'
     }
@@ -40,10 +43,10 @@ const FeaturesSection: React.FC = () => {
           className="text-center mb-20"
         >
           <h2 className="text-4xl lg:text-5xl font-serif font-bold text-gray-900 mb-6">
-            Control total sobre el agua de tu pueblo
+            {t('features.title')}
           </h2>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed font-light">
-            Olvídate de los papeles y los cálculos a mano. Con Punto de Agua, todo queda guardado y ordenado, ya no tendrás que depender solo de tu memoria o tus notas. Descubre cómo transformar la gestión del agua en una tarea sencilla.
+            {t('features.subtitle')}
           </p>
         </motion.div>
 

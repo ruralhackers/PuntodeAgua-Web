@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { useMouseGradient } from '../hooks/useMouseGradient';
 import { Upload, Send, CheckCircle } from 'lucide-react';
 import Footer from '../components/Footer';
 
 const ActivatePage: React.FC = () => {
+  const { t } = useTranslation();
   const gradientRef = useMouseGradient();
   const [formData, setFormData] = useState({
     townName: '',
@@ -41,10 +43,10 @@ const ActivatePage: React.FC = () => {
             className="text-center mb-16"
           >
             <h1 className="text-6xl lg:text-7xl font-display font-black text-gray-900 mb-6 tracking-tight">
-              Activa tu pueblo
+              {t('activate.title')}
             </h1>
             <p className="text-xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed">
-              Registra tu comunidad para comenzar a gestionar el agua de manera eficiente y transparente
+              {t('activate.subtitle')}
             </p>
           </motion.div>
 
@@ -58,7 +60,7 @@ const ActivatePage: React.FC = () => {
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <label htmlFor="townName" className="block text-sm font-semibold text-gray-900 mb-3">
-                    Nombre del pueblo
+                    {t('activate.form.townName')}
                   </label>
                   <input
                     type="text"
@@ -67,14 +69,14 @@ const ActivatePage: React.FC = () => {
                     value={formData.townName}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 bg-white/50 backdrop-blur-sm"
-                    placeholder="Ej: Anceu"
+                    placeholder={t('activate.form.townNamePlaceholder')}
                     required
                   />
                 </div>
 
                 <div>
                   <label htmlFor="responsiblePerson" className="block text-sm font-semibold text-gray-900 mb-3">
-                    Persona responsable
+                    {t('activate.form.responsiblePerson')}
                   </label>
                   <input
                     type="text"
@@ -83,7 +85,7 @@ const ActivatePage: React.FC = () => {
                     value={formData.responsiblePerson}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 bg-white/50 backdrop-blur-sm"
-                    placeholder="Nombre completo"
+                    placeholder={t('activate.form.responsiblePersonPlaceholder')}
                     required
                   />
                 </div>
@@ -91,7 +93,7 @@ const ActivatePage: React.FC = () => {
 
               <div>
                 <label htmlFor="email" className="block text-sm font-semibold text-gray-900 mb-3">
-                  Email de contacto
+                  {t('activate.form.email')}
                 </label>
                 <input
                   type="email"
@@ -100,18 +102,17 @@ const ActivatePage: React.FC = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 bg-white/50 backdrop-blur-sm"
-                  placeholder="ejemplo@email.com"
+                  placeholder={t('activate.form.emailPlaceholder')}
                   required
                 />
               </div>
 
               <div>
                 <label htmlFor="document" className="block text-sm font-semibold text-gray-900 mb-3">
-                  Documento de responsabilidad
+                  {t('activate.form.document')}
                 </label>
                 <p className="text-sm text-gray-600 mb-4">
-                  Adjunta el documento que te acredita como responsable de gestionar el agua 
-                  (ej: Acta constitución Asociación de Aguas)
+                  {t('activate.form.documentDescription')}
                 </p>
                 <div className="relative">
                   <input
@@ -130,10 +131,10 @@ const ActivatePage: React.FC = () => {
                     <Upload className="h-8 w-8 text-gray-400 group-hover:text-primary transition-colors duration-300" />
                     <div className="text-center">
                       <p className="text-sm font-semibold text-gray-900">
-                        {formData.document ? formData.document.name : 'Seleccionar archivo'}
+                        {formData.document ? formData.document.name : t('activate.form.selectFile')}
                       </p>
                       <p className="text-xs text-gray-500">
-                        PDF, DOC, DOCX, JPG, PNG (máx. 10MB)
+                        {t('activate.form.fileTypes')}
                       </p>
                     </div>
                   </label>
@@ -147,12 +148,12 @@ const ActivatePage: React.FC = () => {
                 className="w-full bg-gradient-to-r from-primary to-accent text-white py-4 px-8 rounded-xl font-bold text-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-3 group"
               >
                 <Send className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-                <span>Enviar solicitud</span>
+                <span>{t('activate.form.submit')}</span>
               </motion.button>
 
               <div className="flex items-center justify-center space-x-2 text-sm text-gray-500">
                 <CheckCircle className="h-4 w-4 text-accent" />
-                <span>Nos ponemos en contacto contigo</span>
+                <span>{t('activate.form.contact')}</span>
               </div>
             </form>
           </motion.div>

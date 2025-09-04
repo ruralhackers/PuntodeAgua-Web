@@ -1,7 +1,10 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Droplets, Github, Instagram } from 'lucide-react';
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="bg-white/20 backdrop-blur-md border-t border-white/30">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-8">
@@ -34,7 +37,7 @@ const Footer: React.FC = () => {
           
           {/* Copyright */}
           <p className="text-sm text-gray-700 drop-shadow-sm">
-            © 2025 Punto de Agua
+            {t('footer.copyright')}
           </p>
         </div>
       </div>

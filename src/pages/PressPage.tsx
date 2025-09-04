@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { useMouseGradient } from '../hooks/useMouseGradient';
 import FeaturedArticle from '../components/FeaturedArticle';
 import ArticleList from '../components/ArticleList';
@@ -7,6 +8,7 @@ import Footer from '../components/Footer';
 import { pressData } from '../data/press';
 
 const PressPage: React.FC = () => {
+  const { t } = useTranslation();
   const gradientRef = useMouseGradient();
 
   return (
@@ -22,10 +24,10 @@ const PressPage: React.FC = () => {
             className="text-center mb-20"
           >
             <h1 className="text-6xl lg:text-7xl font-display font-black text-gray-900 mb-8 uppercase tracking-tight">
-              PRENSA
+              {t('press.title')}
             </h1>
             <p className="text-xl text-gray-600 font-light max-w-2xl mx-auto">
-              Noticias en medios de comunicación
+              {t('press.subtitle')}
             </p>
           </motion.div>
 

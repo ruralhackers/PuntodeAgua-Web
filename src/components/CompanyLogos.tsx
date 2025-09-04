@@ -1,7 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const CompanyLogos: React.FC = () => {
+  const { t } = useTranslation();
+  
   const collaborators = [
     { 
       name: 'Eleven Yellow', 
@@ -46,7 +49,7 @@ const CompanyLogos: React.FC = () => {
       {/* Organizer Section */}
       <div>
         <h3 className="text-2xl font-serif font-bold text-gray-900 text-center mb-8">
-          Organiza
+          {t('contributors.organizer')}
         </h3>
         
         <div className="flex justify-center">
@@ -74,7 +77,7 @@ const CompanyLogos: React.FC = () => {
       {/* Collaborators Section */}
       <div>
         <h3 className="text-2xl font-serif font-bold text-gray-900 text-center mb-12">
-          Organizaciones de la alianza
+          {t('contributors.alliance')}
         </h3>
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">

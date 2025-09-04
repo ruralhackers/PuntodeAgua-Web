@@ -1,0 +1,87 @@
+{
+  "nav": {
+    "home": "Home",
+    "team": "Team",
+    "press": "Press",
+    "activate": "Activate your town",
+    "login": "Sign in"
+  },
+  "hero": {
+    "title": "Punto de Agua",
+    "subtitle": "A free tool born to make water management in your town simpler, always ensuring that water remains a public good.",
+    "cta": "How it works"
+  },
+  "features": {
+    "title": "Total control over your town's water",
+    "subtitle": "Forget about papers and manual calculations. With Punto de Agua, everything is saved and organized, you no longer have to rely only on your memory or notes. Discover how to transform water management into a simple task.",
+    "userRegistry": {
+      "title": "User Registry",
+      "description": "Have all the information of each meter organized in its file, all key data, centralized and at hand."
+    },
+    "calendar": {
+      "title": "Task and Reading Calendar",
+      "description": "Your task calendar centralizes readings and controls, with alerts that prevent anything from being left pending."
+    },
+    "analytics": {
+      "title": "Analytics and Reports Control",
+      "description": "All your chlorine, pH and consumption measurements in one place. Ready to consult or print."
+    }
+  },
+  "team": {
+    "title": "Who is behind the project",
+    "hackersdays": {
+      "title": "Hackers Days",
+      "description": "Punto de Agua was born during the Hackers Days by Rural Hackers, a collaborative meeting to create an open and free solution for community water management."
+    },
+    "alliance": {
+      "title": "Alliance for rural areas",
+      "description": "A union between neighbors and technological talent to create useful solutions that respond to the real needs of rural areas."
+    },
+    "cta": "Meet the team of Hackers",
+    "ctaButton": "View team"
+  },
+  "activate": {
+    "title": "Activate your town",
+    "subtitle": "Register your community to start managing water efficiently and transparently",
+    "step1": "Punto de Agua was born during Hackers Days, a collaborative meeting to create an open and free solution.",
+    "step2": "Completely developed in open source, it is available for any water community to use.",
+    "step3": "If your town wants to benefit from a simple tool, it can start today.",
+    "ready": "All ready to start?",
+    "ctaButton": "Activate me in Punto de Agua",
+    "freeText": "Free and open source solution",
+    "form": {
+      "townName": "Town name",
+      "townNamePlaceholder": "Ex: Anceu",
+      "responsiblePerson": "Responsible person",
+      "responsiblePersonPlaceholder": "Full name",
+      "email": "Contact email",
+      "emailPlaceholder": "example@email.com",
+      "document": "Responsibility document",
+      "documentDescription": "Attach the document that accredits you as responsible for managing water (ex: Water Association constitution act)",
+      "selectFile": "Select file",
+      "fileTypes": "PDF, DOC, DOCX, JPG, PNG (max. 10MB)",
+      "submit": "Send request",
+      "contact": "We will contact you"
+    }
+  },
+  "contributors": {
+    "title": "Team",
+    "subtitle": "Thanks to these people and organizations, Punto de Agua is today an open and free resource. Their work and commitment during Hackers Days made possible a solution that any community can adopt and adapt.",
+    "organizer": "Organizer",
+    "alliance": "Alliance organizations"
+  },
+  "press": {
+    "title": "PRESS",
+    "subtitle": "News in media",
+    "featured": "Featured"
+  },
+  "video": {
+    "title": "How Punto de Agua works",
+    "description": "Here will be the explanatory video of the application",
+    "fullDescription": "Discover simplified water management",
+    "fullSubtitle": "In this video we show you step by step how Punto de Agua transforms community water management into a simple and efficient task."
+  },
+  "footer": {
+    "copyright": "© 2025 Punto de Agua"
+  }
+}

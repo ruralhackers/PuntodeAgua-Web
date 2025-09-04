@@ -1,10 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { Droplets, Play } from 'lucide-react';
 import { useMouseGradient } from '../../hooks/useMouseGradient';
 import VideoModal from '../VideoModal';
 
 const HeroSection: React.FC = () => {
+  const { t } = useTranslation();
   const gradientRef = useMouseGradient();
   const [isVideoModalOpen, setIsVideoModalOpen] = React.useState(false);
 
@@ -27,7 +29,7 @@ const HeroSection: React.FC = () => {
               transition={{ delay: 0.5, duration: 1, ease: "easeOut" }}
               className="text-6xl lg:text-8xl font-serif font-bold text-gray-900 mb-8 leading-tight"
             >
-              Punto de Agua
+              {t('hero.title')}
             </motion.h1>
 
             <motion.p 
@@ -36,7 +38,7 @@ const HeroSection: React.FC = () => {
               transition={{ delay: 0.7, duration: 1, ease: "easeOut" }}
               className="text-lg text-gray-600 leading-relaxed font-light mb-12 max-w-xl"
             >
-              Una herramienta gratuita que nace para hacer la gestión del agua de tu pueblo más sencilla, cuidando siempre de que el agua siga siendo un bien público.
+              {t('hero.subtitle')}
             </motion.p>
 
             <motion.div 
@@ -50,7 +52,7 @@ const HeroSection: React.FC = () => {
                 className="bg-gradient-to-r from-primary to-primary-light text-white px-12 py-4 rounded-2xl font-bold text-xl hover:from-primary-light hover:to-primary transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl flex items-center space-x-3"
               >
                 <Play className="h-5 w-5" />
-                <span>Cómo funciona</span>
+                <span>{t('hero.cta')}</span>
               </button>
             </motion.div>
           </motion.div>

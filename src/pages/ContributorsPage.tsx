@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { useMouseGradient } from '../hooks/useMouseGradient';
 import ContributorCard from '../components/ContributorCard';
 import CompanyLogos from '../components/CompanyLogos';
@@ -7,6 +8,7 @@ import Footer from '../components/Footer';
 import { contributorsData } from '../data/contributors';
 
 const ContributorsPage: React.FC = () => {
+  const { t } = useTranslation();
   const gradientRef = useMouseGradient();
 
   return (
@@ -22,12 +24,10 @@ const ContributorsPage: React.FC = () => {
             className="text-center mb-20"
           >
             <h1 className="text-6xl lg:text-7xl font-display font-black text-gray-900 mb-8 tracking-tight">
-              Equipo
+              {t('contributors.title')}
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed font-light max-w-4xl mx-auto">
-              Gracias a estas personas y organizaciones, Punto de Agua es hoy un recurso abierto y gratuito. 
-              Su trabajo y compromiso durante los Hackers Days hicieron posible una solución que cualquier 
-              comunidad puede adoptar y adaptar.
+              {t('contributors.subtitle')}
             </p>
           </motion.div>
 

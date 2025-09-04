@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 interface Article {
   title: string;
@@ -15,6 +16,8 @@ interface FeaturedArticleProps {
 }
 
 const FeaturedArticle: React.FC<FeaturedArticleProps> = ({ article }) => {
+  const { t } = useTranslation();
+
   return (
     <motion.a 
       href={article.link}
@@ -36,7 +39,7 @@ const FeaturedArticle: React.FC<FeaturedArticleProps> = ({ article }) => {
         
         <div className="absolute top-8 left-8">
           <span className="bg-gradient-to-r from-accent to-primary text-white px-4 py-2 rounded-2xl text-sm font-bold uppercase tracking-wide shadow-lg backdrop-blur-md border border-white/40">
-            Destacada
+            {t('press.featured')}
           </span>
         </div>
         

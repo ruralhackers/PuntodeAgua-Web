@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { X, Play } from 'lucide-react';
 
 interface VideoModalProps {
@@ -8,6 +9,8 @@ interface VideoModalProps {
 }
 
 const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose }) => {
+  const { t } = useTranslation();
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -64,10 +67,10 @@ const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose }) => {
                 </motion.div>
                 
                 <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-3 md:mb-4 px-4">
-                  Cómo funciona Punto de Agua
+                  {t('video.title')}
                 </h3>
                 <p className="text-sm md:text-base text-gray-300 max-w-xs md:max-w-md mx-auto px-4 leading-relaxed">
-                  Aquí irá el video explicativo de la aplicación
+                  {t('video.description')}
                 </p>
               </div>
 
@@ -80,11 +83,10 @@ const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose }) => {
             {/* Optional: Video description area */}
             <div className="p-4 md:p-6 lg:p-8 bg-gradient-to-r from-gray-900 to-black border-t border-white/10">
               <h4 className="text-lg md:text-xl font-bold text-white mb-2 md:mb-3 text-center md:text-left">
-                Descubre la gestión del agua simplificada
+                {t('video.fullDescription')}
               </h4>
               <p className="text-sm md:text-base text-gray-300 leading-relaxed text-center md:text-left">
-                En este video te mostramos paso a paso cómo Punto de Agua transforma 
-                la gestión comunitaria del agua en una tarea sencilla y eficiente.
+                {t('video.fullSubtitle')}
               </p>
             </div>
           </motion.div>

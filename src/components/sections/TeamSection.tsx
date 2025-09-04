@@ -1,9 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles, Zap, Globe } from 'lucide-react';
 
 const TeamSection: React.FC = () => {
+  const { t } = useTranslation();
+  
   return (
     <section className="py-32 relative overflow-hidden px-6 lg:px-8">
       {/* Background image */}
@@ -32,11 +35,8 @@ const TeamSection: React.FC = () => {
             <Sparkles className="h-12 w-12 text-accent" />
           </motion.div>
           <h2 className="text-5xl lg:text-6xl font-serif font-bold text-white mb-8 leading-tight">
-            Quién está detrás
+            {t('team.title')}
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-light via-accent to-primary animate-gradient bg-300%">
-              del proyecto
-            </span>
           </h2>
         </motion.div>
 
@@ -64,28 +64,10 @@ const TeamSection: React.FC = () => {
                   </motion.div>
                   <div className="flex-1">
                     <h3 className="text-xl lg:text-2xl font-bold text-white mb-3 lg:mb-4 group-hover:text-accent transition-colors duration-300 text-center sm:text-left">
-                      Hackers Days
+                      {t('team.hackersdays.title')}
                     </h3>
                     <p className="text-gray-300 leading-relaxed text-sm lg:text-base text-center sm:text-left">
-                      Punto de Agua nació durante los{' '}
-                      <a 
-                        href="https://www.hackerdays.org" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-accent hover:text-white font-semibold underline decoration-accent/50 hover:decoration-white/80 transition-all duration-300"
-                      >
-                        Hackers Days
-                      </a>{' '}
-                      de{' '}
-                      <a 
-                        href="https://www.ruralhackers.com" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-accent hover:text-white font-semibold underline decoration-accent/50 hover:decoration-white/80 transition-all duration-300"
-                      >
-                        Rural Hackers
-                      </a>, 
-                      un encuentro colaborativo para crear una solución abierta y gratuita para la gestión comunitaria del agua.
+                      {t('team.hackersdays.description')}
                     </p>
                   </div>
                 </div>
@@ -108,10 +90,10 @@ const TeamSection: React.FC = () => {
                   </motion.div>
                   <div className="flex-1">
                     <h3 className="text-xl lg:text-2xl font-bold text-white mb-3 lg:mb-4 group-hover:text-primary-light transition-colors duration-300 text-center sm:text-left">
-                      Alianza por el rural
+                      {t('team.alliance.title')}
                     </h3>
                     <p className="text-gray-300 leading-relaxed text-sm lg:text-base text-center sm:text-left">
-                      Una unión entre vecinas y talento tecnológico para crear soluciones útiles que respondan a las necesidades reales del medio rural.
+                      {t('team.alliance.description')}
                     </p>
                   </div>
                 </div>
@@ -152,18 +134,15 @@ const TeamSection: React.FC = () => {
                   </motion.div>
                   
                   <h3 className="text-2xl font-bold text-white mb-6 leading-tight">
-                    Conoce al equipo
+                    {t('team.cta')}
                     <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-primary-light">
-                      de Hackers
-                    </span>
                   </h3>
                   
                   <Link 
                     to="/contributors" 
                     className="inline-flex items-center space-x-3 bg-white text-gray-900 px-6 py-3 rounded-2xl font-bold hover:bg-white/90 transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-white/20 group"
                   >
-                    <span>Ver equipo</span>
+                    <span>{t('team.ctaButton')}</span>
                     <ArrowRight className="h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" />
                   </Link>
                 </div>

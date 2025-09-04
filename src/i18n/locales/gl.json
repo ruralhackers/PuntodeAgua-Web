@@ -1,0 +1,87 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "team": "Equipo",
+    "press": "Prensa",
+    "activate": "Activa a túa vila",
+    "login": "Iniciar sesión"
+  },
+  "hero": {
+    "title": "Punto de Agua",
+    "subtitle": "Unha ferramenta gratuíta que nace para facer a xestión da auga da túa vila máis sinxela, coidando sempre de que a auga siga sendo un ben público.",
+    "cta": "Como funciona"
+  },
+  "features": {
+    "title": "Control total sobre a auga da túa vila",
+    "subtitle": "Esquécete dos papeis e os cálculos a man. Con Punto de Agua, todo queda gardado e ordenado, xa non terás que depender só da túa memoria ou das túas notas. Descobre como transformar a xestión da auga nunha tarefa sinxela.",
+    "userRegistry": {
+      "title": "Rexistro de Usuarios",
+      "description": "Ten toda a información de cada contador organizada na súa ficha, todos os datos clave, centralizados e á man."
+    },
+    "calendar": {
+      "title": "Calendario de Tarefas e Lecturas",
+      "description": "O teu calendario de tarefas centraliza lecturas e controis, con alertas que evitan que algo quede pendente."
+    },
+    "analytics": {
+      "title": "Control de Analíticas e Reportes",
+      "description": "Todas as túas medicións de cloro, pH e consumos nun só lugar. Listos para consultar ou imprimir."
+    }
+  },
+  "team": {
+    "title": "Quen está detrás do proxecto",
+    "hackersdays": {
+      "title": "Hackers Days",
+      "description": "Punto de Agua naceu durante os Hackers Days de Rural Hackers, un encontro colaborativo para crear unha solución aberta e gratuíta para a xestión comunitaria da auga."
+    },
+    "alliance": {
+      "title": "Alianza polo rural",
+      "description": "Unha unión entre veciñas e talento tecnolóxico para crear solucións útiles que respondan ás necesidades reais do medio rural."
+    },
+    "cta": "Coñece ao equipo de Hackers",
+    "ctaButton": "Ver equipo"
+  },
+  "activate": {
+    "title": "Activa a túa vila",
+    "subtitle": "Rexistra a túa comunidade para comezar a xestionar a auga de maneira eficiente e transparente",
+    "step1": "Punto de Agua naceu durante os Hackers Days, un encontro colaborativo para crear unha solución aberta e gratuíta.",
+    "step2": "Completamente desenvolvida en open source, está dispoñible para que calquera comunidade de augas a utilice.",
+    "step3": "Se a túa vila quere beneficiarse dunha ferramenta sinxela, pode empezar hoxe mesmo.",
+    "ready": "Todo listo para empezar?",
+    "ctaButton": "Activarme en Punto de Agua",
+    "freeText": "Solución gratuíta e open source",
+    "form": {
+      "townName": "Nome da vila",
+      "townNamePlaceholder": "Ex: Anceu",
+      "responsiblePerson": "Persoa responsable",
+      "responsiblePersonPlaceholder": "Nome completo",
+      "email": "Email de contacto",
+      "emailPlaceholder": "exemplo@email.com",
+      "document": "Documento de responsabilidade",
+      "documentDescription": "Adxunta o documento que te acredita como responsable de xestionar a auga (ex: Acta constitución Asociación de Augas)",
+      "selectFile": "Seleccionar arquivo",
+      "fileTypes": "PDF, DOC, DOCX, JPG, PNG (máx. 10MB)",
+      "submit": "Enviar solicitude",
+      "contact": "Poñémonos en contacto contigo"
+    }
+  },
+  "contributors": {
+    "title": "Equipo",
+    "subtitle": "Grazas a estas persoas e organizacións, Punto de Agua é hoxe un recurso aberto e gratuíto. O seu traballo e compromiso durante os Hackers Days fixeron posible unha solución que calquera comunidade pode adoptar e adaptar.",
+    "organizer": "Organiza",
+    "alliance": "Organizacións da alianza"
+  },
+  "press": {
+    "title": "PRENSA",
+    "subtitle": "Noticias en medios de comunicación",
+    "featured": "Destacada"
+  },
+  "video": {
+    "title": "Como funciona Punto de Agua",
+    "description": "Aquí irá o vídeo explicativo da aplicación",
+    "fullDescription": "Descobre a xestión da auga simplificada",
+    "fullSubtitle": "Neste vídeo móstranche paso a paso como Punto de Agua transforma a xestión comunitaria da auga nunha tarefa sinxela e eficiente."
+  },
+  "footer": {
+    "copyright": "© 2025 Punto de Agua"
+  }
+}
