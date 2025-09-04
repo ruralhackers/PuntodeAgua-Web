@@ -21,12 +21,13 @@ const TeamSection: React.FC = () => {
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            onClick={() => setSelectedImage('/Pot.png')}
             transition={{ duration: 1, ease: "easeOut" }}
             viewport={{ once: true }}
             className="text-center mb-16 md:mb-20 lg:mb-24"
           >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-900 leading-tight">
-              {t('team.title')}
+              className="w-full h-full object-cover cursor-pointer"
             </h2>
           </motion.div>
 
@@ -298,8 +299,11 @@ const TeamSection: React.FC = () => {
               <img 
                 src={selectedImage}
                 alt="Selected image"
+              <div className="absolute inset-0 flex items-end justify-center p-3 md:p-4 lg:p-6 pb-16 md:pb-20 lg:pb-24">
+                <p className="text-white text-xs md:text-sm lg:text-base leading-relaxed text-center font-medium">
                 className="w-full h-full object-contain rounded-2xl"
               />
+              </div>
             </div>
           </motion.div>
         </motion.div>
