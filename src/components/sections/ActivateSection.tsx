@@ -14,15 +14,15 @@ const ActivateSection: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center justify-center space-y-16 lg:space-y-0 lg:space-x-24 mb-24">
           {/* Left - Totalmente Gratis */}
           <div className="text-center lg:text-right flex-1">
-            <h3 className="text-5xl lg:text-7xl font-serif font-bold text-gray-900 leading-tight">
-              <div>Totalmente</div>
-              <div>Gratis</div>
+            <h3 className="text-5xl lg:text-7xl font-serif font-bold text-gray-900 leading-tight flex flex-col items-center lg:items-end">
+              <div className="text-center lg:text-right">Totalmente</div>
+              <div className="text-center lg:text-right">Gratis</div>
             </h3>
           </div>
 
           {/* Center - Lottie Animation */}
-          <div className="flex-shrink-0">
-            <div className="w-64 h-64 lg:w-80 lg:h-80 flex items-center justify-center">
+          <div className="flex-shrink-0 flex justify-center">
+            <div className="w-64 h-64 lg:w-80 lg:h-80 flex items-center justify-center mx-auto">
               <iframe
                 src="https://lottie.host/embed/84d1e7b6-0d59-48c0-9e60-bb1f0c8c0f79/AE71MNMra7.lottie"
                 style={{
@@ -38,9 +38,9 @@ const ActivateSection: React.FC = () => {
 
           {/* Right - Código Abierto */}
           <div className="text-center lg:text-left flex-1">
-            <h3 className="text-5xl lg:text-7xl font-serif font-bold text-gray-900 leading-tight">
-              <div>Código</div>
-              <div>Abierto</div>
+            <h3 className="text-5xl lg:text-7xl font-serif font-bold text-gray-900 leading-tight flex flex-col items-center lg:items-start">
+              <div className="text-center lg:text-left">Código</div>
+              <div className="text-center lg:text-left">Abierto</div>
             </h3>
           </div>
         </div>
