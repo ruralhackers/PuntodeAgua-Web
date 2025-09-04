@@ -29,6 +29,7 @@
   },
   "team": {
     "title": "Who is behind the project",
+    "subtitle": "Their work and commitment during Hackers Days made possible a solution that any community can adopt and adapt.",
     "hackersdays": {
       "title": "Hackers Days",
       "description": "Punto de Agua was born during the Hackers Days by Rural Hackers, a collaborative meeting to create an open and free solution for community water management."
@@ -42,7 +43,7 @@
   },
   "activate": {
     "title": "Activate your town",
-    "subtitle": "Register your community to start managing your water",
+    "subtitle": "Register your community to start managing water efficiently and transparently",
     "step1": "Punto de Agua was born during Hackers Days, a collaborative meeting to create an open and free solution.",
     "step2": "Completely developed in open source, it is available for any water community to use.",
     "step3": "If your town wants to benefit from a simple tool, it can start today.",
