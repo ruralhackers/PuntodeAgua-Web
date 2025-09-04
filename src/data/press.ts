@@ -3,27 +3,30 @@ export const pressData = {
     title: 'Hackers para garantizar el agua de aldeas',
     source: 'Europa Press',
     date: 'Septiembre 2, 2025',
-    image: '/Screenshot 2025-09-03 at 01.15.12.png',
+    image: 'https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=800',
     link: 'https://www.galiciapress.es/articulo/galicia-en-red/2025-09-02/5413061-hackers-garantizar-agua-aldeas-gallegas-como-anceu'
   },
   articles: [
     {
-      title: 'Innovative Water Management in Rural Areas',
-      source: 'Rural Development Journal',
-      date: 'June 22, 2024',
-      image: 'https://images.pexels.com/photos/1076758/pexels-photo-1076758.jpeg?auto=compress&cs=tinysrgb&w=400'
+      title: 'Cadena Ser - Hoy por Hoy',
+      source: 'Cadena Ser',
+      date: '4 de Septiembre, 2025',
+      image: 'https://images.pexels.com/photos/4792509/pexels-photo-4792509.jpeg?auto=compress&cs=tinysrgb&w=400',
+      link: 'https://cadenaser.com/audio/cadenaser_pontevedra_hoyporhoypontevedra_20250903_122622_135000/'
     },
     {
-      title: 'Punto de Agua: A Beacon of Hope',
-      source: 'Global News Network',
-      date: 'May 10, 2024',
-      image: 'https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=400'
+      title: 'Código Cero - Hackathon en el Rural',
+      source: 'Código Cero',
+      date: '2 de Septiembre, 2025',
+      image: 'https://images.pexels.com/photos/518543/pexels-photo-518543.jpeg?auto=compress&cs=tinysrgb&w=400',
+      link: 'https://codigocero.com/20-persoas-reunense-en-Anceu-para-dixitalizar-o-seu-sistema-de-xestion'
     },
     {
-      title: 'The Tech Behind Clean Water Access',
-      source: 'Tech Innovate',
-      date: 'April 28, 2024'
-      // Sin imagen para mostrar el ícono de imagen rota
+      title: 'Solución Digital para transformar la gestión del agua',
+      source: 'Vivaces',
+      date: '2 Septiembre, 2025',
+      image: 'https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=400',
+      link: 'https://www.vivaces.org/blog-posts/vivaces-y-siteground-colaboramos-en-el-diseno-de-una-solucion-digital-para-transformar-la-gestion-del-agua-en-el-rural-desde-una-aldea-de-100-habitantes'
     }
   ]
 };

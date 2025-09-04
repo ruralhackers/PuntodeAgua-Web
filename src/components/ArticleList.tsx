@@ -13,6 +13,14 @@ interface ArticleListProps {
   articles: Article[];
 }
 
+interface Article {
+  title: string;
+  source: string;
+  date: string;
+  image?: string;
+  link?: string;
+}
+
 const ArticleList: React.FC<ArticleListProps> = ({ articles }) => {
   return (
     <motion.div 
@@ -28,6 +36,7 @@ const ArticleList: React.FC<ArticleListProps> = ({ articles }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 + index * 0.1, ease: "easeOut" }}
           className="bg-white/80 backdrop-blur-md rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 border border-white/60 hover:border-white/80 group cursor-pointer hover:-translate-y-1"
+          onClick={() => article.link && window.open(article.link, '_blank')}
         >
           <div className="flex space-x-4">
             <div className="flex-shrink-0 w-20 h-20 bg-gray-100 rounded-2xl overflow-hidden shadow-lg">
