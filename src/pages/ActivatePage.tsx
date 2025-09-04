@@ -166,3 +166,5 @@ const ActivatePage: React.FC = () => {
 };
 
 export default ActivatePage;
+  )
+}
