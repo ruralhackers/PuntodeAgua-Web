@@ -4,11 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Droplets, Menu, X } from 'lucide-react';
 import LanguageSelector from './LanguageSelector';
 
-interface NavigationProps {
-  isHidden?: boolean;
-}
-
-const Navigation: React.FC<NavigationProps> = ({ isHidden = false }) => {
+const Navigation: React.FC = () => {
   const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -26,7 +22,7 @@ const Navigation: React.FC<NavigationProps> = ({ isHidden = false }) => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 px-4 lg:px-6 ${isHidden ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+    <nav className="fixed top-0 left-0 right-0 z-[100] transition-all duration-500 px-4 lg:px-6">
       <div className={`max-w-6xl mx-auto mt-6 transition-all duration-500 ${
         isScrolled 
           ? 'bg-white/20 backdrop-blur-2xl shadow-2xl border border-white/30' 
