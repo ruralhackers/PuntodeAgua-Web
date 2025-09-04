@@ -1,25 +1,77 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { X } from 'lucide-react';
+import { X, ChevronDown } from 'lucide-react';
 
-const TeamSection: React.FC = () => {
+interface TeamSectionProps {
+  onEnterSection?: () => void;
+  onLeaveSection?: () => void;
+}
+
+const TeamSection: React.FC<TeamSectionProps> = ({ onEnterSection, onLeaveSection }) => {
+
   const { t } = useTranslation();
   const [selectedImage, setSelectedImage] = React.useState<string | null>(null);
+  const sectionRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          onEnterSection?.();
+        } else {
+          onLeaveSection?.();
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [onEnterSection, onLeaveSection]);
   
   return (
     <>
-      <section className="min-h-screen relative overflow-hidden bg-black flex flex-col">
+      <section 
+        ref={sectionRef}
+        className="min-h-screen relative overflow-hidden bg-black flex flex-col snap-start"
+      >
+        {/* Parallax scroll indicator */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="absolute top-8 left-1/2 transform -translate-x-1/2 z-20"
+        >
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            className="flex flex-col items-center text-white/70"
+          >
+            <span className="text-sm font-light mb-2">Scroll to explore</span>
+            <ChevronDown className="h-5 w-5" />
+          </motion.div>
+        </motion.div>
+
         <div className="flex-1 relative z-10 p-4 md:p-6 lg:p-8">
           {/* Bento Grid */}
-          <div className="grid grid-cols-5 grid-rows-3 gap-2 md:gap-3 lg:gap-4 h-[80vh] md:h-[85vh] lg:h-[90vh] max-w-6xl mx-auto px-4 md:px-8 lg:px-12">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="grid grid-cols-6 grid-rows-4 gap-2 md:gap-3 lg:gap-4 h-[80vh] md:h-[85vh] lg:h-[90vh] max-w-6xl mx-auto px-4 md:px-8 lg:px-12"
+          >
             {/* Card 0 */}
             <motion.div 
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              initial={{ opacity: 0, scale: 0.8, rotateY: -15 }}
+              whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
               viewport={{ once: true }}
-              className="col-start-1 row-start-1 row-span-2 rounded-2xl md:rounded-3xl overflow-hidden hover:scale-105 transition-transform duration-300 relative border border-white/20"
+              className="col-start-1 col-span-2 row-start-1 row-span-3 rounded-2xl md:rounded-3xl overflow-hidden hover:scale-105 hover:rotate-1 transition-all duration-500 relative border border-white/20 shadow-2xl"
             >
               <div className="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded z-30">0</div>
               <img 
@@ -31,11 +83,11 @@ const TeamSection: React.FC = () => {
 
             {/* Card 1 */}
             <motion.div 
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial={{ opacity: 0, scale: 0.8, x: -50 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="col-start-1 row-start-3 col-span-2 rounded-2xl md:rounded-3xl overflow-hidden hover:scale-105 transition-transform duration-300 relative border border-white/20"
+              className="col-start-1 col-span-3 row-start-4 rounded-2xl md:rounded-3xl overflow-hidden hover:scale-105 hover:-rotate-1 transition-all duration-500 relative border border-white/20 shadow-2xl"
               style={{ background: 'linear-gradient(to right, #5a9aa7 25%, #3a7a83 76%)' }}
             >
               <div className="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded z-30">1</div>
@@ -48,11 +100,11 @@ const TeamSection: React.FC = () => {
 
             {/* Card 2 */}
             <motion.div 
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              initial={{ opacity: 0, scale: 0.8, y: -50 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
-              className="col-start-2 row-start-1 col-span-2 rounded-2xl md:rounded-3xl overflow-hidden hover:scale-105 transition-transform duration-300 relative border border-white/20"
+              className="col-start-3 col-span-2 row-start-1 rounded-2xl md:rounded-3xl overflow-hidden hover:scale-105 hover:rotate-1 transition-all duration-500 relative border border-white/20 shadow-2xl"
               style={{ backgroundColor: '#647CFF' }}
             >
               <div className="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded z-30">2</div>
@@ -60,11 +112,11 @@ const TeamSection: React.FC = () => {
 
             {/* Card 3 */}
             <motion.div 
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial={{ opacity: 0, scale: 0.8, rotateX: 15 }}
+              whileInView={{ opacity: 1, scale: 1, rotateX: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
-              className="col-start-2 row-start-2 col-span-2 rounded-2xl md:rounded-3xl overflow-hidden hover:scale-105 transition-transform duration-300 relative border border-white/20"
+              className="col-start-3 col-span-2 row-start-2 row-span-2 rounded-2xl md:rounded-3xl overflow-hidden hover:scale-105 hover:-rotate-1 transition-all duration-500 relative border border-white/20 shadow-2xl"
               style={{ backgroundColor: '#EB9B11' }}
             >
               <div className="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded z-30">3</div>
@@ -77,11 +129,11 @@ const TeamSection: React.FC = () => {
 
             {/* Card 4 */}
             <motion.div 
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
+              initial={{ opacity: 0, scale: 0.8, x: 50 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
               viewport={{ once: true }}
-              className="col-start-3 row-start-3 rounded-2xl md:rounded-3xl overflow-hidden hover:scale-105 transition-transform duration-300 relative border border-white/20"
+              className="col-start-4 row-start-4 rounded-2xl md:rounded-3xl overflow-hidden hover:scale-105 hover:rotate-2 transition-all duration-500 relative border border-white/20 shadow-2xl"
               style={{ backgroundColor: '#50A99A' }}
             >
               <div className="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded z-30">4</div>
@@ -89,11 +141,11 @@ const TeamSection: React.FC = () => {
 
             {/* Card 5 */}
             <motion.div 
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              initial={{ opacity: 0, scale: 0.8, rotateY: 15 }}
+              whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
               viewport={{ once: true }}
-              className="col-start-4 row-start-1 col-span-2 rounded-2xl md:rounded-3xl overflow-hidden hover:scale-105 transition-transform duration-300 relative border border-white/20 cursor-pointer"
+              className="col-start-5 col-span-2 row-start-1 row-span-2 rounded-2xl md:rounded-3xl overflow-hidden hover:scale-105 hover:-rotate-1 transition-all duration-500 relative border border-white/20 cursor-pointer shadow-2xl"
               onClick={() => setSelectedImage('/foto1.png')}
             >
               <div className="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded z-30">5</div>
@@ -106,11 +158,11 @@ const TeamSection: React.FC = () => {
 
             {/* Card 6 */}
             <motion.div 
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.7 }}
+              initial={{ opacity: 0, scale: 0.8, y: 50 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.7 }}
               viewport={{ once: true }}
-              className="col-start-4 row-start-2 col-span-2 row-span-2 rounded-2xl md:rounded-3xl overflow-hidden hover:scale-105 transition-transform duration-300 relative border border-white/20 cursor-pointer"
+              className="col-start-5 col-span-2 row-start-3 row-span-2 rounded-2xl md:rounded-3xl overflow-hidden hover:scale-105 hover:rotate-1 transition-all duration-500 relative border border-white/20 cursor-pointer shadow-2xl"
               style={{ background: 'linear-gradient(to bottom, #81C1E6 0%, #486E7A 82%)' }}
               onClick={() => window.open('https://www.ruralhackers.com', '_blank')}
             >
@@ -123,7 +175,7 @@ const TeamSection: React.FC = () => {
                 />
               </div>
             </motion.div>
-          </div>
+          </motion.div>
         </div>
       </section>
 

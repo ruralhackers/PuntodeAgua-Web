@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { useMouseGradient } from '../hooks/useMouseGradient';
 import HeroSection from '../components/sections/HeroSection';
 import FeaturesSection from '../components/sections/FeaturesSection';
@@ -6,8 +7,20 @@ import ActivateSection from '../components/sections/ActivateSection';
 import TeamSection from '../components/sections/TeamSection';
 import Footer from '../components/Footer';
 
-const HomePage: React.FC = () => {
+interface HomePageProps {
+  onTeamSectionVisibility?: (isVisible: boolean) => void;
+}
+
+const HomePage: React.FC<HomePageProps> = ({ onTeamSectionVisibility }) => {
   const gradientRef = useMouseGradient();
+
+  const handleTeamSectionEnter = () => {
+    onTeamSectionVisibility?.(true);
+  };
+
+  const handleTeamSectionLeave = () => {
+    onTeamSectionVisibility?.(false);
+  };
 
   return (
     <div ref={gradientRef} className="relative overflow-hidden">
@@ -15,7 +28,10 @@ const HomePage: React.FC = () => {
       <HeroSection />
       <FeaturesSection />
       <ActivateSection />
-      <TeamSection />
+      <TeamSection 
+        onEnterSection={handleTeamSectionEnter}
+        onLeaveSection={handleTeamSectionLeave}
+      />
       <Footer />
     </div>
   );
