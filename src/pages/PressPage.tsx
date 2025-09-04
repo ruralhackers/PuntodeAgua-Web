@@ -23,7 +23,7 @@ const PressPage: React.FC = () => {
             transition={{ duration: 1, ease: "easeOut" }}
             className="text-center mb-20"
           >
-            <h1 className="text-6xl lg:text-7xl font-display font-black text-gray-900 mb-8 uppercase tracking-tight">
+            <h1 className="text-6xl lg:text-7xl font-serif font-bold text-gray-900 mb-8 uppercase tracking-tight">
               {t('press.title')}
             </h1>
             <p className="text-xl text-gray-600 font-light max-w-2xl mx-auto">
