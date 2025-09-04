@@ -10,27 +10,8 @@ const TeamSection: React.FC = () => {
   return (
     <section className="min-h-screen relative overflow-hidden bg-black flex flex-col">
       <div className="flex-1 relative z-10 p-4 md:p-6 lg:p-8">
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="text-center mb-8 md:mb-12"
-        >
-          <motion.div
-            animate={{ rotate: 360 }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-            className="inline-block mb-4 md:mb-6"
-          >
-            <Sparkles className="h-8 w-8 md:h-12 md:w-12 text-accent" />
-          </motion.div>
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-4 md:mb-8 leading-tight">
-            {t('team.title')}
-          </h2>
-        </motion.div>
-
         {/* Bento Grid */}
-        <div className="grid grid-cols-5 grid-rows-3 gap-2 md:gap-3 lg:gap-4 h-[60vh] md:h-[70vh] lg:h-[75vh] max-w-7xl mx-auto">
+        <div className="grid grid-cols-5 grid-rows-3 gap-2 md:gap-3 lg:gap-4 h-[80vh] md:h-[85vh] lg:h-[90vh] max-w-7xl mx-auto">
           {/* Card 0 */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.8 }}
