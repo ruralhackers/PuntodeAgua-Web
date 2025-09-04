@@ -110,6 +110,8 @@ const TeamSection: React.FC = () => {
                 alt="Rural Hackers logo" 
                className="w-24 h-24 md:w-32 md:h-32 object-contain"
               />
+            </div>
+          </motion.div>
 
           {/* Card 5 */}
           <motion.div 
