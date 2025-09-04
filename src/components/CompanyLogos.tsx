@@ -63,7 +63,7 @@ const CompanyLogos: React.FC = () => {
               <img 
                 src={organizer.logo} 
                 alt={organizer.name}
-                className="w-full h-full object-contain group-hover:scale-110 transition-all duration-500 drop-shadow-md"
+                className="w-full h-full object-contain group-hover:scale-110 transition-all duration-500"
               />
             </div>
           </motion.a>
@@ -92,7 +92,7 @@ const CompanyLogos: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-white/10 rounded-3xl blur-lg group-hover:blur-xl transition-all duration-500" />
               
               {/* Glass container matching Rural Hackers style */}
-              <div className="relative bg-white/80 backdrop-blur-md rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 border border-white/60 hover:border-white/80 group-hover:-translate-y-2 h-full flex items-center justify-center">
+              <div className="relative bg-white/80 backdrop-blur-md rounded-3xl p-8 transition-all duration-500 border border-white/60 hover:border-white/80 group-hover:-translate-y-2 h-full flex items-center justify-center">
               <img 
                 src={company.logo} 
                 alt={company.name}
@@ -100,7 +100,7 @@ const CompanyLogos: React.FC = () => {
                   company.name === 'Viko' ? 'w-20 h-20' : 
                   company.name === 'Next Digital' || company.name === 'SiteGround' ? 'w-40 h-28' : 
                   'w-32 h-24'
-                } object-contain group-hover:scale-110 transition-all duration-500 drop-shadow-md ${
+                } object-contain group-hover:scale-110 transition-all duration-500 ${
                   company.name === 'Eleven Yellow' ? 'filter brightness-0' : ''
                 }`}
               />
