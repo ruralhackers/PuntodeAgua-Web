@@ -119,7 +119,7 @@ const TeamSection: React.FC = () => {
                 alt="Layer 1 illustration" 
                 className="absolute -bottom-2 md:-bottom-4 right-2 md:right-4 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 object-contain z-20"
               />
-              <div className="absolute inset-0 flex items-center justify-end flex-col p-3 md:p-4 lg:p-6 pb-16 md:pb-20 lg:pb-24">
+              <div className="absolute inset-0 flex items-center justify-center p-3 md:p-4 lg:p-6 pb-16 md:pb-20 lg:pb-24">
                 <p className="text-white text-xs md:text-sm lg:text-base leading-relaxed text-center font-medium pb-4 md:pb-6 lg:pb-8">
                   Punto de Agua nació durante los Hackers Days de Rural Hackers, un encuentro colaborativo para crear una solución abierta y gratuita para la gestión comunitaria del agua.
                 </p>
