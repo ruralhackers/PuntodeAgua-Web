@@ -37,7 +37,7 @@ export const contributorsData = [
   },
   {
     name: 'Nacho',
-    company: 'Rural Hackers',
+    company: 'Rural Hacker',
     role: '',
     photo: '/retratos/Nacho (Rural Hacker).jpg'
   },
