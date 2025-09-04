@@ -54,8 +54,6 @@ const ContributorCard: React.FC<ContributorCardProps> = ({ contributor, index })
         </div>
       </div>
       
-      {/* Tape effect */}
-      <div className="absolute top-1 left-1/2 transform -translate-x-1/2 w-10 h-5 bg-yellow-100 opacity-80 rounded-sm shadow-sm border border-yellow-200 -rotate-12 group-hover:rotate-0 transition-transform duration-500"></div>
     </motion.div>
   );
 };
