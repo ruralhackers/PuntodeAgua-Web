@@ -54,6 +54,11 @@ const TeamSection: React.FC = () => {
             viewport={{ once: true }}
             className="col-start-1 row-start-3 col-span-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl md:rounded-3xl overflow-hidden flex items-center justify-center text-white hover:scale-105 transition-transform duration-300 relative"
           >
+            <img 
+              src="/2 (2).png" 
+              alt="Computer illustration" 
+              className="absolute top-2 left-2 w-8 h-8 md:w-12 md:h-12 object-contain z-20"
+            />
             <div className="absolute inset-0 flex items-center justify-center z-10">
               <Users className="h-4 w-4 md:h-8 md:w-8 mr-2 md:mr-3" />
               <span className="font-bold text-sm md:text-base">Comunidad</span>
@@ -105,13 +110,15 @@ const TeamSection: React.FC = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.5 }}
             viewport={{ once: true }}
-            className="col-start-3 row-start-3 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl md:rounded-3xl overflow-hidden hover:scale-105 transition-transform duration-300 relative"
+            className="col-start-3 row-start-3 bg-gradient-to-br from-indigo-600 to-purple-700 rounded-2xl md:rounded-3xl overflow-hidden hover:scale-105 transition-transform duration-300 relative"
           >
-            <img 
-              src="/2 (2).png" 
-              alt="Computer illustration" 
-              className="w-full h-full object-cover"
-            />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <img 
+                src="/Logo Rural Hackers.png" 
+                alt="Rural Hackers logo" 
+                className="w-12 h-12 md:w-16 md:h-16 object-contain"
+              />
+            </div>
           </motion.div>
 
           {/* Card 5 */}
@@ -142,13 +149,8 @@ const TeamSection: React.FC = () => {
             className="col-start-4 row-start-2 col-span-2 row-span-2 bg-gradient-to-br from-indigo-600 to-purple-700 rounded-2xl md:rounded-3xl overflow-hidden hover:scale-105 transition-transform duration-300 relative"
           >
             <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-4 md:p-8">
-              <img 
-                src="/Logo Rural Hackers.png" 
-                alt="Rural Hackers logo" 
-                className="w-16 h-16 md:w-32 md:h-32 object-contain mb-3 md:mb-6"
-              />
-              <h3 className="text-lg md:text-2xl font-bold mb-2 text-center">RURAL HACKERS</h3>
-              <p className="text-xs md:text-sm opacity-90 mb-4 md:mb-6 text-center">Tecnología para el rural</p>
+              <h3 className="text-lg md:text-2xl font-bold mb-2 text-center">VER EQUIPO</h3>
+              <p className="text-xs md:text-sm opacity-90 mb-4 md:mb-6 text-center">Conoce al equipo</p>
               <Link 
                 to="/contributors" 
                 className="inline-flex items-center space-x-2 bg-white text-gray-900 px-3 md:px-4 py-2 rounded-xl font-bold hover:bg-white/90 transition-all duration-300 hover:scale-105 shadow-lg text-xs md:text-sm"
