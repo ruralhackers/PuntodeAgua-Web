@@ -52,25 +52,25 @@ const TeamSection: React.FC = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
-              className="col-start-2 row-start-1 col-span-2 rounded-2xl md:rounded-3xl overflow-hidden hover:scale-105 transition-transform duration-300 relative border border-white/20"
+              className="col-start-2 row-start-1 col-span-2 rounded-2xl md:rounded-3xl overflow-hidden hover:scale-105 transition-transform duration-300 relative border border-white/20 group"
               style={{ backgroundColor: '#647CFF' }}
             >
               <div className="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded z-30">2</div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
-                  <div className="text-transparent text-2xl md:text-3xl lg:text-4xl font-bold mb-2 tracking-wider transition-all duration-300 group-hover:drop-shadow-[0_0_8px_rgba(235,155,17,0.8)]" style={{ WebkitTextStroke: '1px rgba(0, 0, 0, 0.3)' }}>
+                  <div className="text-transparent text-2xl md:text-3xl lg:text-4xl font-bold mb-2 tracking-wider transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(235,155,17,1)] group-hover:text-yellow-400" style={{ WebkitTextStroke: '1px rgba(0, 0, 0, 0.3)' }}>
                     HACKER DAYS
                   </div>
-                  <div className="text-transparent text-2xl md:text-3xl lg:text-4xl font-bold mb-2 tracking-wider transition-all duration-300 group-hover:drop-shadow-[0_0_8px_rgba(235,155,17,0.8)]" style={{ WebkitTextStroke: '1px rgba(0, 0, 0, 0.3)' }}>
+                  <div className="text-transparent text-2xl md:text-3xl lg:text-4xl font-bold mb-2 tracking-wider transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(235,155,17,1)] group-hover:text-yellow-400" style={{ WebkitTextStroke: '1px rgba(0, 0, 0, 0.3)' }}>
                     HACKER DAYS
                   </div>
                   <div className="text-white text-2xl md:text-3xl lg:text-4xl font-bold mb-2 tracking-wider">
                     HACKER DAYS
                   </div>
-                  <div className="text-transparent text-2xl md:text-3xl lg:text-4xl font-bold mb-2 tracking-wider transition-all duration-300 group-hover:drop-shadow-[0_0_8px_rgba(235,155,17,0.8)]" style={{ WebkitTextStroke: '1px rgba(0, 0, 0, 0.3)' }}>
+                  <div className="text-transparent text-2xl md:text-3xl lg:text-4xl font-bold mb-2 tracking-wider transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(235,155,17,1)] group-hover:text-yellow-400" style={{ WebkitTextStroke: '1px rgba(0, 0, 0, 0.3)' }}>
                     HACKER DAYS
                   </div>
-                  <div className="text-transparent text-2xl md:text-3xl lg:text-4xl font-bold tracking-wider transition-all duration-300 group-hover:drop-shadow-[0_0_8px_rgba(235,155,17,0.8)]" style={{ WebkitTextStroke: '1px rgba(0, 0, 0, 0.3)' }}>
+                  <div className="text-transparent text-2xl md:text-3xl lg:text-4xl font-bold tracking-wider transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(235,155,17,1)] group-hover:text-yellow-400" style={{ WebkitTextStroke: '1px rgba(0, 0, 0, 0.3)' }}>
                     HACKER DAYS
                   </div>
                 </div>
