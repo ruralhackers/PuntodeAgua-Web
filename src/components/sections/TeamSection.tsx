@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Computer, Users, Zap, Code } from 'lucide-react';
+import { ArrowRight, Monitor } from 'lucide-react';
 
 const TeamSection: React.FC = () => {
   const { t } = useTranslation();
@@ -22,45 +22,46 @@ const TeamSection: React.FC = () => {
           </h2>
         </motion.div>
 
-        {/* Grid layout matching the image */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {/* Top left - Mural image */}
+        {/* Grid layout matching the image exactly */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
+          {/* Top row */}
+          {/* Top left - Mural/Community image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.1 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-slate-600 to-slate-700 rounded-3xl p-8 h-64 flex items-center justify-center relative overflow-hidden group hover:scale-105 transition-all duration-500"
+            className="bg-gradient-to-br from-slate-600 to-slate-700 rounded-3xl h-64 overflow-hidden group hover:scale-105 transition-all duration-500"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-slate-500/20 to-slate-800/40" />
-            <div className="relative text-center">
-              <Users className="h-16 w-16 text-white mb-4 mx-auto" />
-              <p className="text-white text-sm font-medium">Comunidad Rural</p>
-            </div>
+            <img 
+              src="/def copy.png" 
+              alt="Mural comunitario"
+              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            />
           </motion.div>
 
-          {/* Top center - Hackers Days */}
+          {/* Top center - HACKER DAYS */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl p-8 h-64 flex flex-col items-center justify-center relative overflow-hidden group hover:scale-105 transition-all duration-500"
+            className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl h-64 flex flex-col items-center justify-center relative overflow-hidden group hover:scale-105 transition-all duration-500"
           >
             <div className="text-center">
-              <div className="text-blue-200 text-xs font-bold uppercase tracking-wider mb-2 opacity-60">
+              <div className="text-blue-200 text-xs font-bold uppercase tracking-wider mb-1 opacity-40">
                 HACKER DAYS
               </div>
-              <div className="text-blue-200 text-xs font-bold uppercase tracking-wider mb-2 opacity-40">
+              <div className="text-blue-200 text-xs font-bold uppercase tracking-wider mb-1 opacity-60">
                 HACKER DAYS
               </div>
-              <h3 className="text-white text-2xl font-bold uppercase tracking-wide mb-2">
+              <h3 className="text-white text-2xl font-bold uppercase tracking-wide mb-1">
                 HACKER DAYS
               </h3>
-              <div className="text-blue-200 text-xs font-bold uppercase tracking-wider mb-2 opacity-40">
+              <div className="text-blue-200 text-xs font-bold uppercase tracking-wider mb-1 opacity-60">
                 HACKER DAYS
               </div>
-              <div className="text-blue-200 text-xs font-bold uppercase tracking-wider opacity-60">
+              <div className="text-blue-200 text-xs font-bold uppercase tracking-wider opacity-40">
                 HACKER DAYS
               </div>
             </div>
@@ -72,58 +73,55 @@ const TeamSection: React.FC = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-gray-700 to-gray-800 rounded-3xl p-8 h-64 flex items-center justify-center relative overflow-hidden group hover:scale-105 transition-all duration-500"
+            className="bg-gradient-to-br from-gray-700 to-gray-800 rounded-3xl h-64 overflow-hidden group hover:scale-105 transition-all duration-500"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-gray-600/20 to-gray-900/40" />
-            <div className="relative text-center">
-              <Users className="h-16 w-16 text-white mb-4 mx-auto" />
-              <p className="text-white text-sm font-medium">Equipo Colaborativo</p>
-            </div>
+            <img 
+              src="/def.png" 
+              alt="Equipo de trabajo"
+              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            />
           </motion.div>
 
-          {/* Bottom left - Computer icon */}
+          {/* Bottom row */}
+          {/* Bottom left - Computer/Development */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-cyan-400 to-cyan-500 rounded-3xl p-8 h-64 flex items-center justify-center relative overflow-hidden group hover:scale-105 transition-all duration-500"
+            className="bg-gradient-to-br from-cyan-400 to-cyan-500 rounded-3xl h-64 flex items-center justify-center relative overflow-hidden group hover:scale-105 transition-all duration-500"
           >
             <div className="text-center">
-              <Computer className="h-20 w-20 text-white mb-4 mx-auto" />
-              <p className="text-white text-sm font-medium">Desarrollo</p>
+              <Monitor className="h-16 w-16 text-white mb-4 mx-auto" />
             </div>
           </motion.div>
 
-          {/* Bottom center - Orange section */}
+          {/* Bottom center - Orange section with black element */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-orange-400 to-orange-500 rounded-3xl p-8 h-64 flex items-center justify-center relative overflow-hidden group hover:scale-105 transition-all duration-500"
+            className="bg-gradient-to-br from-orange-400 to-orange-500 rounded-3xl h-64 flex items-center justify-center relative overflow-hidden group hover:scale-105 transition-all duration-500"
           >
+            {/* Black element in bottom right corner */}
             <div className="absolute bottom-4 right-4">
               <div className="w-8 h-16 bg-black rounded-t-full flex items-end justify-center pb-2">
-                <Zap className="h-4 w-4 text-purple-500" />
+                <div className="w-4 h-4 bg-purple-500 rounded-full" />
               </div>
-            </div>
-            <div className="text-center">
-              <Code className="h-16 w-16 text-white mb-4 mx-auto" />
-              <p className="text-white text-sm font-medium">Innovación</p>
             </div>
           </motion.div>
 
-          {/* Bottom right - Rural Hackers */}
+          {/* Bottom right - Rural Hackers with tree icon */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl p-8 h-64 flex flex-col items-center justify-center relative overflow-hidden group hover:scale-105 transition-all duration-500"
+            className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl h-64 flex flex-col items-center justify-center relative overflow-hidden group hover:scale-105 transition-all duration-500"
           >
             <div className="text-center">
-              {/* Tree-like icon */}
+              {/* Tree-like network icon */}
               <div className="relative mb-4">
                 <div className="flex justify-center space-x-2 mb-2">
                   <div className="w-3 h-3 bg-white rounded-full"></div>
@@ -151,11 +149,11 @@ const TeamSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="flex justify-center mt-16"
+          className="flex justify-center"
         >
           <Link 
             to="/contributors" 
-            className="inline-flex items-center space-x-3 bg-white text-black px-8 py-4 rounded-2xl font-bold hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-2xl"
+            className="inline-flex items-center space-x-3 bg-white text-black px-8 py-4 rounded-2xl font-bold hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-2xl group"
           >
             <span>{t('team.ctaButton')}</span>
             <ArrowRight className="h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" />
