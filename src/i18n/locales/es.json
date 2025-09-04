@@ -45,6 +45,9 @@
   "activate": {
     "title": "Activa tu pueblo",
     "subtitle": "Registra tu comunidad para comenzar a gestionar tu agua",
+    "totallyFree": "Totalmente Gratis",
+    "openSource": "Código Abierto",
+    "activateButton": "Activa tu pueblo",
     "step1": "Punto de Agua nació durante los Hackers Days, un encuentro colaborativo para crear una solución abierta y gratuita.",
     "step2": "Completamente desarrollada en open source, está disponible para que cualquier comunidad de aguas la utilice.",
     "step3": "Si tu pueblo quiere beneficiarse de una herramienta sencilla, puede empezar hoy mismo.",

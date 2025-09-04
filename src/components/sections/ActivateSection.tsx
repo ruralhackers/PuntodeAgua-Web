@@ -15,8 +15,9 @@ const ActivateSection: React.FC = () => {
           {/* Left - Totalmente Gratis */}
           <div className="text-center lg:text-right flex-1">
             <h3 className="text-5xl lg:text-7xl font-serif font-bold text-gray-900 leading-tight">
-              <div className="text-center">Totalmente</div>
-              <div className="text-center">Gratis</div>
+              {t('activate.totallyFree').split(' ').map((word, index) => (
+                <div key={index} className="text-center">{word}</div>
+              ))}
             </h3>
           </div>
 
@@ -39,8 +40,9 @@ const ActivateSection: React.FC = () => {
           {/* Right - Código Abierto */}
           <div className="text-center lg:text-left flex-1 lg:-ml-8">
             <h3 className="text-5xl lg:text-7xl font-serif font-bold text-gray-900 leading-tight">
-              <div className="text-center">Código</div>
-              <div className="text-center">Abierto</div>
+              {t('activate.openSource').split(' ').map((word, index) => (
+                <div key={index} className="text-center">{word}</div>
+              ))}
             </h3>
           </div>
         </div>
@@ -66,7 +68,7 @@ const ActivateSection: React.FC = () => {
               to="/activa-tu-pueblo"
               className="bg-gradient-to-r from-primary to-primary-light text-white px-8 py-3 rounded-2xl font-bold text-lg hover:from-primary-light hover:to-primary transition-all duration-300 shadow-xl hover:shadow-2xl flex items-center space-x-3"
             >
-              <span>Activa tu pueblo</span>
+              <span>{t('activate.activateButton')}</span>
               <motion.div
                 animate={{ x: [0, 3, 0] }}
                 transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
