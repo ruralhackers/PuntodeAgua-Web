@@ -58,14 +58,14 @@ const ActivateSection: React.FC = () => {
           >
             <Link 
               to="/activa-tu-pueblo"
-              className="relative bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-full font-medium text-sm hover:bg-primary hover:text-white transition-all duration-300 flex items-center space-x-2"
+              className="bg-gradient-to-r from-primary to-primary-light text-white px-12 py-4 rounded-2xl font-bold text-xl hover:from-primary-light hover:to-primary transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl flex items-center space-x-3"
             >
               <span>Activa tu pueblo</span>
               <motion.div
                 animate={{ x: [0, 3, 0] }}
                 transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
               >
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRight className="h-5 w-5" />
               </motion.div>
             </Link>
           </motion.div>
