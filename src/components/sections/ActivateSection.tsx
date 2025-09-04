@@ -52,13 +52,17 @@ const ActivateSection: React.FC = () => {
           className="flex justify-center"
         >
           <motion.div
-            whileHover={{ scale: 1.02, y: -2 }}
-            whileTap={{ scale: 0.98 }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.95 }}
             className="group relative"
           >
             <Link 
               to="/activa-tu-pueblo"
-              className="bg-gradient-to-r from-primary to-primary-light text-white px-12 py-4 rounded-2xl font-bold text-xl hover:from-primary-light hover:to-primary transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl flex items-center space-x-3"
+              className="bg-gradient-to-r from-primary to-primary-light text-white px-8 py-3 rounded-2xl font-bold text-lg hover:from-primary-light hover:to-primary transition-all duration-300 shadow-xl hover:shadow-2xl flex items-center space-x-3"
             >
               <span>Activa tu pueblo</span>
               <motion.div
