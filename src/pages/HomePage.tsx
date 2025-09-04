@@ -4,7 +4,6 @@ import HeroSection from '../components/sections/HeroSection';
 import FeaturesSection from '../components/sections/FeaturesSection';
 import ActivateSection from '../components/sections/ActivateSection';
 import TeamSection from '../components/sections/TeamSection';
-import FigmaSection from '../components/sections/FigmaSection';
 import Footer from '../components/Footer';
 
 const HomePage: React.FC = () => {
@@ -17,7 +16,6 @@ const HomePage: React.FC = () => {
       <FeaturesSection />
       <ActivateSection />
       <TeamSection />
-      <FigmaSection />
       <Footer />
     </div>
   );
