@@ -18,7 +18,7 @@ const Navigation: React.FC = () => {
       // Hide navigation when reaching the last section (footer area)
       const scrollPosition = window.scrollY + window.innerHeight;
       const documentHeight = document.documentElement.scrollHeight;
-      const threshold = documentHeight - 1000; // Hide slightly before team section
+      const threshold = documentHeight - 900; // Hide slightly before team section
       
       setIsHidden(scrollPosition > threshold);
     };
