@@ -37,7 +37,7 @@ const ActivateSection: React.FC = () => {
           </div>
 
           {/* Right - Código Abierto */}
-          <div className="text-center lg:text-left flex-1 lg:pl-8">
+          <div className="text-center lg:text-left flex-1">
             <h3 className="text-5xl lg:text-7xl font-serif font-bold text-gray-900 leading-tight">
               <div className="text-center">Código</div>
               <div className="text-center">Abierto</div>

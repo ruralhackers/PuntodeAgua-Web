@@ -137,15 +137,17 @@ const TeamSection: React.FC = () => {
             >
               <div className="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded z-30">4</div>
               <div className="absolute inset-0 flex flex-col items-center justify-center p-3 md:p-4 lg:p-6 text-center">
-                <h3 className="text-white text-sm md:text-lg lg:text-xl font-bold mb-2 md:mb-4">
+                <div className="w-full">
+                  <h3 className="text-white text-sm md:text-lg lg:text-xl font-bold mb-2 md:mb-4">
                   Conoce al equipo de Hackers
-                </h3>
-                <Link 
-                  to="/contributors"
-                  className="bg-white/20 hover:bg-white/30 text-white px-3 md:px-4 py-1.5 md:py-2 rounded-xl text-xs md:text-sm font-semibold transition-all duration-300 border border-white/30 hover:border-white/50"
-                >
-                  Ver equipo
-                </Link>
+                  </h3>
+                  <Link 
+                    to="/contributors"
+                    className="bg-white/20 hover:bg-white/30 text-white px-3 md:px-4 py-1.5 md:py-2 rounded-xl text-xs md:text-sm font-semibold transition-all duration-300 border border-white/30 hover:border-white/50"
+                  >
+                    Ver equipo
+                  </Link>
+                </div>
               </div>
             </motion.div>
 
