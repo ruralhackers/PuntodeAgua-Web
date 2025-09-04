@@ -22,9 +22,9 @@ const ContributorCard: React.FC<ContributorCardProps> = ({ contributor, index })
       className="group hover:scale-105 hover:-rotate-1 transition-all duration-500 cursor-pointer"
     >
       {/* Polaroid container */}
-      <div className="bg-white p-4 pb-16 rounded-lg shadow-xl border border-gray-100 transform rotate-1 group-hover:rotate-0 transition-transform duration-500 max-w-[200px] mx-auto">
+      <div className="bg-white p-3 pb-12 rounded-lg shadow-xl border border-gray-100 transform rotate-1 group-hover:rotate-0 transition-transform duration-500 max-w-[180px] mx-auto">
         {/* Photo */}
-        <div className="w-full aspect-square mb-4 overflow-hidden">
+        <div className="w-full aspect-square mb-3 overflow-hidden">
           {contributor.photo ? (
             <img 
               src={contributor.photo}
@@ -42,12 +42,12 @@ const ContributorCard: React.FC<ContributorCardProps> = ({ contributor, index })
         
         {/* Text area - like polaroid bottom */}
         <div className="text-center">
-          <h3 className="text-lg font-bold text-gray-900 mb-1 group-hover:text-primary transition-colors duration-300">
+          <h3 className="text-base font-bold text-gray-900 mb-1 group-hover:text-primary transition-colors duration-300 leading-tight">
             {contributor.name}
           </h3>
           
           {contributor.company && (
-            <p className="text-primary font-semibold text-sm">
+            <p className="text-primary font-semibold text-xs leading-tight">
               {contributor.company}
             </p>
           )}
@@ -55,7 +55,7 @@ const ContributorCard: React.FC<ContributorCardProps> = ({ contributor, index })
       </div>
       
       {/* Tape effect */}
-      <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-12 h-6 bg-yellow-100 opacity-80 rounded-sm shadow-sm border border-yellow-200 -rotate-12 group-hover:rotate-0 transition-transform duration-500"></div>
+      <div className="absolute top-1 left-1/2 transform -translate-x-1/2 w-10 h-5 bg-yellow-100 opacity-80 rounded-sm shadow-sm border border-yellow-200 -rotate-12 group-hover:rotate-0 transition-transform duration-500"></div>
     </motion.div>
   );
 };

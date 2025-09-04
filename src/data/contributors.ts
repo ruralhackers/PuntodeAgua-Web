@@ -82,5 +82,29 @@ export const contributorsData = [
     company: '',
     role: '',
     photo: '/retratos/Emma.jpg'
+  },
+  {
+    name: 'Nacho',
+    company: 'Rural Hacker',
+    role: '',
+    photo: '/retratos/Nacho (Rural Hacker).jpg'
+  },
+  {
+    name: 'Jesus',
+    company: 'Next Digital',
+    role: '',
+    photo: '/retratos/Jesus (Next Digital).jpg'
+  },
+  {
+    name: 'Pablo',
+    company: 'Next Digital',
+    role: '',
+    photo: '/retratos/Pablo (Next Digital).jpg'
+  },
+  {
+    name: 'Ana',
+    company: 'Next Digital',
+    role: '',
+    photo: '/retratos/Ana (Next Digital).jpg'
   }
 ];
