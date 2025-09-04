@@ -56,12 +56,9 @@ const ActivateSection: React.FC = () => {
             whileTap={{ scale: 0.98 }}
             className="group relative"
           >
-            {/* Animated background glow */}
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-accent to-primary-light rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500" />
-            
             <Link 
               to="/activa-tu-pueblo"
-              className="relative bg-gradient-to-r from-primary to-accent text-white py-2 px-4 rounded-lg font-medium text-sm hover:from-primary-light hover:to-primary transition-all duration-300 shadow-md hover:shadow-lg flex items-center space-x-2 border border-white/20"
+              className="relative bg-transparent border-2 border-primary text-primary py-3 px-6 rounded-full font-medium text-sm hover:bg-primary hover:text-white transition-all duration-300 flex items-center space-x-2"
             >
               <span>Activa tu pueblo</span>
               <motion.div
