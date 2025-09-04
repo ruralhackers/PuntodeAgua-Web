@@ -12,7 +12,7 @@ const TeamSection: React.FC = () => {
   
   return (
     <>
-      <section ref={gradientRef} className="min-h-screen relative overflow-hidden flex flex-col">
+      <section ref={gradientRef} className="min-h-screen relative overflow-hidden flex flex-col" data-team-section>
         {/* Interactive gradient background with specific class */}
         <div className="gradient-bg absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-emerald-50 transition-all duration-1000 ease-out" />
         
