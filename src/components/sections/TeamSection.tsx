@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
 import { X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const TeamSection: React.FC = () => {
   const { t } = useTranslation();
