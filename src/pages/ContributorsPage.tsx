@@ -20,7 +20,6 @@ const ContributorsPage: React.FC = () => {
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
             className="text-center mb-20"
           >
             <h1 className="text-6xl lg:text-7xl font-serif font-bold text-gray-900 mb-8 tracking-tight">
