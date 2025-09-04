@@ -11,7 +11,7 @@ const TeamSection: React.FC = () => {
     <section className="min-h-screen relative overflow-hidden bg-black flex flex-col">
       <div className="flex-1 relative z-10 p-4 md:p-6 lg:p-8">
         {/* Bento Grid */}
-        <div className="grid grid-cols-5 grid-rows-3 gap-2 md:gap-3 lg:gap-4 h-[80vh] md:h-[85vh] lg:h-[90vh] max-w-7xl mx-auto">
+        <div className="grid grid-cols-5 grid-rows-3 gap-2 md:gap-3 lg:gap-4 h-[80vh] md:h-[85vh] lg:h-[90vh] max-w-6xl mx-auto px-4 md:px-8 lg:px-12">
           {/* Card 0 */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.8 }}
