@@ -57,13 +57,14 @@ const CompanyLogos: React.FC = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
-            className="group relative overflow-hidden w-80 h-48"
+            className="bg-white/80 backdrop-blur-md rounded-3xl p-12 shadow-lg hover:shadow-xl transition-all duration-500 border border-white/60 hover:border-white/80 group hover:-translate-y-2 w-80 h-48"
+            className="bg-white/80 backdrop-blur-md rounded-3xl p-12 shadow-lg hover:shadow-xl transition-all duration-500 border border-white/60 hover:border-white/80 group hover:-translate-y-2 w-96 h-64"
           >
-            <div className="bg-white/80 backdrop-blur-md rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 border border-white/60 hover:border-white/80 group-hover:-translate-y-2 h-full flex items-center justify-center">
+            <div className="flex flex-col items-center justify-center h-full">
               <img 
                 src={organizer.logo} 
                 alt={organizer.name}
-                className="w-full h-full object-contain group-hover:scale-110 transition-all duration-500"
+                className="w-full h-full object-contain group-hover:scale-110 transition-all duration-500 p-2"
               />
             </div>
           </motion.a>
@@ -86,13 +87,8 @@ const CompanyLogos: React.FC = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.8 + index * 0.1, ease: "easeOut" }}
-              className="group relative overflow-hidden h-32"
+              className="bg-white/80 backdrop-blur-md rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 border border-white/60 hover:border-white/80 group hover:-translate-y-2 h-32 flex items-center justify-center"
             >
-              {/* Subtle gradient background for consistency */}
-              <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-white/10 rounded-3xl blur-lg group-hover:blur-xl transition-all duration-500" />
-              
-              {/* Glass container matching Rural Hackers style */}
-              <div className="relative bg-white/80 backdrop-blur-md rounded-3xl p-8 transition-all duration-500 border border-white/60 hover:border-white/80 group-hover:-translate-y-2 h-full flex items-center justify-center">
               <img 
                 src={company.logo} 
                 alt={company.name}
@@ -104,7 +100,6 @@ const CompanyLogos: React.FC = () => {
                   company.name === 'Eleven Yellow' ? 'filter brightness-0' : ''
                 }`}
               />
-              </div>
             </motion.a>
           ))}
         </div>
