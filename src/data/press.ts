@@ -3,7 +3,7 @@ export const pressData = {
     title: 'Hackers para garantizar el agua de aldeas',
     source: 'Europa Press',
     date: 'Septiembre 2, 2025',
-    image: 'https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/HackerDays_grupo_2 copy.JPG',
     link: 'https://www.galiciapress.es/articulo/galicia-en-red/2025-09-02/5413061-hackers-garantizar-agua-aldeas-gallegas-como-anceu'
   },
   articles: [
