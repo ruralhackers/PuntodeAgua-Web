@@ -39,7 +39,7 @@ export const contributorsData = [
     name: 'Nacho',
     company: 'Rural Hacker',
     role: '',
-    photo: '/retratos/Nacho (Rural Hacker).jpg'
+    photo: '/retratos/Nacho.jpg'
   },
   {
     name: 'Victor',
@@ -93,7 +93,7 @@ export const contributorsData = [
     name: 'Jesus',
     company: 'Next Digital',
     role: '',
-    photo: '/retratos/Jesus (Next Digital).jpg'
+    photo: '/retratos/Jesus.jpg'
   },
   {
     name: 'Pablo',
@@ -102,9 +102,9 @@ export const contributorsData = [
     photo: '/retratos/Pablo (Next Digital).jpg'
   },
   {
-    name: 'Ana',
-    company: 'Next Digital',
+    name: 'Pablo Maderuelo',
+    company: 'Vivaces',
     role: '',
-    photo: '/retratos/Ana (Next Digital).jpg'
+    photo: '/retratos/Pablo (Vivaces).jpg'
   }
 ];
