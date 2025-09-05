@@ -11,7 +11,7 @@ export const pressData = {
       title: 'Cadena Ser - Hoy por Hoy',
       source: 'Cadena Ser',
       date: '4 de Septiembre, 2025',
-      image: 'https://images.pexels.com/photos/4792509/pexels-photo-4792509.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: '/Cadena-Ser-Blanco.png',
       link: 'https://cadenaser.com/audio/cadenaser_pontevedra_hoyporhoypontevedra_20250903_122622_135000/'
     },
     {
@@ -25,7 +25,7 @@ export const pressData = {
       title: 'Solución Digital para transformar la gestión del agua',
       source: 'Vivaces',
       date: '2 Septiembre, 2025',
-      image: 'https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: '/vivaces_logo-cuadrado.jpeg',
       link: 'https://www.vivaces.org/blog-posts/vivaces-y-siteground-colaboramos-en-el-diseno-de-una-solucion-digital-para-transformar-la-gestion-del-agua-en-el-rural-desde-una-aldea-de-100-habitantes'
     }
   ]
