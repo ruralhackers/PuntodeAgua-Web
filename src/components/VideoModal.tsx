@@ -134,7 +134,7 @@ const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose }) => {
             </button>
 
             {/* Video container */}
-            <div className="aspect-video bg-black relative">
+            <div className="bg-black relative" style={{ aspectRatio: '872/720' }}>
               <div 
                 ref={playerRef}
                 className="w-full h-full"
