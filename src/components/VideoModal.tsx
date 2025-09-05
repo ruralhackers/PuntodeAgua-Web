@@ -1,15 +1,99 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
-import { X, Play } from 'lucide-react';
+import { X } from 'lucide-react';
 
 interface VideoModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
+// Declare YouTube API types
+declare global {
+  interface Window {
+    YT: any;
+    onYouTubeIframeAPIReady: () => void;
+  }
+}
+
 const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose }) => {
-  const { t } = useTranslation();
+  const playerRef = useRef<HTMLDivElement>(null);
+  const ytPlayerRef = useRef<any>(null);
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    // Load YouTube IFrame API
+    const loadYouTubeAPI = () => {
+      if (window.YT && window.YT.Player) {
+        createPlayer();
+        return;
+      }
+
+      // Check if script is already loading
+      if (document.querySelector('script[src*="youtube.com/iframe_api"]')) {
+        window.onYouTubeIframeAPIReady = createPlayer;
+        return;
+      }
+
+      // Load the script
+      const script = document.createElement('script');
+      script.src = 'https://www.youtube.com/iframe_api';
+      script.async = true;
+      document.head.appendChild(script);
+
+      window.onYouTubeIframeAPIReady = createPlayer;
+    };
+
+    const createPlayer = () => {
+      if (!playerRef.current) return;
+
+      ytPlayerRef.current = new window.YT.Player(playerRef.current, {
+        videoId: 'IA7_FrKNoWM',
+        width: '100%',
+        height: '100%',
+        playerVars: {
+          autoplay: 1,
+          controls: 0,
+          rel: 0,
+          modestbranding: 1,
+          enablejsapi: 1,
+          iv_load_policy: 3,
+          disablekb: 1,
+          fs: 0,
+          showinfo: 0,
+          playsinline: 1,
+          mute: 0,
+          quality: 'hd1080'
+        },
+        events: {
+          onStateChange: (event: any) => {
+            // When video ends, close modal
+            if (event.data === window.YT.PlayerState.ENDED) {
+              onClose();
+            }
+          }
+        }
+      });
+    };
+
+    loadYouTubeAPI();
+
+    // Cleanup function
+    return () => {
+      if (ytPlayerRef.current && ytPlayerRef.current.destroy) {
+        ytPlayerRef.current.destroy();
+        ytPlayerRef.current = null;
+      }
+    };
+  }, [isOpen, onClose]);
+
+  // Cleanup when modal closes
+  useEffect(() => {
+    if (!isOpen && ytPlayerRef.current && ytPlayerRef.current.destroy) {
+      ytPlayerRef.current.destroy();
+      ytPlayerRef.current = null;
+    }
+  }, [isOpen]);
 
   return (
     <AnimatePresence>
@@ -48,46 +132,11 @@ const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose }) => {
             </button>
 
             {/* Video container */}
-            <div className="aspect-video bg-gradient-to-br from-gray-900 to-black flex items-center justify-center relative px-4 md:px-8">
-              {/* Placeholder for video - you can replace this with actual video element */}
-              <div className="text-center">
-                <motion.div
-                  animate={{ 
-                    scale: [1, 1.1, 1],
-                    opacity: [0.7, 1, 0.7]
-                  }}
-                  transition={{ 
-                    duration: 2, 
-                    repeat: Infinity, 
-                    ease: "easeInOut" 
-                  }}
-                  className="w-16 h-16 md:w-24 md:h-24 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center mb-4 md:mb-6 mx-auto border border-white/30"
-                >
-                  <Play className="h-8 w-8 md:h-12 md:w-12 text-white ml-1" />
-                </motion.div>
-                
-                <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-3 md:mb-4 px-4">
-                  {t('video.title')}
-                </h3>
-                <p className="text-sm md:text-base text-gray-300 max-w-xs md:max-w-md mx-auto px-4 leading-relaxed">
-                  {t('video.description')}
-                </p>
-              </div>
-
-              {/* Decorative elements */}
-              <div className="absolute top-4 left-4 md:top-8 md:left-8 w-1.5 h-1.5 md:w-2 md:h-2 bg-primary rounded-full animate-pulse" />
-              <div className="absolute top-6 right-6 md:top-12 md:right-12 w-2 h-2 md:w-3 md:h-3 bg-accent rounded-full animate-pulse delay-1000" />
-              <div className="absolute bottom-4 left-6 md:bottom-8 md:left-12 w-1.5 h-1.5 md:w-2 md:h-2 bg-primary-light rounded-full animate-pulse delay-500" />
-            </div>
-
-            {/* Optional: Video description area */}
-            <div className="p-4 md:p-6 lg:p-8 bg-gradient-to-r from-gray-900 to-black border-t border-white/10">
-              <h4 className="text-lg md:text-xl font-bold text-white mb-2 md:mb-3 text-center md:text-left">
-                {t('video.fullDescription')}
-              </h4>
-              <p className="text-sm md:text-base text-gray-300 leading-relaxed text-center md:text-left">
-                {t('video.fullSubtitle')}
-              </p>
+            <div className="aspect-video bg-black relative">
+              <div 
+                ref={playerRef}
+                className="w-full h-full"
+              />
             </div>
           </motion.div>
         </motion.div>
