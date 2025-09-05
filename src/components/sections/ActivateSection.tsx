@@ -13,7 +13,7 @@ const ActivateSection: React.FC = () => {
         {/* Main content with three columns */}
         <div className="flex flex-col lg:flex-row items-center justify-center space-y-16 lg:space-y-0 lg:space-x-24 mb-16">
           {/* Left - Totalmente Gratis */}
-          <div className="text-center lg:text-right flex-1 lg:max-w-xs">
+          <div className="text-center lg:text-right flex-shrink-0 w-full lg:w-48">
             <h3 className="text-5xl lg:text-7xl font-serif font-bold text-gray-900 leading-tight">
               {t('activate.totallyFree').split(' ').map((word, index) => (
                 <div key={index} className="text-center">{word}</div>
@@ -22,8 +22,8 @@ const ActivateSection: React.FC = () => {
           </div>
 
           {/* Center - Lottie Animation */}
-          <div className="flex-shrink-0 flex justify-center lg:mx-8">
-            <div className="w-[32rem] h-[28rem] lg:w-[40rem] lg:h-[34rem] flex items-center justify-center mx-auto">
+          <div className="flex-shrink-0 flex justify-center">
+            <div className="w-[28rem] h-[24rem] lg:w-[32rem] lg:h-[28rem] flex items-center justify-center mx-auto">
               <iframe
                 src="https://lottie.host/embed/69106f9a-bff2-47b7-b763-b957c9e78878/iqlok7ethL.lottie"
                 style={{
@@ -38,7 +38,7 @@ const ActivateSection: React.FC = () => {
           </div>
 
           {/* Right - Código Abierto */}
-          <div className="text-center lg:text-left flex-1 lg:max-w-xs">
+          <div className="text-center lg:text-left flex-shrink-0 w-full lg:w-48">
             <h3 className="text-5xl lg:text-7xl font-serif font-bold text-gray-900 leading-tight">
               {t('activate.openSource').split(' ').map((word, index) => (
                 <div key={index} className="text-center">{word}</div>
@@ -53,7 +53,7 @@ const ActivateSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="flex justify-center -mt-12 lg:-mt-16"
+          className="flex justify-center -mt-8 lg:-mt-12"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
