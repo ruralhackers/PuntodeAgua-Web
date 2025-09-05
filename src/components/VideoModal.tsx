@@ -62,7 +62,6 @@ const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose }) => {
           fs: 0,
           showinfo: 0,
           playsinline: 1,
-          mute: 1,
           quality: 'hd1080',
           cc_load_policy: 0,
           hl: 'es',
