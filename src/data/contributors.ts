@@ -99,7 +99,7 @@ export const contributorsData = [
     name: 'Pablo',
     company: 'Next Digital',
     role: '',
-    photo: '/retratos/Pablo (Next Digital).jpg'
+    photo: '/retratos/Pablo Dibujo.png'
   },
   {
     name: 'Pablo Maderuelo',
