@@ -4,7 +4,11 @@ import { useTranslation } from 'react-i18next';
 import { Droplets, Menu, X } from 'lucide-react';
 import LanguageSelector from './LanguageSelector';
 
-const Navigation: React.FC = () => {
+interface NavigationProps {
+  isVideoModalOpen?: boolean;
+}
+
+const Navigation: React.FC<NavigationProps> = ({ isVideoModalOpen = false }) => {
   const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
@@ -32,7 +36,7 @@ const Navigation: React.FC = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 px-4 lg:px-6 ${
-      isHidden 
+      isHidden || isVideoModalOpen
         ? 'transform -translate-y-full opacity-0 pointer-events-none' 
         : 'transform translate-y-0 opacity-100'
     }`}>

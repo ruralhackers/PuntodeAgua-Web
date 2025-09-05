@@ -9,12 +9,13 @@ import ActivatePage from './pages/ActivatePage';
 
 const AppContent: React.FC = () => {
   useScrollToTop();
+  const [isVideoModalOpen, setIsVideoModalOpen] = React.useState(false);
 
   return (
     <>
-      <Navigation />
+      <Navigation isVideoModalOpen={isVideoModalOpen} />
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<HomePage onVideoModalChange={setIsVideoModalOpen} />} />
         <Route path="/contributors" element={<ContributorsPage />} />
         <Route path="/prensa" element={<PressPage />} />
         <Route path="/activa-tu-pueblo" element={<ActivatePage />} />
