@@ -18,7 +18,7 @@ const Navigation: React.FC<NavigationProps> = ({ isVideoModalOpen = false }) => 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-      
+
       // Hide navigation when reaching team section cards
       const teamSection = document.querySelector('[data-team-section]');
       if (teamSection) {
@@ -35,16 +35,14 @@ const Navigation: React.FC<NavigationProps> = ({ isVideoModalOpen = false }) => 
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 px-4 lg:px-6 ${
-      isHidden || isVideoModalOpen
-        ? 'transform -translate-y-full opacity-0 pointer-events-none' 
-        : 'transform translate-y-0 opacity-100'
-    }`}>
-      <div className={`max-w-6xl mx-auto mt-6 transition-all duration-500 ${
-        isScrolled 
-          ? 'bg-white/20 backdrop-blur-2xl shadow-2xl border border-white/30' 
-          : 'bg-white/10 backdrop-blur-xl shadow-xl border border-white/20'
-      } rounded-3xl`}>
+    <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 px-4 lg:px-6 ${isHidden || isVideoModalOpen
+      ? 'transform -translate-y-full opacity-0 pointer-events-none'
+      : 'transform translate-y-0 opacity-100'
+      }`}>
+      <div className={`max-w-6xl mx-auto mt-6 transition-all duration-500 ${isScrolled
+        ? 'bg-white/20 backdrop-blur-2xl shadow-2xl border border-white/30'
+        : 'bg-white/10 backdrop-blur-xl shadow-xl border border-white/20'
+        } rounded-3xl`}>
         <div className="flex justify-between items-center h-18 px-8">
           <Link to="/" className="flex items-center space-x-3 text-primary hover:text-primary-light transition-all duration-300 group">
             <div className="relative">
@@ -54,50 +52,46 @@ const Navigation: React.FC<NavigationProps> = ({ isVideoModalOpen = false }) => 
           </Link>
 
           <div className="hidden lg:flex items-center space-x-3 h-full py-3">
-            <Link 
-              to="/" 
-              className={`text-sm font-medium transition-all duration-300 px-4 py-2 rounded-xl relative group my-1 ${
-                isActive('/') 
-                  ? 'bg-primary text-white shadow-lg' 
-                  : 'text-gray-700 hover:bg-primary hover:text-white hover:shadow-md'
-              }`}
+            <Link
+              to="/"
+              className={`text-sm font-medium transition-all duration-300 px-4 py-2 rounded-xl relative group my-1 ${isActive('/')
+                ? 'bg-primary text-white shadow-lg'
+                : 'text-gray-700 hover:bg-primary hover:text-white hover:shadow-md'
+                }`}
             >
               {t('nav.home')}
             </Link>
-            <Link 
-              to="/contributors" 
-              className={`text-sm font-medium transition-all duration-300 px-4 py-2 rounded-xl relative group my-1 ${
-                isActive('/contributors') 
-                  ? 'bg-primary text-white shadow-lg' 
-                  : 'text-gray-700 hover:bg-primary hover:text-white hover:shadow-md'
-              }`}
+            <Link
+              to="/contributors"
+              className={`text-sm font-medium transition-all duration-300 px-4 py-2 rounded-xl relative group my-1 ${isActive('/contributors')
+                ? 'bg-primary text-white shadow-lg'
+                : 'text-gray-700 hover:bg-primary hover:text-white hover:shadow-md'
+                }`}
             >
               {t('nav.team')}
             </Link>
-            <Link 
-              to="/prensa" 
-              className={`text-sm font-medium transition-all duration-300 px-4 py-2 rounded-xl relative group my-1 ${
-                isActive('/prensa') 
-                  ? 'bg-primary text-white shadow-lg' 
-                  : 'text-gray-700 hover:bg-primary hover:text-white hover:shadow-md'
-              }`}
+            <Link
+              to="/prensa"
+              className={`text-sm font-medium transition-all duration-300 px-4 py-2 rounded-xl relative group my-1 ${isActive('/prensa')
+                ? 'bg-primary text-white shadow-lg'
+                : 'text-gray-700 hover:bg-primary hover:text-white hover:shadow-md'
+                }`}
             >
               {t('nav.press')}
             </Link>
-            <Link 
-              to="/activa-tu-pueblo" 
-              className={`text-sm font-medium transition-all duration-300 px-4 py-2 rounded-xl relative group my-1 ${
-                isActive('/activa-tu-pueblo') 
-                  ? 'bg-primary text-white shadow-lg' 
-                  : 'text-gray-700 hover:bg-primary hover:text-white hover:shadow-md'
-              }`}
+            <Link
+              to="/activa-tu-pueblo"
+              className={`text-sm font-medium transition-all duration-300 px-4 py-2 rounded-xl relative group my-1 ${isActive('/activa-tu-pueblo')
+                ? 'bg-primary text-white shadow-lg'
+                : 'text-gray-700 hover:bg-primary hover:text-white hover:shadow-md'
+                }`}
             >
               {t('nav.activate')}
             </Link>
             <LanguageSelector />
-            <a 
-              href="https://dashboard.puntodeagua.com" 
-              target="_blank" 
+            <a
+              href="https://panel.puntodeagua.com"
+              target="_blank"
               rel="noopener noreferrer"
               className="bg-white/80 text-gray-900 px-4 py-2 rounded-xl text-sm font-semibold hover:bg-white transition-all duration-300 ml-4 border border-gray-200/50 hover:shadow-md my-1 inline-block"
             >
@@ -109,7 +103,7 @@ const Navigation: React.FC<NavigationProps> = ({ isVideoModalOpen = false }) => 
           <div className="lg:hidden">
             <div className="flex items-center space-x-2">
               <LanguageSelector />
-              <button 
+              <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className="p-2 rounded-xl transition-all duration-300 text-gray-700 hover:bg-white/30"
               >
@@ -123,53 +117,49 @@ const Navigation: React.FC<NavigationProps> = ({ isVideoModalOpen = false }) => 
         {isMobileMenuOpen && (
           <div className="lg:hidden">
             <div className="px-8 py-4 space-y-3 border-t border-white/20">
-              <Link 
-                to="/" 
+              <Link
+                to="/"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`block text-sm font-medium transition-all duration-300 px-4 py-2 rounded-xl mx-2 ${
-                  isActive('/') 
-                    ? 'bg-primary text-white' 
-                    : 'text-gray-700 hover:bg-primary hover:text-white'
-                }`}
+                className={`block text-sm font-medium transition-all duration-300 px-4 py-2 rounded-xl mx-2 ${isActive('/')
+                  ? 'bg-primary text-white'
+                  : 'text-gray-700 hover:bg-primary hover:text-white'
+                  }`}
               >
                 {t('nav.home')}
               </Link>
-              <Link 
-                to="/contributors" 
+              <Link
+                to="/contributors"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`block text-sm font-medium transition-all duration-300 px-4 py-2 rounded-xl mx-2 ${
-                  isActive('/contributors') 
-                    ? 'bg-primary text-white' 
-                    : 'text-gray-700 hover:bg-primary hover:text-white'
-                }`}
+                className={`block text-sm font-medium transition-all duration-300 px-4 py-2 rounded-xl mx-2 ${isActive('/contributors')
+                  ? 'bg-primary text-white'
+                  : 'text-gray-700 hover:bg-primary hover:text-white'
+                  }`}
               >
                 {t('nav.team')}
               </Link>
-              <Link 
-                to="/prensa" 
+              <Link
+                to="/prensa"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`block text-sm font-medium transition-all duration-300 px-4 py-2 rounded-xl mx-2 ${
-                  isActive('/prensa') 
-                    ? 'bg-primary text-white' 
-                    : 'text-gray-700 hover:bg-primary hover:text-white'
-                }`}
+                className={`block text-sm font-medium transition-all duration-300 px-4 py-2 rounded-xl mx-2 ${isActive('/prensa')
+                  ? 'bg-primary text-white'
+                  : 'text-gray-700 hover:bg-primary hover:text-white'
+                  }`}
               >
                 {t('nav.press')}
               </Link>
-              <Link 
-                to="/activa-tu-pueblo" 
+              <Link
+                to="/activa-tu-pueblo"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`block text-sm font-medium transition-all duration-300 px-4 py-2 rounded-xl mx-2 ${
-                  isActive('/activa-tu-pueblo') 
-                    ? 'bg-primary text-white' 
-                    : 'text-gray-700 hover:bg-primary hover:text-white'
-                }`}
+                className={`block text-sm font-medium transition-all duration-300 px-4 py-2 rounded-xl mx-2 ${isActive('/activa-tu-pueblo')
+                  ? 'bg-primary text-white'
+                  : 'text-gray-700 hover:bg-primary hover:text-white'
+                  }`}
               >
                 {t('nav.activate')}
               </Link>
-              <a 
-                href="https://dashboard.puntodeagua.com" 
-                target="_blank" 
+              <a
+                href="https://panel.puntodeagua.com"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="w-full bg-white/80 text-gray-900 px-4 py-2 rounded-xl text-sm font-semibold hover:bg-white transition-all duration-300 border border-gray-200/50 mx-2 inline-block text-center"
               >
